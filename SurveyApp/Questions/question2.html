@@ -8,7 +8,6 @@
   body,input,button{
   font-family: "Arial" ,sans-serif;
   } 
-  
 
   h1{
   text-align: center;
@@ -29,38 +28,35 @@
 	color: #000000;
 	}
 
-	#next{
+	#next,#back{
 	width:5em;
 	height:3em;
 	}
+
 	
  </style>
  <script type="text/javascript">
-	
-	var fname,age;
-	
-	fname = sessionStorage.setItem('firstname').val();
-	age = sessionStorage.setItem('age').val();
+ 
+ var fname,age;
 
  </script>
   
 </head>
 <body>
 	<h1>Survey Application</h1>
-	<form name="surveyApp" method="GET"> 
+	<form name="surveyApp"> 
 		<div class="grid">
 			<div id="question">
-					<p>Please fill in your details</p><br/>
-					First Name:
-					<input type="text" id="firstname" maxlength="20">
-					<br/><br/>
-					Age:
-					<input type="number" id="age" min="5" max="25" />
-					<br /> <br /> 
+					<p>Q2 </p><br/>
 					
-					<!-<input type=button value="Next" style="float: right;">
 					
-					<input type=button id="next" onClick="location.href='Questions/question1.html'" value='Next'>
+					
+					
+					<input type=button id="back" onClick="location.href='question1.html'" 
+					value='Back' style="float: left;">
+					
+					<input type=button id="next" onClick="location.href='question3.html'" 
+					value='Next' style="float: right;">
 			</div>
 		</div>
 	</form>
