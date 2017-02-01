@@ -37,25 +37,28 @@
 	
  </style>
  <script type="text/javascript">
-
+	
+	//get values from index page
+	var fname = sessionStorage.getItem("firstname");
+	var age = sessionStorage.getItem("age");
 
  </script>
   
 </head>
 <body>
 	<h1>Survey Application</h1>
-	<form name="surveyApp" action="" method="GET"> 
+	<form name="surveyApp" method="GET"> 
 		<div class="grid">
 			<div id="question">
 					<p>Q1 Which of the following code is clearer for you to read/understand?</p>
 					
 					
-					<input type="radio" id="Choice1" value="Java Eclipse" /> Java with Eclipse</br/>
-					<img src="../Images/Java With Eclipse.jpg" alt="Java Eclipse" style="width:500px;height:300px;"></br/>
+					<input type="radio" name="q1" value="Java Eclipse"> Java with Eclipse<br>
+					<img src="../Images/Java With Eclipse.jpg" alt="Java Eclipse" style="width:500px;height:300px;"><br>
 					
 					
-					<input type="radio" id="Choice2" value="C# with Visual Studio" /> C# with Visual Studio</br/>
-					<img src="../Images/CSharp With Visual Studio.jpg" alt="C# Visual Studio" style="width:500px;height:300px;" ></br/></br/></br/></br/>
+					<input type="radio" name="q1" value="C# with Visual Studio"> C# with Visual Studio<br>
+					<img src="../Images/CSharp With Visual Studio.jpg" alt="C# Visual Studio" style="width:500px;height:300px;" ><br><br><br><br>
 
 					<input type=button id="back" onClick="location.href='../SurveyAppIndex.html'" 
 					value='Back' style="float: left;">
