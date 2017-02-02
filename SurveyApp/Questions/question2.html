@@ -3,68 +3,36 @@
 <head>
 	<title>Survey Application</title>
 	<meta charset='utf-8'>
-      
- <style type="text/css" >
-  body,input,button{
-  font-family: "Arial" ,sans-serif;
-  } 
-  
-
-  h1{
-  text-align: center;
-  }
-  
-  .grid{
-	width: 1300px;
-	height: 900px;
-	margin: 0 auto;
-	padding: 10px 50px 50px 50px;
-	border-radius: 50px;
-	border: 2px solid #000000;
-	}
-  
-  .grid #question{
-	font-family: sans-serif;
-	font-size: 25px;
-	color: #000000;
-	}
-
-	#next,#back{
-	width:5em;
-	height:3em;
-	}
-
-	
- </style>
- <script type="text/javascript">
-
-
- </script>
-  
+	<link rel="stylesheet" href="../CSS/style.css" type="text/css"> 
 </head>
-<body>
-	<h1>Survey Application</h1>
-	<form name="surveyApp" action="" method="GET"> 
-		<div class="grid">
-			<div id="question">
-				<p>Q2 Which of the following background colour makes the code clearer to read/understand?</p>
-					
-					
-				<input type="radio" name="q2" value="Java Eclipse"> Eclipse IDE Windows theme<br>
-				<img src="../Images/Java With Eclipse.jpg" alt="Java Eclipse" style="width:500px;height:300px;"><br>
-					
-					
-				<input type="radio" name="q2" value="C# with Visual Studio"> Eclipse IDE with Dark theme<br>
-				<img src="../Images/Java with Eclipse Dark.jpg" alt="C# Visual Studio" style="width:500px;height:300px;" ><br><br><br><br>
 
-				<input type=button id="back" onClick="location.href='question1.html'" 
-				value='Back' style="float: left;">
-					
-				<input type=button id="next" onClick="location.href='question3.html'" 
-				value='Next' style="float: right;">
+<script type="text/javascript">
 	
-			</div>
-		</div>
+
+
+</script>
+
+<body>
+	<form name="surveyApp" method="POST"> 
+		<h1>Q2 Which of the following code is clearer for you to understand?</h1><br>
+
+		<input type="radio" name="q2" value="HTML5"> HTML5<br>
+		
+		
+		<img src="../Images/HTML Code.png" alt="HTML5" 
+		style="float:left;width:500px;height:300px;">
+		
+		<input type="radio" name="q2" value="Javascript" > Javascript<br>
+		<img src="../Images/Javascript(PSPad).png" alt="Javascript" 
+		style="float:right;width:400px;height:300px;" >
+		
+		<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+		
+		<input type=button id="back" onClick="location.href='question1.html'" 
+		value='Back' style="float: left;">
+					
+		<input type=button id="next" onClick="location.href='question.html'" 
+		value='Next' style="float: right;">
 	</form>
 </body>
 

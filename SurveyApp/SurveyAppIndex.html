@@ -3,7 +3,6 @@
 <head>
 	<title>Survey Application</title>
 	<meta charset='utf-8'>
-      
  <style type="text/css" >
   body,input,button{
   font-family: "Arial" ,sans-serif;
@@ -15,8 +14,8 @@
   }
   
   .grid{
-	width: 800px;
-	height: 500px;
+	width: 300px;
+	height: 250px;
 	margin: 0 auto;
 	padding: 10px 50px 50px 50px;
 	border-radius: 50px;
@@ -32,35 +31,38 @@
 	#next{
 	width:5em;
 	height:3em;
+	font-weight: bold;
 	}
 	
  </style>
+
  <script type="text/javascript">
 	
 	var fname,age;
+	//save input values
+	fname = sessionStorage.setItem('firstname','firstname'.val());
+	age = sessionStorage.setItem('age','age'.val());
 	
-	fname = sessionStorage.setItem('firstname').val();
-	age = sessionStorage.setItem('age').val();
-
  </script>
   
 </head>
 <body>
-	<h1>Survey Application</h1>
-	<form name="surveyApp" method="GET"> 
+	<form name="surveyApp" action="Questions/question1.html" method="GET"> 
 		<div class="grid">
 			<div id="question">
-					<p>Please fill in your details</p><br/>
+					<!--<h1>Survey Application</h1>
+					<hr style="margin-bottom: 20px">-->
+					
+					<p>Please fill in your details</p>
 					First Name:
-					<input type="text" id="firstname" maxlength="20">
-					<br/><br/>
+					<input type="text" id="firstname" maxlength="20" required>
+					<br><br>
 					Age:
-					<input type="number" id="age" min="5" max="25" />
-					<br /> <br /> 
+					<input type="number" id="age" min="5" max="25" required>
+					<br> <br> 
 					
-					<!-<input type=button value="Next" style="float: right;">
-					
-					<input type=button id="next" onClick="location.href='Questions/question1.html'" value='Next'>
+					<input type=button id="next" onClick="location.href='Questions/question1.html'" value='Next' 
+					style="float:right;">
 			</div>
 		</div>
 	</form>
