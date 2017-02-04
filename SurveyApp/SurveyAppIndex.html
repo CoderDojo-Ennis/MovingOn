@@ -37,11 +37,24 @@
  </style>
 
  <script type="text/javascript">
+	var fname;
+	var age;
+
+	function saveData(){
+		
+		 fname = document.getElementById('firstname').value;
+		 age = document.getElementById('age').value;
+		 console.log(fname);
+		 //save input values
+	 	 sessionStorage.setItem('firstname',fname);
+		 sessionStorage.setItem('age',age);
+		 
+		 window.location.href = "Questions/question1.html";
+
+			 
+	}
 	
-	var fname,age;
-	//save input values
-	fname = sessionStorage.setItem('firstname','firstname'.val());
-	age = sessionStorage.setItem('age','age'.val());
+	
 	
  </script>
   
@@ -61,7 +74,7 @@
 					<input type="number" id="age" min="5" max="25" required>
 					<br> <br> 
 					
-					<input type=button id="next" onClick="location.href='Questions/question1.html'" value='Next' 
+					<input type=button id="next" onClick= "saveData() "value='Next' 
 					style="float:right;">
 			</div>
 		</div>
