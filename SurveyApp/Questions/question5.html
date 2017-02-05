@@ -7,24 +7,57 @@
 </head>
 
 <script type="text/javascript">
+	function saveData(){
+	
+	   
+		var q5A_Radio;
+		var q5B_Radio;
+		
+		 if(document.getElementById('q5A').checked)
+		 {
+			q5A_Radio = document.getElementById('q5A').value;
+			sessionStorage.setItem("q5A",q5A_Radio);
+			
+			sessionStorage.removeItem("q5B",q5B_Radio);
+			
+		 }
+		 
+		 else if(document.getElementById('q5B').checked)
+		 {
+			q5B_Radio = document.getElementById('q5B').value;
+			sessionStorage.setItem("q5B",q5B_Radio);
+			
+			sessionStorage.removeItem("q5A",q5A_Radio);
+		 }
+		 
 
+		 window.location.href = "question6.html";	 
+	}
+	
+	
+	function goBack(){
+	
+		window.history.back();
+		
+		window.location.href = "question4.html";
+	}
 
 </script>
  
 <body>
 	<form name="surveyApp" action="" method="POST"> 
-		<h1>Q5 Which of the following code structure makes it clearer for you to read/understand?</h1>
+		<h1>Q5 Which of the following code structure makes it clearer for you to read?</h1>
 		
-		<input type="radio" name="q8" value="A">A <br>
+		<input type="radio" id="q5A" name="q8" value="A">A <br>
 		<img src="../Images/With whitespacing and indentations.jpg" alt="With whitespacing and indentations" style="width:500px;height:600px;"><br><br><br><br>
 					
-		<input type="radio" name="q8" value="B">B<br>
+		<input type="radio" id="q5B" name="q8" value="B">B<br>
 		<img src="../Images/limited whitespacing or indentation.jpg" alt="limited whitespacing or indentation" style="width:500px;height:600px;" ><br><br><br><br>
 
-		<input type=button id="back" onClick="location.href='question4.html'" 
+		<input type=button id="back" onClick="goBack()" 
 		value='Back' style="float: left;">
 					
-		<input type=button id="next" onClick="location.href='question6.html'" 
+		<input type=button id="next" onClick="saveData()" 
 		value='Next' style="float: right;">
 	</form>
 </body>

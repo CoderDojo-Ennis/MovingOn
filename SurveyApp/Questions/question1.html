@@ -7,34 +7,64 @@
 </head>
 
 <script type="text/javascript">
-	//get values from index page
-	var fname = sessionStorage.getItem("firstname");
-	var age = sessionStorage.getItem("age");
+
+	
+	
+	function saveData(){
+		 
+		 var q1A_Radio;
+		 var q1B_Radio;
+		
+		 if(document.getElementById('q1A').checked)
+		 {
+			q1A_Radio = document.getElementById('q1A').value;
+			sessionStorage.setItem("q1A",q1A_Radio);
+			
+			sessionStorage.removeItem("q1B",q1B_Radio);
+		 }
+		 
+		 else if(document.getElementById('q1B').checked)
+		 {
+			q1B_Radio = document.getElementById('q1B').value;
+			sessionStorage.setItem("q1B",q1B_Radio);
+			
+			sessionStorage.removeItem("q1A",q1A_Radio);
+		 }
+		 
+
+		 window.location.href = "question2.html";	 
+	}
+	
+	function goBack(){
+	
+		window.history.back();
+		
+		window.location.href = "../SurveyAppIndex.html";
+	}
 </script>
 
 <body>
 	<!--<h1>Survey Application</h1>-->
 	<form name="surveyApp" method="POST"> 
 
-		<h1>Q1 Which of the following code is clearer for you to read/understand?</h1><br><br>
+		<h1>Q1 Which of the following code is clearer for you to understand?</h1><br><br>
 
-     	   <input type="radio" name="q1" value="A"> A<br>
+     	   <input type="radio" id="q1A" name="q1" value="A"> A<br>
      	  
 			<img src="../Images/Java With Eclipse.jpg" alt="Java" 
 			style="width:500px;height:300px;"><br>
 								
-			<input type="radio" name="q1" value="B"> B<br>
+			<input type="radio" id="q1B" name="q1" value="B"> B<br>
 			<img src="../Images/CSharp With Visual Studio.jpg" alt="C#" 
 			style="width:450px;height:250px;" >
 			
 			<br><br><br><br><br><br>
 				
 					
-			<input type=button id="back" onClick="location.href='../SurveyAppIndex.html'" 
+			<input type=button id="back" onClick="goBack()" 
 			value='Back' style="float:left" >
 					
-			<input type=button id="next" onClick="location.href='question2.html'" 
-			value='Next'style="float:right">
+			<input type=button id="next" onClick="saveData()" value='Next'style="float:right">
 	</form>
 </body>
 

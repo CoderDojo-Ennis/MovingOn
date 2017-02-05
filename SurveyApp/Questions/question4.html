@@ -7,7 +7,39 @@
 </head>
 
 <script type="text/javascript">
+	function saveData(){
+		 
+		 
+	     var q4A_Radio;
+		 var q4B_Radio;
+		
+		 if(document.getElementById('q4A').checked)
+		 {
+			q4A_Radio = document.getElementById('q4A').value;
+			sessionStorage.setItem("q4A",q4A_Radio);
+			
+			sessionStorage.removeItem("q4B",q4B_Radio);
+		 }
+		 
+		 else if(document.getElementById('q4B').checked)
+		 {
+			q4B_Radio = document.getElementById('q4B').value;
+			sessionStorage.setItem("q4B",q4B_Radio);
+			
+			sessionStorage.removeItem("q4A",q4A_Radio);
+		 }
+		 
+
+		 window.location.href = "question5.html";	 
+	}
 	
+	
+	function goBack(){
+	
+		window.history.back();
+		
+		window.location.href = "question3.html";
+	}
 
 
 </script>
@@ -16,22 +48,21 @@
 	<form name="surveyApp" method="POST"> 
 		<h1>Q4 Which of the following code is clearer for you to read?</h1><br>
 
-		<input type="radio" name="q4" value="A"> A<br>
+		<input type="radio" id="q4A" name="q4" value="A"> A<br>
 
 		<img src="../Images/Verdana.png" alt="Verdana" 
 		style="width:400px;height:250px;"><br><br>
 					
-		<input type="radio" name="q4" value="B"> B<br>
+		<input type="radio" id="q4B" name="q4" value="B"> B<br>
 		<img src="../Images/Consolas.png" alt="Consolas" 
 		style="width:400px;height:250px;" >
 		
 		<br><br><br><br><br><br>
 					
-		<input type=button id="back" onClick="location.href='question3.html'" 
+		<input type=button id="back" onClick="goBack()" 
 		value='Back' style="float: left;">
 					
-		<input type=button id="next" onClick="location.href='question5.html'" 
-		value='Next' style="float: right;">
+		<input type=button id="next" onClick="saveData()" value='Next' style="float: right">
 	</form>
 </body>
 

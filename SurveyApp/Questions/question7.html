@@ -7,23 +7,55 @@
 </head>
 
 <script type="text/javascript">
+	    
+	function saveData(){
+		var q7A_Radio;
+		var q7B_Radio;
+		
+		 if(document.getElementById('q7A').checked)
+		 {
+			q7A_Radio = document.getElementById('q7A').value;
+			sessionStorage.setItem("q7A",q7A_Radio);
+			
+			sessionStorage.removeItem("q7B",q7B_Radio);
+			
+		 }
+		 
+		 else if(document.getElementById('q7B').checked)
+		 {
+			q7B_Radio = document.getElementById('q7B').value;
+			sessionStorage.setItem("q7B",q7B_Radio);
+			
+			sessionStorage.removeItem("q7A",q7A_Radio);
+		 }
+		 
 
+		 window.location.href = "question8.html";	 
+	}
+	
+	
+	function goBack(){
+	
+		window.history.back();
+		
+		window.location.href = "question6.html";
+	}
 
 </script>
  
 <body>
 	<form name="surveyApp" action="" method="POST"> 
 		<h1>Q7 Which of the following IDE background colour makes the code clearer to read?</h1>
-		<input type="radio" name="q7" value="A"> A<br>
+		<input type="radio" id="q7A" name="q7" value="A"> A<br>
 		<img src="../Images/Dark Theme IntelliJ.jpg" alt="Dark theme with IntelliJ" style="width:600px;height:400px;"><br><br><br><br>
 					
-		<input type="radio" name="q7" value="B"> B<br>
+		<input type="radio" id="q7B" name="q7" value="B"> B<br>
 		<img src="../Images/Visual Studio Dark.jpg" alt="Dark background with Visual Studio" style="width:600px;height:400px;" ><br><br><br><br>
 
-		<input type=button id="back" onClick="location.href='question6.html'" 
+		<input type=button id="back" onClick="goBack()" 
 		value='Back' style="float: left;">
 					
-		<input type=button id="next" onClick="location.href='question8.html'" 
+		<input type=button id="next" onClick="saveData()" 
 		value='Next' style="float: right;">
 	</form>
 </body>
