@@ -28,9 +28,22 @@
 			
 			sessionStorage.removeItem("q10A",q10A_Radio);
 		 }
-		 
 
-		 window.location.href = "thankyou.html";	 
+		//https://stackoverflow.com/questions/9713058/send-post-data-using-xmlhttprequest
+		var http = new XMLHttpRequest();
+		//https://www.googleapis.com/auth/spreadsheets
+		var url = "https://sheets.googleapis.com/v4/spreadsheets/1-hkSlmPU57vZaAY6lG2C2TxlAoAuX1fk1k1P0vGKwms/values/Sheet1!A1:E1?valueInputOption=RAW";
+		var myObj = { "First Name":sessionStorage.fname, "Age":sessionStorage.age};
+		var myJSON = JSON.stringify(myObj);
+		http.open("PUT", url, true);
+
+		http.send(myObj);
+
+
+
+
+
+	    //window.location.href = "thankyou.html";	 
 	}
 	
 	function goBack(){
