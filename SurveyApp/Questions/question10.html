@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 	<title>Survey Application</title>
-	<meta charset='utf-8'>  
+	<meta http-equiv="Access-Control-Allow-Origin" content="*" charset='utf-8'>  
 	<link rel="stylesheet" href="../CSS/style.css" type="text/css">
 </head>
 
@@ -30,14 +30,17 @@
 		 }
 
 		//https://stackoverflow.com/questions/9713058/send-post-data-using-xmlhttprequest
-		var http = new XMLHttpRequest();
+		var xhr = new XMLHttpRequest();
 		//https://www.googleapis.com/auth/spreadsheets
-		var url = "https://sheets.googleapis.com/v4/spreadsheets/1-hkSlmPU57vZaAY6lG2C2TxlAoAuX1fk1k1P0vGKwms/values/Sheet1!A1:E1?valueInputOption=RAW";
+		var url = "https://script.google.com/macros/s/AKfycbwzHCFDKpZ0n5GIh3r0nG3j0RIgYLvKRvacqWiEov6tUbAcGdH_/exec";
+		
+		xhr.open("POST", url, true);
+		xhr.setRequestHeader('Content-Type', 'application/json; charset=UTF-8');
+		
+		
 		var myObj = { "First Name":sessionStorage.fname, "Age":sessionStorage.age};
-		var myJSON = JSON.stringify(myObj);
-		http.open("PUT", url, true);
 
-		http.send(myObj);
+		xhr.send(JSON.stringify(myObj));
 
 
 
@@ -45,13 +48,16 @@
 
 	    //window.location.href = "thankyou.html";	 
 	}
-	
+
 	function goBack(){
 	
 		window.history.back();
 		
 		window.location.href = "question9.html";
 	}
+	
+	
+	
 
 </script>
  
