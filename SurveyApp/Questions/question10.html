@@ -7,6 +7,18 @@
 </head>
 
 <script type="text/javascript">
+
+		var q1 = ('#q1').checked;
+		var q2 = ('#q2').checked;
+		var q3 = ('#q3').checked;
+		var q4 = ('#q4').checked;
+		var q5 = ('#q5').checked;
+		var q6 = ('#q6').checked;
+		var q7 = ('#q7').checked;
+		var q8 = ('#q8').checked;
+		var q9 = ('#q9').checked;
+		var q10 = ('#q10').checked;
+
 	
 	function submitData(){
 		var q10A_Radio;
@@ -30,20 +42,20 @@
 		 }
 
 		//https://stackoverflow.com/questions/9713058/send-post-data-using-xmlhttprequest
+		
 		var xhr = new XMLHttpRequest();
+		
 		//https://www.googleapis.com/auth/spreadsheets
 		var url = "https://script.google.com/macros/s/AKfycbwzHCFDKpZ0n5GIh3r0nG3j0RIgYLvKRvacqWiEov6tUbAcGdH_/exec";
 		
+		var myObj = {"First Name" : sessionStorage.fname,"Age" : sessionStorage.age, 
+				   "Q1":q1,"Q2":q2,"Q3" : q3,"Q4":q4,"Q5":q5,"Q6":q6,"Q7":q7,"Q8":q8,
+				   "Q9": q9,"Q10":q10};
+				   
 		xhr.open("POST", url, true);
-		xhr.setRequestHeader('Content-Type', 'application/json; charset=UTF-8');
+		xhr.setRequestHeader('Access-Control-Allow-Origin', '*');
 		
-		
-		var myObj = { "First Name":sessionStorage.fname, "Age":sessionStorage.age};
-
 		xhr.send(JSON.stringify(myObj));
-
-
-
 
 
 	    //window.location.href = "thankyou.html";	 
