@@ -1,6 +1,7 @@
  body{
    
    padding: 10px 200px 50px 200px;
+   background-color: #e6e6fa;
  }
  body,input,button{
    font-family: "Arial" ,sans-serif;
