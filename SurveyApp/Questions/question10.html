@@ -31,16 +31,23 @@
 		 {
 			q10A_Radio = document.getElementById('q10A').value;
 			sessionStorage.setItem("q10A",q10A_Radio);
+
+			sessionStorage.removeItem("q10B",q10B_Radio);
 			
 		 }
 		 
 		 else 
 		 {
+		 	//var Q10B = document.getElementById('q10B').checked;
 			q10B_Radio = document.getElementById('q10B').value;
 			sessionStorage.setItem("q10B",q10B_Radio);
+
+			sessionStorage.removeItem("q10A",q10A_Radio);
 		 }
 
 		 var Q10B = document.getElementById('q10B').checked;
+
+		 
 
 
 		//https://stackoverflow.com/questions/9713058/send-post-data-using-xmlhttprequest
