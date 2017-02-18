@@ -4,6 +4,7 @@
 	<title>Survey Application</title>
 	<meta http-equiv="Access-Control-Allow-Origin" content="*" charset='utf-8'>  
 	<link rel="stylesheet" href="../CSS/style.css" type="text/css">
+	<script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
 </head>
 
 <script type="text/javascript">
@@ -40,8 +41,11 @@
 			q10B_Radio = document.getElementById('q10B').value;
 			sessionStorage.setItem("q10B",q10B_Radio);
 			
-			sessionStorage.removeItem("q10A",q10A_Radio);
+			sessionStorage.removeItem("q10B",q10B_Radio);
 		 }
+
+		 var Q10B = document.getElementById('q10B').checked;
+
 
 		//https://stackoverflow.com/questions/9713058/send-post-data-using-xmlhttprequest
 		
@@ -52,12 +56,35 @@
 		var url = "https://script.google.com/macros/s/AKfycbwzHCFDKpZ0n5GIh3r0nG3j0RIgYLvKRvacqWiEov6tUbAcGdH_/exec";
 		var myObj = {"First Name" : fname,"Age" : age, "Q1":q1,"Q2":q2,
 					"Q3" : q3,"Q4":q4,"Q5":q5,"Q6":q6,"Q7":q7,"Q8":q8,
-				    "Q9": q9,"Q10":q10};
+				    "Q9": q9,"Q10":q10,
+					Q10B: Q10B};
 				   
+		/*
 		xhr.open("POST", url, true);
 		xhr.setRequestHeader('Access-Control-Allow-Origin', '*');
 		
 		xhr.send(JSON.stringify(myObj));
+		*/
+
+		console.log("Posting object: " + JSON.stringify(myObj));
+
+		$.ajax({
+                    url: url,
+                    data: myObj,
+                    type: "POST",
+                    dataType: "xml",
+                    statusCode: {
+                        0: function() {
+                            //Success message
+                        },
+                        200: function() {
+                            //Success Message
+                        }
+                    }
+                });
+
+
+
 
 
 	    //window.location.href = "thankyou.html";	 
