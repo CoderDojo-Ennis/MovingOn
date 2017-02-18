@@ -19,17 +19,15 @@
 		 {
 			q1A_Radio = document.getElementById('q1A').value;
 			sessionStorage.setItem("q1A",q1A_Radio);
-			
-			sessionStorage.removeItem("q1B",q1B_Radio);
+		
 		 }
 		 
-		 else if(document.getElementById('q1B').checked)
+		 else
 		 {
 			q1B_Radio = document.getElementById('q1B').value;
 			sessionStorage.setItem("q1B",q1B_Radio);
-			
-			sessionStorage.removeItem("q1A",q1A_Radio);
 		 }
+
 		 
 
 		 window.location.href = "question2.html";	 
