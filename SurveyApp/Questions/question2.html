@@ -10,26 +10,19 @@
 
 	function saveData(){
 	
-	
-		
-		var q2A_Radio;
-		var q2B_Radio;
-		
-		 if(document.getElementById('q2A').checked)
-		 {
-			q2A_Radio = document.getElementById('q2A').value;
-			sessionStorage.setItem("q2A",q2A_Radio);
-			
-			sessionStorage.removeItem("q2B",q2B_Radio);
-		 }
+		var Q2;
+
 		 
-		 else if(document.getElementById('q2B').checked)
-		 {
-			q2B_Radio = document.getElementById('q2B').value;
-			sessionStorage.setItem("q2B",q2B_Radio);
-			
-			sessionStorage.removeItem("q2A",q2A_Radio);
-		 }
+		var A = document.getElementById('q2A').checked;
+		var B = document.getElementById('q2B').checked;
+		
+		if(A){
+			sessionStorage.setItem("Q2","A");
+
+		}
+		else{
+			sessionStorage.setItem("Q2","B");
+		}
 		 
 
 		 window.location.href = "question3.html";	 
@@ -46,15 +39,15 @@
 
 <body>
 	<form name="surveyApp" method="POST"> 
-		<h1>Q2 Which of the following code is clearer for you to understand?</h1><br><br>
+		<h1>Q2 Which of the following code is clearer for you to understand?</h1><br>
 
-		<input type="radio" id="q2A" name="q2" value="A"> A<br><br>
+		<input type="radio" id="q2A" name="q2" value="A"> A<br>
 		
 		
 		<img src="../Images/HTML Code.png" alt="HTML5" 
-		style="width:500px;height:300px;"><br><br><br>
+		style="width:500px;height:300px;"><br><br>
 		
-		<input type="radio" id="q2B" name="q2" value="B" > B<br><br>
+		<input type="radio" id="q2B" name="q2" value="B" > B<br>
 		<img src="../Images/Javascript(PSPad).png" alt="Javascript" 
 		style="width:400px;height:300px;" >
 		

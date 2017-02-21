@@ -11,32 +11,29 @@
 	
 	
 	function saveData(){
-		 
-		 var q1A_Radio;
-		 var q1B_Radio;
+		//declaring variable for q1 
+		var Q1;
 		
-		 if(document.getElementById('q1A').checked)
-		 {
-			q1A_Radio = document.getElementById('q1A').value;
-			sessionStorage.setItem("q1A",q1A_Radio);
 
-			sessionStorage.removeItem("q1B",q1B_Radio);
+		//variables for choice a and b 
+		var A = document.getElementById('q1A').checked;
+		var B = document.getElementById('q1B').checked;
 		
-		 }
-		 
-		 else
-		 {
-			q1B_Radio = document.getElementById('q1B').value;
-			sessionStorage.setItem("q1B",q1B_Radio);
-
-			sessionStorage.removeItem("q1A",q1A_Radio);
-		 }
-
-		 
-
-		 window.location.href = "question2.html";	 
+		//if a is checked
+		if(A){
+			sessionStorage.setItem("Q1","A");
+		}
+		else{//if b is checked
+			sessionStorage.setItem("Q1","B");
+		}
+		
+		
+		
+		//next page
+		window.location.href = "question2.html";	 
 	}
 	
+	//function to go back to previous page
 	function goBack(){
 	
 		window.history.back();

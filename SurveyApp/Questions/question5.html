@@ -9,27 +9,19 @@
 <script type="text/javascript">
 	function saveData(){
 	
-	   
-		var q5A_Radio;
-		var q5B_Radio;
+	    var Q5;
+
+		 
+		var A = document.getElementById('q5A').checked;
+		var B = document.getElementById('q5B').checked;
 		
-		 if(document.getElementById('q5A').checked)
-		 {
-			q5A_Radio = document.getElementById('q5A').value;
-			sessionStorage.setItem("q5A",q5A_Radio);
-			
-			sessionStorage.removeItem("q5B",q5B_Radio);
-			
-		 }
-		 
-		 else if(document.getElementById('q5B').checked)
-		 {
-			q5B_Radio = document.getElementById('q5B').value;
-			sessionStorage.setItem("q5B",q5B_Radio);
-			
-			sessionStorage.removeItem("q5A",q5A_Radio);
-		 }
-		 
+		if(A){
+			sessionStorage.setItem("Q5","A");
+
+		}
+		else{
+			sessionStorage.setItem("Q5","B");
+		}
 
 		 window.location.href = "question6.html";	 
 	}
@@ -46,12 +38,12 @@
  
 <body>
 	<form name="surveyApp" action="" method="POST"> 
-		<h1>Q5 Which of the following code structure makes it clearer for you to read?</h1><br><br>
+		<h1>Q5 Which of the following code structure makes it clearer for you to read?</h1>
 		
-		<input type="radio" id="q5A" name="q8" value="A">A <br><br>
+		<input type="radio" id="q5A" name="q8" value="A">A <br>
 		<img src="../Images/With whitespacing and indentations.jpg" alt="With whitespacing and indentations" style="width:500px;height:600px;"><br><br><br><br>
 					
-		<input type="radio" id="q5B" name="q8" value="B">B<br><br>
+		<input type="radio" id="q5B" name="q8" value="B">B<br>
 		<img src="../Images/limited whitespacing or indentation.jpg" alt="limited whitespacing or indentation" style="width:500px;height:600px;" ><br><br><br><br>
 
 		<input type=button id="back" onClick="goBack()" 

@@ -8,27 +8,19 @@
 
 <script type="text/javascript">
 	function saveData(){
-		var q6A_Radio;
-		var q6B_Radio;
-		
-		 if(document.getElementById('q6A').checked)
-		 {
-			q6A_Radio = document.getElementById('q6A').value;
-			sessionStorage.setItem("q6A",q6A_Radio);
-			
-			sessionStorage.removeItem("q6B",q6B_Radio);
-			
-		 }
-		 
-		 else if(document.getElementById('q6B').checked)
-		 {
-			q6B_Radio = document.getElementById('q6B').value;
-			sessionStorage.setItem("q6B",q6B_Radio);
-			
-			sessionStorage.removeItem("q6A",q6A_Radio);
-		 }
-		 
+		var Q6;
 
+		 
+		var A = document.getElementById('q6A').checked;
+		var B = document.getElementById('q6B').checked;
+		
+		if(A){
+			sessionStorage.setItem("Q6","A");
+
+		}
+		else{
+			sessionStorage.setItem("Q6","B");
+		}
 		 window.location.href = "question7.html";	 
 	}
 	
@@ -44,11 +36,11 @@
  
 <body>
 	<form name="surveyApp" action="" method="POST"> 
-		<h1>Q6 Which of the following background colour makes the code clearer to read?</h1><br><br>
-		<input type="radio" id="q6A" name="q6" value="A"> A<br><br>
-		<img src="../Images/Java With Eclipse.jpg" alt="Java Eclipse" style="width:500px;height:300px;"><br><br><br>
+		<h1>Q6 Which of the following background colour makes the code clearer to read?</h1><br>
+		<input type="radio" id="q6A" name="q6" value="A"> A<br>
+		<img src="../Images/Java With Eclipse.jpg" alt="Java Eclipse" style="width:500px;height:300px;"><br>
 					
-		<input type="radio" id="q6B" ="q6" value="B"> B<br><br>
+		<input type="radio" id="q6B" ="q6" value="B"> B<br>
 		<img src="../Images/Java with Eclipse Dark.jpg" alt="C# Visual Studio" style="width:500px;height:300px;" ><br><br><br><br>
 
 		<input type=button id="back" onClick="goBack()" 

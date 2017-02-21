@@ -8,25 +8,19 @@
 
 <script type="text/javascript">
 	function saveData(){
-		var q9A_Radio;
-		var q9B_Radio;
-		
-		 if(document.getElementById('q9A').checked)
-		 {
-			q9A_Radio = document.getElementById('q9A').value;
-			sessionStorage.setItem("q9A",q9A_Radio);
-			
-			sessionStorage.removeItem("q9B",q9B_Radio);
-			
-		 }
+		var Q9;
+
 		 
-		 else if(document.getElementById('q9B').checked)
-		 {
-			q9B_Radio = document.getElementById('q9B').value;
-			sessionStorage.setItem("q9B",q9B_Radio);
-			
-			sessionStorage.removeItem("q9A",q9A_Radio);
-		 }
+		var A = document.getElementById('q9A').checked;
+		var B = document.getElementById('q9B').checked;
+		
+		if(A){
+			sessionStorage.setItem("Q9","A");
+
+		}
+		else{
+			sessionStorage.setItem("Q9","B");
+		}
 		 
 
 		 window.location.href = "question10.html";	 
@@ -45,11 +39,11 @@
 <body>
 	<form name="surveyApp" action="" method="POST"> 
 		<h1>Q9 Which of the following code reads better?</h1><br>
-	
-		<input type="radio" id="q9A" name="q9" value="A"> A<br><br>
-		<img src="../Images/HelloWorldJCreator.png" alt="jcreator" style="width:450px;height:200px;"><br><br><br>
+		
+		<input type="radio" id="q9A" name="q9" value="A"> A<br>
+		<img src="../Images/HelloWorldJCreator.png" alt="jcreator" style="width:450px;height:200px;"><br><br>
 					
-		<input type="radio" id="q9B" name="q9" value="B"> B<br><br>
+		<input type="radio" id="q9B" name="q9" value="B"> B<br>
 		<img src="../Images/HelloWorldIntelliJ.png" alt="intellij" style="width:450px;height:200px;" ><br><br><br><br>
 
 		<input type=button id="back" onClick="goBack()" 

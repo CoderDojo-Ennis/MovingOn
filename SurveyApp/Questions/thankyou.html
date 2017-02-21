@@ -3,6 +3,7 @@
 <head>
 	<title>Survey Application</title>
 	<meta charset='utf-8'>
+	<script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
  <style type="text/css" >
  
  h1{
@@ -15,7 +16,52 @@
 </head>
 
 <script type="text/javascript">
+		//getting data from session storage
+		var fname = sessionStorage.getItem("firstname");
+		var age = sessionStorage.getItem("age");
+		var Q1 = sessionStorage.getItem("Q1");
+		var Q2 = sessionStorage.getItem("Q2");
+		var Q3 = sessionStorage.getItem("Q3");
+		var Q4 = sessionStorage.getItem("Q4");
+		var Q5 = sessionStorage.getItem("Q5");
+		var Q6 = sessionStorage.getItem("Q6");
+		var Q7 = sessionStorage.getItem("Q7");
+		var Q8 = sessionStorage.getItem("Q8");
+		var Q9 = sessionStorage.getItem("Q9");
+		var Q10 = sessionStorage.getItem("Q10");
+		
+		//https://stackoverflow.com/questions/9713058/send-post-data-using-xmlhttprequest
+		
+		var xhr = new XMLHttpRequest();
+		
+		//var url = "https://script.google.com/macros/s/AKfycbwzHCFDKpZ0n5GIh3r0nG3j0RIgYLvKRvacqWiEov6tUbAcGdH_/exec";
+		var url = "https://script.google.com/macros/s/AKfycbxBxRIuSdjcBm0ntzolsY8V4taqOkJ6e7HZEKRzlx7504egPRM/exec";
+		xhr.open("POST",url,true);
 
+		var myObj = {"FirstName" : fname,"Age" : age, "Q1":Q1,"Q2":Q2,
+					"Q3" : Q3,"Q4":Q4,"Q5":Q5,"Q6":Q6,"Q7":Q7,"Q8":Q8,
+					"Q9": Q9,"Q10":Q10};
+					
+		var myJSON = JSON.stringify(myObj);
+		
+		console.log("Posting object: " + myJSON);
+		
+		request = $.ajax({
+                    url: url,
+                    data: myObj,
+                    type: "POST",
+                    dataType: "xml",
+                    statusCode: {
+                        0: function() {
+                            //Success message
+                        },
+                        200: function() {
+                            //Success Message
+                        }
+                    }
+                });
+
+		//xhr.send(myJSON);
 
 </script>
  
