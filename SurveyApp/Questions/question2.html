@@ -40,24 +40,27 @@
 <body>
 	<form name="surveyApp" method="POST"> 
 		<h1>Q2 Which of the following code is clearer for you to understand?</h1><br>
+		
+		<div class="choice">
+			<label class="imageAsChoice">
+				<input type="radio" id="q2A" name="q2" value="A"> A<br><br>
+				<img src="../Images/HTML Code.png" alt="HTML5" style="width:500px;height:300px;">
+			</label>
+		</div>
+		<div class="choice">
+			<label class="imageAsChoice">
+				<input type="radio" id="q2B" name="q2" value="B" > B<br><br>
+				<img src="../Images/Javascript(PSPad).png" alt="Javascript" style="width:500px;height:300px;">
+			</label>
+		</div>
 
-		<input type="radio" id="q2A" name="q2" value="A"> A<br>
-		
-		
-		<img src="../Images/HTML Code.png" alt="HTML5" 
-		style="width:500px;height:300px;"><br><br>
-		
-		<input type="radio" id="q2B" name="q2" value="B" > B<br>
-		<img src="../Images/Javascript(PSPad).png" alt="Javascript" 
-		style="width:400px;height:300px;" >
-		
-		<br><br><br><br><br><br>
-		
-		<input type=button id="back" onClick="goBack()" 
-		value='Back' style="float: left;">
+		<div class="buttons">
+			<input type=button id="back" onClick="goBack()" 
+			value='Back' style="float: left;">
 					
-		<input type=button id="next" onClick="saveData()" 
-		value='Next' style="float: right;">
+			<input type=button id="next" onClick="saveData()" 
+			value='Next' style="float: right;">
+		</div>
 	</form>
 </body>
 
