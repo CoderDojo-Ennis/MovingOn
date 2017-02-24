@@ -1,3 +1,7 @@
+ html{ 
+  font-size:100%; 
+ } 
+ 
  body{
    
    padding: 10px 200px 50px 200px;
@@ -14,37 +18,34 @@
    text-align: center;
   }
   
+
+  
   .choice{
     float: left;
-    margin: 5px;
-    padding: 15px;
-    max-width: 700px;
-    height: 500px;
+    margin: 2px;
+    padding: 20px;
+    max-width: 100%;
+    height: auto;
 	
     
   }
+		
+  img{
+	width: 500px;
+	max-width: 100%;
+    height: auto;
+  }
+ 
   .choice:hover{ 
-	border:1px solid black;	
-  }
-  
-  
-  .imageAsChoice > input{ /* Hides radio buttons */
-    visibility: hidden; /* make input not clickable */
-	position: absolute; 
-  }
-  .imageAsChoice > input + img{ 
-	cursor:pointer;
-	border:2px solid transparent;
-  }
 	
-  .imageAsChoice > input:checked + img{ /* (RADIO CHECKED) IMAGE STYLES */
-	border:2px solid #f00;
+	border: 2px solid black;
   }
-  
+
+ 
   .buttons{
 	position:relative;
 	margin-top:50%;
-	
+	width:100%;
   }
   
 
