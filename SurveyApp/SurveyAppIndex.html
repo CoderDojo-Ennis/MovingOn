@@ -4,47 +4,8 @@
 	<title>Survey Application</title>
 	<link rel="favicon icon" href="Images/App_Icon.ico" type="image/x-icon" />
 	<meta charset='utf-8'>
-	<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
- <style type="text/css" >
- 
-  html{ 
-  font-size:100%; 
-  }
-  body{
-	background-color: #e6e6fa;
-  }
-  
-  body,input,button{
-  font-family: "Arial" ,sans-serif;
-  } 
-  
-
-  h1{
-  text-align: center;
-  }
-  
-  .grid{
-	width: 300px;
-	height: 250px;
-	margin: 0 auto;
-	padding: 10px 50px 50px 50px;
-	border-radius: 50px;
-	border: 2px solid #000000;
-	}
-  
-  .grid #question{
-	font-family: sans-serif;
-	font-size: 25px;
-	color: #000000;
-	}
-
-	#next{
-	width:5em;
-	height:3em;
-	font-weight: bold;
-	}
-	
- </style>
+	<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=yes">
+	<link rel="stylesheet" href="CSS/style.css" type="text/css">
 
  <script type="text/javascript">
 	var fname;
@@ -70,8 +31,8 @@
   
 </head>
 <body>
-	<form name="surveyApp" action="Questions/question1.html" method="GET"> 
-		<div class="grid">
+	<form name="surveyApp" action="" method="POST"> 
+		<div class="container">
 			<div id="question">
 					<!--<h1>Survey Application</h1>
 					<hr style="margin-bottom: 20px">-->
@@ -84,8 +45,10 @@
 					<input type="number" id="age" min="5" max="25" required>
 					<br> <br> 
 					
-					<input type=button id="next" onClick= "saveData() "value='Next' 
-					style="float:right;">
+					<div class="indexNextBtn">
+						<input type=button id="indexNext" onClick= "saveData() "value='Next' 
+						style="float:right;">
+					</div>
 			</div>
 		</div>
 	</form>
