@@ -62,7 +62,14 @@
  
   .buttons{
 	position:relative;
-	margin-top:50%;
+	margin-top:55%;
+	width:100%;
+	max-width:100%;
+  }
+  
+  .q5buttons{
+	position:relative;
+	margin-top:75%;
 	width:100%;
 	max-width:100%;
   }
