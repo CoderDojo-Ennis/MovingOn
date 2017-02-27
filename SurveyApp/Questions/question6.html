@@ -15,13 +15,16 @@
 		 
 		var A = document.getElementById('q6A').checked;
 		var B = document.getElementById('q6B').checked;
+		var C = document.getElementById('q6C').checked;
 		
 		if(A){
 			sessionStorage.setItem("Q6","A");
-
 		}
 		else if(B){
 			sessionStorage.setItem("Q6","B");
+		}
+		else if(C){
+			sessionStorage.setItem("Q6","C");
 		}
 		 window.location.href = "question7.html";	 
 	}
@@ -44,14 +47,21 @@
 		<div class="choiceA">
 			<label class="imageAsChoice">
 				<input type="radio" id="q6A" name="q6" value="A"> A<br><br>
-				<img src="../Images/Java With Eclipse.jpg" alt="Java Eclipse" >
+				<img src="../Images/Java With Eclipse.jpg" alt="Bright" >
 			</label>
 		</div>	
 
 		<div class="choiceB">
 			<label class="imageAsChoice">
 				<input type="radio" id="q6B" name="q6" value="B"> B<br><br>
-				<img src="../Images/Java with Eclipse Dark.jpg" alt="C# Visual Studio" >
+				<img src="../Images/Java with Eclipse Dark.jpg" alt="Dark" >
+			</label>
+		</div>
+		
+		<div class="choiceC">
+			<label class="imageAsChoice">
+				<input type="radio" id="q6C" name="q6" value="B"> C<br><br>
+				<img src="../Images/Java with Eclipse Dark.jpg" alt="Solarized" >
 			</label>
 		</div>
 		

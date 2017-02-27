@@ -16,6 +16,7 @@
 		 
 		var A = document.getElementById('q7A').checked;
 		var B = document.getElementById('q7B').checked;
+		var C = document.getElementById('q7C').checked;
 		
 		if(A){
 			sessionStorage.setItem("Q7","A");
@@ -23,6 +24,9 @@
 		}
 		else if(B){
 			sessionStorage.setItem("Q7","B");
+		}
+		else if(C){
+			sessionStorage.setItem("Q7","C");
 		}
 
 		 window.location.href = "question8.html";	 
@@ -55,6 +59,13 @@
 			<label class="imageAsChoice">
 				<input type="radio" id="q7B" name="q7" value="B"> B<br><br>
 				<img src="../Images/DarkBG_CSharp.png" alt="Dark BG" >
+			</label>
+		</div>
+		
+		<div class="choiceC">
+			<label class="imageAsChoice">
+				<input type="radio" id="q7C" name="q7" value="B"> C<br><br>
+				<img src="../Images/DarkBG_CSharp.png" alt="Solarized BG" >
 			</label>
 		</div>
 		
