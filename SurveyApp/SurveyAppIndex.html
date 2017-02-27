@@ -2,9 +2,9 @@
 <html lang="en">
 <head>
 	<title>Survey Application</title>
-	<link rel="favicon icon" href="Images/App_Icon.ico" type="image/x-icon" />
 	<meta charset='utf-8'>
-	<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=yes">
+	<meta name="viewport" content="width=device-width,height=device-height,initial-scale=1,user-scalable=yes">
+	<link rel="favicon icon" href="../Images/App_Icon.ico" type="image/x-icon" />
 	<link rel="stylesheet" href="CSS/style.css" type="text/css">
 
  <script type="text/javascript">
@@ -12,16 +12,16 @@
 	var age;
 
 	function saveData(){
-		
+		 //get user input 
 		 fname = document.getElementById('firstname').value;
 		 age = document.getElementById('age').value;
 		 //console.log(fname);
-		 //save input values
+		 
+		 //save input values to session storage
 	 	 sessionStorage.setItem('firstname',fname);
 		 sessionStorage.setItem('age',age);
 		 
 		 window.location.href = "Questions/question1.html";
-
 			 
 	}
 	
@@ -34,8 +34,6 @@
 	<form name="surveyApp" action="" method="POST"> 
 		<div class="container">
 			<div id="question">
-					<!--<h1>Survey Application</h1>
-					<hr style="margin-bottom: 20px">-->
 					
 					<p>Please fill in your details</p>
 					First Name:
@@ -49,6 +47,7 @@
 						<input type=button id="indexNext" onClick= "saveData() "value='Next' 
 						style="float:right;">
 					</div>
+
 			</div>
 		</div>
 	</form>
