@@ -6,6 +6,9 @@
 	<meta name="viewport" content="width=device-width,height=device-height,initial-scale=1,user-scalable=yes">
 	<!--<link rel="favicon icon" href="Images/App_Icon.ico" type="image/x-icon" />-->
 	<link rel="stylesheet" href="../CSS/style.css" type="text/css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
 
 <script type="text/javascript">
@@ -31,19 +34,32 @@
 		<p>First you will need to install <a href="https://code.visualstudio.com/#alt-downloads"> Visual Studio Code</a>.</p>
 		<p>For C#, you will also need to install <a href="https://www.microsoft.com/net/download/core">.NET Core</a>.</p>
 		
+		 <!--reference to how to make the steps to collapse.
+			https://www.w3schools.com/bootstrap/tryit.asp?filename=trybs_collapsible&stacked=h-->
+		<p>Click on the button to toggle between showing and hiding content.</p>
 		
-		<h3>Installing C# extension</h3>
-		<p>If you are coding in C# you will need to install C# extension.</p>
-		<p>Go to View - Extensions, then type in C#.</p>
-		<img src="../Images/InstallingCSharpEx_1.png" alt="InstallingC#Step1">
-		<img src="../Images/InstallingCSharpEx_2.png" alt="InstallingC#Step2">
+		<button type="button" class="btn btn-info" data-toggle="collapse" data-target="#Step1">Installing C# extension</button>
+		  <div id="Step1" class="collapse">
+			<br>If you are coding in C# you will need to install C# extension.
+			Go to View - Extensions, then type in C#.<br><br>
+			<img src="../Images/InstallingCSharpEx_1.png" alt="InstallingC#Step1">
+			<img src="../Images/InstallingCSharpEx_2.png" alt="InstallingC#Step2">
+		  </div>
+		  
+		  <br><br>
 		
-		<h3>Changing background theme of the editor </h3>
-		<p>Go to File - Preferences - Color Theme</p>
-		<img src="../Images/ChangingBackgroundColor.png" alt="ChangeBGColor">
+		<button type="button" class="btn btn-info" data-toggle="collapse" data-target="#Step2">Changing background theme of the editor</button>
+		  <div id="Step2" class="collapse">
+			<br>File - Preferences - Color Theme<br><br><br>
+			<img src="../Images/ChangingBackgroundColor.png" alt="ChangeBGColor">
+		  </div>
+		  
+		<br><br>
 		
-		<h3>Changing language</h3>
-		<img src="../Images/ChangingLanguage.png" alt="ChangeBGColor">
+		<button type="button" class="btn btn-info" data-toggle="collapse" data-target="#Step3">Changing language</button>
+		  <div id="Step3" class="collapse"><br><br>
+			<img src="../Images/ChangingLanguage.png" alt="ChangeBGColor">
+		  </div>
 		
 		
 	<footer>
