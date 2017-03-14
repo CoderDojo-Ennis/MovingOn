@@ -1,19 +1,21 @@
  html{ 
-  font-size:100%; 
+	font-size:100%; 
  }
+ 
+body{
+	display:block;
+}
 
 
  
 body,input,button{
-   font-family: "Arial" ,sans-serif;  
+	font-family: "Arial" ,sans-serif;  
+}
+.container{
+	 margin: 10px 50px 10px 50px;
 }
 
-.container h1{
-	text-align:center;
-
-	padding: 10px 10px 10px 10px;
-}
-
+/*styling on menu links*/
 .nav{
 	text-align:center;
 }
@@ -23,6 +25,7 @@ body,input,button{
 	 padding:0;
 	 overflow: hidden;
 	 background-color:#333;
+
  }
  
 .nav li{
@@ -45,5 +48,23 @@ body,input,button{
 	background-color:#fff;
 	cursor:default;
 }
+
+
+a{
+	color:blue;
+}
+
+
+
+h1{
+	text-align: center;
+}
+
+img{
+	height:auto;
+	max-width: 100%;
+}
+
+
  
  
