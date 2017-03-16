@@ -6,6 +6,9 @@
 	<meta name="viewport" content="width=device-width,height=device-height,initial-scale=1,user-scalable=yes">
 	<!--<link rel="favicon icon" href="Images/App_Icon.ico" type="image/x-icon" />-->
 	<link rel="stylesheet" href="../CSS/style.css" type="text/css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
  <script type="text/javascript">
 
@@ -24,9 +27,45 @@
 		</div>
 		
 		<h1>JavaScript Tutorial</h1>
-		<p>Getting started with Javascript (Hello World Example)</p>
-		
-		<a href="#top">Back to top</a>
+		<button type="button" class="btn btn-info" data-toggle="collapse" data-target="#JSStep1">Getting started with JavaScript (Hello World Example)</button>
+			<div id="JSTip1" class="collapse"><br>
+	
+				<p>1. Create a folder called HelloWorld on your desktop.</p>
+				<p>2. Open Visual Studio Code and go to File - Open Folder and select the HelloWorld folder you set up in step 1.</p>
+				<p>3. Click on the new file icon in the Explorer.</p>
+				<img src="../Images/HW_CSharp_3.png" alt="HW_C#_Step3"><br>
+				<br><p>4. Name the file helloWorld.html</p>
+				<p>5. Add the below code to Visual Studio Code</p>
+				<textarea id="JS_textarea1" readonly>
+				<!DOCTYPE HTML>
+				<html lang="en">
+				<head>
+				<script type="text/javascript">
+					alert('Hello World!');
+				</script>
+
+				</head>
+				<body>
+				</body>
+				</html>
+				</textarea>
+			
+				<br><p>6. Save the file</p>
+				<p>7. Go the HelloWorld folder and double click on the helloWorld.html to open the file in a browser</p>
+				<p>The broswer should display a alert box with "Hello World!" like below</p>
+		   
+				<img src="../Images/HW_JS_Step1-7.png" alt="HW_JS_Step1-7"><br>
+				
+				<br><p> Well done! You have just created your first JavaScript program!</p>
+		   
+			</div>
+			<br><br>
+			
+		<button type="button" class="btn btn-info" data-toggle="collapse" data-target="#JSTip2"></button>
+			<div id="JSTip2" class="collapse"><br>
+			</div>
+		   	
+		<br><br><a href="#top">Back to top</a>
 
 	</div>
 </body>

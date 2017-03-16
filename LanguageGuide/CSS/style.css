@@ -71,6 +71,17 @@ p{
 	
 }
 
+#JS_textarea1{
+	resize: none;
+    overflow: hidden;
+	text-align: left;
+	width:500px;
+    min-height: 150px;
+    line-height: 13px;
+    font-size: 13px;
+	font-family: Arial, sans-serif;
+}
+
 
  
  
