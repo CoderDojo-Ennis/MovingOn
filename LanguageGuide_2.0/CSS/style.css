@@ -97,8 +97,8 @@ p{
 #JS_textarea1{
 	resize: none;
     overflow: hidden;
-	width:250px;
-    min-height: 150px;
+	width:500px;
+    min-height: 400px;
     line-height: 13px;
     font-size: 13px;
 	font-family: Arial, sans-serif;

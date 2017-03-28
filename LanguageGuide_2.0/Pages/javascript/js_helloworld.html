@@ -62,32 +62,54 @@
 			<p>But how do you do this in JavaScript?</p>
 		</div>
 		<div class="js">
-			<h3>Hello World in JavaScript</h3>
+			<h3>Hello World with Phaser</h3>
 			<p>1. Create a folder called HelloWorld on your desktop.</p>
-				<p>2. Open Visual Studio Code and go to File - Open Folder and select the HelloWorld folder you set up in step 1.</p>
-				<p>3. Click on the new file icon in the Explorer.</p>
-				<img src="../../Images/HW_CSharp_3.png" alt="HW_C#_Step3"><br>
-				<br><p>4. Name the file helloWorld.html</p>
-				<p>5. Add the below code to Visual Studio Code</p>
+			<p>2. Inside the HelloWorld folder create another folder called js.</p>
+			<p>3. Download phaser.min.js file from <a href="https://phaser.io/download/stable">phaser.io</a>.</p>
+			<p>4. Cut and paste the file into the js folder.</p>
+			<p>5. Open Visual Studio Code and go to File - Open Folder and select the HelloWorld folder you set up in step 1.</p>
+			<p>6. Click on the new file icon in the Explorer.</p>
+			<img src="../../Images/HW_CSharp_3.png" alt="HW_C#_Step3"><br>
+			<br><p>7. Name the file helloWorld.html</p>
+			<p>8. Add the below code to Visual Studio Code</p>
 <textarea id="JS_textarea1" readonly>
-<!DOCTYPE HTML>
-<html lang="en">
-<head>
-<script type="text/javascript">
-document.write("Hello World!");
-</script>
-
+<!doctype html> 
+<html lang="en"> 
+<head> 
+	<meta charset="UTF-8" />
+	<title>Phaser - Display Text</title>
+	<script type="text/javascript" src="./js/phaser.min.js"></script>
+    <style type="text/css">
+        body {
+            margin: 0;
+        }
+    </style>
 </head>
 <body>
+
+<script type="text/javascript">
+
+var game = new Phaser.Game(800, 600, Phaser.CANVAS, '', { create: create });
+
+function create() {
+
+    
+	var text = "Hello World!";
+	var style = { font: "65px Arial", fill: "#4488AA", align: "center" };
+
+	var display = game.add.text(game.world.centerX, game.world.centerY, text, style).anchor.set(0.5);
+}
+
+</script>
 </body>
 </html>
 </textarea>
 			
-				<br><p>6. Save the file</p>
-				<p>7. Go the HelloWorld folder and double click on the helloWorld.html to open the file in a browser</p>
-				<p>The browser should display the text "Hello World!!" like below</p>
+				<br><p>9. Save the file</p>
+				<p>10. Go the HelloWorld folder and double click on the helloWorld.html to open the file in a browser</p>
+				<p>The browser should display the text "Hello World!" like below</p>
 		   
-				<img src="../../Images/JS_HW.png" alt="JS_HelloWorldEx"><br>
+				<img src="../../Images/HelloWorldPhaser.png" alt="HW_Phaser"><br>
 				
 				<br><p> Well done! You have just created your first JavaScript program!</p>
 		
