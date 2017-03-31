@@ -7,12 +7,19 @@
 	<!--<link rel="favicon icon" href="Images/App_Icon.ico" type="image/x-icon" />-->
 	<link rel="stylesheet" href="../../CSS/style.css" type="text/css">
 
- <script type="text/javascript">
 
- </script>
+
+<script type="text/javascript">
+	
+
+
+</script>
   
 </head>
 <body>
+
+	<a name="top"></a>
+	
 	<div class="container">
 		<div class = "nav">
 		<ul>
@@ -38,7 +45,6 @@
 			<li class="dropdown">
 				<a href="javascript:void(0)" class="dropbtn">JavaScript tutorial</a>
 				<div class="dropdown-content">
-					
 					<a href="../javascript/getting_started_with_phaser.html">1. Getting started with Phaser</a>
 					<a href="../javascript/js_helloworld.html">2. JavaScript Hello World</a>
 				</div>
@@ -54,33 +60,34 @@
 			<li><a href="../links.html">Links</a></li>
 		</ul>
 		</div>
-		
-		<h2>Getting started with JavaScript (Hello World Example)</h2>
 	
+           		
+		<h2>Getting started with Phaser</h2>
 		<div class="scratch">
-			<h3>Hello World in Scratch</h3>
-			<p>In Scratch, you have learned to output dialogs like this:</p>
-			<img src="../../Images/HW_Scratch2.png" alt="HW_Scracth2">
-			<img src="../../Images/HW_Scratch1.png" alt="HW_Scracth1">
+			<h3>Game Stage in Scratch </h3>
+			<p>In Scratch, you start with a stage like this</p>
+			<img src="../../Images/StageScratch.png" alt="StageScratch">
+			
 			<p>But how do you do this in JavaScript?</p>
 		</div>
+		
 		<div class="js">
-			<h3>Hello World using Phaser</h3>
-			<p>1. Create a folder called HelloWorld on your desktop.</p>
-			<p>2. Inside the HelloWorld folder create another folder called js.</p>
+			<h3>Creating a game stage using Phaser</h3>
+			<p>1. Create a folder called MyFirstPhaserProject on your desktop.</p>
+			<p>2. Inside the MyFirstPhaserProject folder create another folder called js.</p>
 			<p>3. Download phaser.js file from <a href="https://phaser.io/download/stable">phaser.io</a>.</p>
 			<p>4. Cut and paste the file into the js folder.</p>
-			<p>5. Open Visual Studio Code and go to File - Open Folder and select the HelloWorld folder you set up in step 1.</p>
+			<p>5. Open Visual Studio Code and go to File - Open Folder and select the MyFirstPhaserProject folder you set up in step 1.</p>
 			<p>6. Click on the new file icon in the Explorer.</p>
 			<img src="../../Images/HW_CSharp_3.png" alt="HW_C#_Step3"><br>
 			<br><p>7. Name the file index.html</p>
 			<p>8. Add the below code to Visual Studio Code</p>
-<textarea id="JS_HW_textarea" readonly>
+<textarea id="phaser_textarea1" readonly>
 <!doctype html> 
 <html lang="en"> 
 <head> 
 	<meta charset="UTF-8" />
-	<title>Phaser - Display Text</title>
+	<title>Phaser - First Project</title>
 	<script type="text/javascript" src="./js/phaser.min.js"></script>
     <style type="text/css">
         body {
@@ -92,16 +99,7 @@
 
 <script type="text/javascript">
 
-var game = new Phaser.Game(800, 600, Phaser.CANVAS, '', { create: create });
-
-function create() {
-
-    
-	var text = "Hello World!";
-	var style = { font: "65px Arial", fill: "#4488AA", align: "center" };
-
-	var display = game.add.text(game.world.centerX, game.world.centerY, text, style).anchor.set(0.5);
-}
+	var game = new Phaser.Game(800, 600, Phaser.CANVAS, 'First Project', { create: create });
 
 </script>
 </body>
@@ -109,16 +107,63 @@ function create() {
 </textarea>
 			
 				<br><p>9. Save the file</p>
-				<p>10. Go the HelloWorld folder and double click on the helloWorld.html to open the file in a browser</p>
-				<p>The browser should display the text "Hello World!" like below</p>
-		   
-				<img src="../../Images/HelloWorldPhaser.png" alt="HW_Phaser"><br>
-
-		
+				<p>10. Open the index.html file in a browser</p>
+				<p>The browser should display like below</p>
+				<img src="../../Images/CanvasPhaser.png" alt="CanvasPhaser"><br>
+				
 		</div>
-			
-			
+		
+		<p>A bit dull? How about adding a Sprite?</p>
+		<p>1. Google search any star png image of your choice and save it inside your project folder as star.</p> 
+		<p>2. Go back to Visual Studio Code and change the following code.</p>
+		
+<textarea id="phaser_textarea2" readonly>
+<!doctype html> 
+<html lang="en"> 
+<head> 
+	<meta charset="UTF-8" />
+	<title>Phaser - First Project </title>
+	<script type="text/javascript" src="./js/phaser.min.js"></script>
+    <style type="text/css">
+        body {
+            margin: 0;
+        }
+    </style>
+</head>
+<body>
+
+<script type="text/javascript">
+
+	var game = new Phaser.Game(800, 600, Phaser.AUTO, 'First Project', { preload: preload, create: create });
+
+	function preload() {
+
+		game.load.image('star', 'star.png');
+	}
+
+	function create() {
+  
+		game.add.sprite(50, 80,'star');
+	}
+</script>
+</body>
+</html>
+</textarea>
+
+		<br><p>3. Save the file.</p>
+			<p>4. Open the index.html in a browser and your image should display.</p>
+		   
+			<img src="../../Images/AddSpritePhaser.png" alt="AddSpritePhaser"><br>
+		
+			<p>Well done! You have just created your first Phaser project!!</p>
+		
 		<br><br><a href="#top">Back to top</a>
+		
+		
+	<footer>
+	
+	</footer>
 	</div>
 </body>
+
 </html>

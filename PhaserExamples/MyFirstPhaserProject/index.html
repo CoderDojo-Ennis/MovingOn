@@ -2,7 +2,7 @@
 <html lang="en"> 
 <head> 
 	<meta charset="UTF-8" />
-	<title>Phaser - Adding a Sprite</title>
+	<title>Phaser - First Project</title>
 	<script type="text/javascript" src="./js/phaser.min.js"></script>
     <style type="text/css">
         body {
@@ -15,8 +15,7 @@
 <script type="text/javascript">
 
 
-
-var game = new Phaser.Game(800, 600, Phaser.AUTO, '', { preload: preload, create: create });
+var game = new Phaser.Game(800, 600, Phaser.AUTO, 'First Project', { preload: preload, create: create });
 
 function preload() {
 
@@ -26,11 +25,9 @@ function preload() {
 
 function create() {
 
-   game.add.sprite(100, 100,'star');
+   game.add.sprite(50, 80,'star');
 
 }
-
-
 
 </script>
 </body>
