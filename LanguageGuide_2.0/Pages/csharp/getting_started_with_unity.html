@@ -67,9 +67,70 @@
 		<img src="../../Images/ScratchInterface.png" alt="ScratchInterface">
 		
 		<h3>Unity Interface</h3>
+		<img src="../../Images/Unity_Interface.png" alt="UnityInterface">
+	
+		<h3>Basic Movement</h3>
+		<p>This code allows you to move gameobject using the arrow keys/WASD keys.</p>
+
+			<textarea id="Csharp_textarea1" readonly="" style="margin:0px;width: 806px; height: 466px;" :0px;="" height:="" 464px;="" width:773px;"="">using UnityEngine;
+using System.Collections;
+
+public class movement : MonoBehaviour{
+		   
+    private float walkingSpeed = 3f;
+					   
+	 void Start(){
+	    }
+					
+	 void Update()
+	  {
+              //Controller Buttons for control gameobject
+	     MoveRightAndLeft(Input.GetAxis("Horizontal"));
+	     MoveForwardAndBack(Input.GetAxis("Vertical"));
+	  }
+
+	  //Moves gameobject left and right
+	  void MoveRightAndLeft(float direction)
+	  {
+		transform.position += walkingSpeed 
+		  * Vector3.right * direction * Time.deltaTime;
+	  }
+  
+	  //Moves gameobject forward and backwards
+	  void MoveForwardAndBack(float direction)
+	  {
+	         transform.position += walkingSpeed 
+	           * Vector3.forward * direction * Time.deltaTime;   
+          }
+			
+ }</textarea>
+	     
+		<h4>Collision Detection and How to Destroy a gameobject</h4>
 		
+		<p><Strong>1.</Strong> Create a  gameobject named "Player".</p>
+		<p><Strong>2.</Strong> Create a another gameobject named "Enemy".</p>
+		<p><Strong>3.</Strong> You will need to add a ridgetbody component to your Player gameobject.</p>
+		<p><Strong>4.</Strong> You will need disable "gravity" under rigetbody setings if you do not have a plane.</p>
+		<p><Strong>5.</Strong> Add the script below to your player gameobject.</p>
+		
+		<textarea id="Csharp_textarea2" readonly="" style="margin: 0px; width: 363px; height: 261px;">using UnityEngine;
+using System.Collections;
+
+public class Destroy : MonoBehaviour {
+
+    void OnCollisionEnter(Collision col)
+    {
+        if (col.gameObject.name == "Enemy")
+        {
+            Destroy(col.gameObject);
+        }
+    }
+}
+</textarea>
 		
 		<br><br><a href="#top">Back to top</a>
+		
+		
 		
 		
 	<footer>
