@@ -85,7 +85,7 @@ var name = 'Joe';
 </textarea>
 			<p>In this case variable <strong>name</strong> stores the value <strong>Joe</strong>.</p>
 
-			<h3>3. Operators</h3>
+		<h3>3. Operators</h3>
 				
 			<p><strong>Arithmetic Operators</strong></p>
 			<table>
@@ -127,12 +127,12 @@ var name = 'Joe';
 			<table>
 				<tr>
 					<td>Equal</td>
-					<td>==</td>
+					<td>===</td>
 					<td><img src="../../Images/Equal.png" alt="Operators"></td>
 				</tr>
 				<tr>
 					<td>Not equal</td>
-					<td>!=</td>
+					<td>!==</td>
 				</tr>
 				<tr>
 					<td>Greater than</td>
@@ -171,11 +171,66 @@ var name = 'Joe';
 					<td>!</td>
 					<td><img src="../../Images/NOT.png" alt="Operators"></td>
 				</tr>
-			</table>
-		</div><br><br>
+			</table><br>
 			
 			
-		<br><br><a href="#top">Back to top</a>
+			
+		<h3>4. Conditional Statements</h3>
+			<p>Conditional statements are used to perform different actions based on different decisions.</p>
+			<p>In Scratch, a simple conditional statement may look at this</p>
+			<img src="../../Images/Simple_IF_Scratch.png" alt="IfScratch">
+			<p>How do we do this in JavaScript?</p>
+
+<textarea id="JS_textarea4" readonly>
+<!DOCTYPE html>
+<html>
+<body>
+
+
+<button onclick="myFunction()">Click me</button>
+
+<p id="result"></p>
+
+<script>
+function myFunction() {
+    var hour = new Date().getHours(); 
+    var greeting;
+    if (hour < 18) {
+        greeting = "Good day";
+    } else {
+        greeting = "Good evening";
+    }
+    document.getElementById("result").innerHTML = greeting;
+}
+</script>
+
+</body>
+</html>
+</textarea>
+
+		<h3>5. Loops</h3>
+			<p>In Scratch, you may have come across the following loop blocks</p>
+			<img src="../../Images/Loop_Scratch.png" alt="LoopScratch">
+			<p>How do we do this in JavaScript?</p>
+			<p>In JavaScript, the two common types of loops you will use are: <strong>for</strong> and <strong>while</strong>.</p>
+			<p>A <strong>for</strong> loop is used when you know in advance how many times the script should perform.</p>
+			<p>Click <a href="https://www.w3schools.com/js/tryit.asp?filename=tryjs_loop_for">here</a> to see an example of the <strong>for loop</strong> in JavaScript.</p>
+			<p>A <strong>while</strong> loop is used when you want the loop to continue until a certain condition becomes true.</p>
+			<p>Click <a href="https://www.w3schools.com/js/tryit.asp?filename=tryjs_while">here</a> to see an example of the <strong>while loop</strong> in JavaScript.</p>
+			
+		
+		<h3>6. Arrays</h3>
+			<p>Arrays in JavaScript allows you to stores multiple values in a single variable</p>
+			<p>To create an array in JavaScript</p>
+<textarea id="JS_textarea3" readonly>
+var animal = ['Cat','Dog','Rabbit'];
+</textarea>
+
+	<br><br><a href="#top">Back to top</a>
+			
+	</div><br><br>
+			
+		
 	</div>
 </body>
 </html>

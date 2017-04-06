@@ -98,27 +98,42 @@ p{
 	resize: none;
     overflow: hidden;
 	width:500px;
-    min-height: 300px;
+    height: 300px;
     line-height: 13px;
     font-size: 13px;
 	font-family: Arial, sans-serif;
+	
 }
 
 #JS_textarea2{
-	width:200px;
+	width:100%;
+	max-width:200px;
+	resize:none;
+	
 }
 
 #JS_textarea3{
-	width:300px;
+	width:100%;
+	max-width:300px;
+	resize:none;
+	
+	 
 }
 #JS_HW_textarea{
-	resize: none;
+
     overflow: hidden;
-	width:500px;
-    min-height: 400px;
+	width:100%;
+	max-width:600px;
+	min-height:500px;
     line-height: 13px;
     font-size: 13px;
-	font-family: Arial, sans-serif;
+	font-family: Arial, sans-serif; 
+}
+#JS_textarea4{
+	width:100%;
+	min-height:400px;
+	max-width:500px;
+
 }
 
 #phaser_textarea1{
