@@ -75,8 +75,7 @@
 		<img src="../../Images/Movement_Scratch.png" alt="Scratch_Movement">
 
 		<p>The below C# code allows you to move gameobject using the arrow keys/WASD keys.</p>
-
-			<textarea id="Csharp_textarea1" readonly="" style="margin:0px;width: 806px; height: 466px;" :0px;="" height:="" 464px;="" width:773px;"="">using UnityEngine;
+<textarea id="JS_textarea4" readonly>using UnityEngine;
 using System.Collections;
 
 public class movement : MonoBehaviour{
@@ -87,44 +86,49 @@ public class movement : MonoBehaviour{
 	    }
 					
 	 void Update()
-	  {
-              //Controller Buttons for control gameobject
-	     MoveRightAndLeft(Input.GetAxis("Horizontal"));
-	     MoveForwardAndBack(Input.GetAxis("Vertical"));
-	  }
-
-	  //Moves gameobject left and right
-	  void MoveRightAndLeft(float direction)
-	  {
-		transform.position += walkingSpeed 
-		  * Vector3.right * direction * Time.deltaTime;
-	  }
-  
-	  //Moves gameobject forward and backwards
-	  void MoveForwardAndBack(float direction)
-	  {
-	         transform.position += walkingSpeed 
-	           * Vector3.forward * direction * Time.deltaTime;   
-          }
-			
- }</textarea>
+           {
+	     if(Input.GetKey(KeyCode.LeftArrow))
+		{
+	           transform.position += Vector3.left * 
+				speed * Time.deltaTime;
+		}
+		
+             if(Input.GetKey(KeyCode.RightArrow))
+                {
+                   transform.position += Vector3.right * 
+			         speed * Time.deltaTime;
+                }
+				
+             if(Input.GetKey(KeyCode.UpArrow))
+                {
+                   transform.position += Vector3.up * 
+				 speed * Time.deltaTime;
+                }
+				
+             if(Input.GetKey(KeyCode.DownArrow))
+                {
+                   transform.position += Vector3.down * 
+				  speed * Time.deltaTime;
+                }
+           }
+}</textarea>
 	     
 		<h4>Collision Detection and How to Destroy a gameobject</h4>
 
 		<img src="../../Images/Col_Destroy_Scratch.png" alt="Col_Destroy_Scratch">
 		
-		<p><Strong>1.</Strong> Create a  gameobject named "Player".</p>
-		<p><Strong>2.</Strong> Create a another gameobject named "Enemy".</p>
-		<p><Strong>3.</Strong> You will need to add a ridgetbody component to your Player gameobject.</p>
-		<p><Strong>4.</Strong> You will need disable "gravity" under rigetbody setings if you do not have a plane.</p>
+		<p><Strong>1.</Strong> Create a  2D gameobject named "Player".</p>
+		<p><Strong>2.</Strong> Create a another 2D gameobject named "Enemy".</p>
+		<p><Strong>3.</Strong> You will need to add a ridgetbody 2D component to your Player gameobject.</p>
+		<p><Strong>4.</Strong> You will need to enable "Freeze Position X and Y" under rigetbody 2D" settings.</p>
 		<p><Strong>5.</Strong> Add the script below to your player gameobject.</p>
 		
-		<textarea id="Csharp_textarea2" readonly="" style="margin: 0px; width: 363px; height: 261px;">using UnityEngine;
+<textarea id="JS_textarea1" readonly>using UnityEngine;		
 using System.Collections;
 
 public class Destroy : MonoBehaviour {
 
-    void OnCollisionEnter(Collision col)
+    void OnCollisionEnter2D(Collision2D col)
     {
         if (col.gameObject.name == "Enemy")
         {
