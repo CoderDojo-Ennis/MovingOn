@@ -163,6 +163,12 @@ table, th, td {
 	width: 20%;
 }
 
+#back-top {
+  position: fixed;
+  bottom:20px;
+  right: 2%;
+  z-index: 100; }
+
 
 
  

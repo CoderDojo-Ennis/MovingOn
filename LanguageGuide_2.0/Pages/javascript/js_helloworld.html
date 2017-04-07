@@ -119,7 +119,43 @@ function create() {
 			
 		<br><br><h3>Now you are ready to start making your first phaser game! 
 		Click <a href="https://phaser.io/tutorials/making-your-first-phaser-game/index">here</a> get started.</h3>
+		
 		<br><br><a href="#top">Back to top</a>
+
+		<div id="back-top">
+  		<a href="#"> <img src="../../Images/uparrow.png" alt="uparrow" </a>
 	</div>
+
+	</div>
+
+	 <script>
+$(document).ready(function(){
+
+  // hide #back-top first
+  $("#back-top").hide();
+
+  // fade in #back-top
+  $(function () {
+    $(window).scroll(function () {
+      if ($(this).scrollTop() > 100) {
+        $('#back-top').fadeIn();
+      } else {
+        $('#back-top').fadeOut();
+      }
+    });
+
+    // scroll body to 0px on click
+    $('#back-top .uparrow').click(function () {
+      $('body,html').animate({
+        scrollTop: 0
+      }, 800);
+      return false;
+    });
+  });
+
+});
+</script>
+
+
 </body>
 </html>

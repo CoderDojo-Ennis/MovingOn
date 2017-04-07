@@ -79,11 +79,15 @@ var price = 1.23;
 		</ul>
 		
 		<h3>2. Variables</h3>
-			<p><strong>Variables</strong> are containers for storing data values. When declaring a variable we use the keyword <strong>var</strong>. e.g.</p>
+
+		<ul>
+			<li><strong>Variables</strong> are containers for storing data values. When declaring a variable we use the keyword <strong>var</strong>. e.g.</li><br>
 <textarea id="JS_textarea2" readonly>
 var name = 'Joe';
 </textarea>
 			<p>In this case variable <strong>name</strong> stores the value <strong>Joe</strong>.</p>
+		</ul>
+
 
 		<h3>3. Operators</h3>
 				
@@ -227,10 +231,40 @@ var animal = ['Cat','Dog','Rabbit'];
 </textarea>
 
 	<br><br><a href="#top">Back to top</a>
+	<div id="back-top">
+  		<a href="#"> <img src="../../Images/uparrow.png" alt="uparrow" </a>
+	</div>
 			
 	</div><br><br>
 			
 		
 	</div>
+	 <script>
+$(document).ready(function(){
+
+  // hide #back-top first
+  $("#back-top").hide();
+
+  // fade in #back-top
+  $(function () {
+    $(window).scroll(function () {
+      if ($(this).scrollTop() > 100) {
+        $('#back-top').fadeIn();
+      } else {
+        $('#back-top').fadeOut();
+      }
+    });
+
+    // scroll body to 0px on click
+    $('#back-top .uparrow').click(function () {
+      $('body,html').animate({
+        scrollTop: 0
+      }, 800);
+      return false;
+    });
+  });
+
+});
+</script>
 </body>
 </html>

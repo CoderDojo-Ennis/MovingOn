@@ -94,10 +94,48 @@
 
 				<p><strong>You have now created a template hello World Application!</p></strong>
 
+				<br><h3>Now you are ready to start making your first 2D unity game! 
+				Click <a href="https://unity3d.com/learn/tutorials/topics/2d-game-creation/project-goals?playlist=17093">here</a> get started.</h3>
+
+				<a href="#top">Back to top</a>	
+
 		</div>
-		<br><br><a href="#top">Back to top</a>
+
+		
+		<div id="back-top">
+  		<a href="#"> <img src="../../Images/uparrow.png" alt="uparrow" </a>
 
 	</div>
+
+	</div>
+	
+	 <script>
+$(document).ready(function(){
+
+  // hide #back-top first
+  $("#back-top").hide();
+
+  // fade in #back-top
+  $(function () {
+    $(window).scroll(function () {
+      if ($(this).scrollTop() > 100) {
+        $('#back-top').fadeIn();
+      } else {
+        $('#back-top').fadeOut();
+      }
+    });
+
+    // scroll body to 0px on click
+    $('#back-top .uparrow').click(function () {
+      $('body,html').animate({
+        scrollTop: 0
+      }, 800);
+      return false;
+    });
+  });
+
+});
+</script>
 </body>
 
 </html>

@@ -95,13 +95,14 @@ String strMessage = '!!I like coding!!';
 		
 		<h3>2. Variables</h3>
 
-			<p><strong>Variables</strong> are containers for storing data values. When declaring a variable we use the keyword <strong>int</strong>. e.g.</p>
+<ul>
+			<li><strong>Variables</strong> are containers for storing data values. When declaring a variable we use the keyword <strong>int</strong>. e.g.</li><br>
 <textarea id="JS_textarea2" readonly>
 int age = 22;
 </textarea>
 
 			<p>In this case variable <strong>age</strong> stores the value <strong>22</strong>.</p>
-
+</ul>
 
 		<h3>3. Operators</h3>
 				
@@ -201,14 +202,47 @@ int age = 22;
 			<p>In C#, the common types of loops you will use are: <Strong>while</Strong> loop, <Strong>do-while</Strong> loop and <Strong>for</Strong> loop.</p>
 			<li>Click <a href="http://www.completecsharptutorial.com/basic/while-loop">here</a> to see an example of the <strong>while loop</strong> in C#.</li><br>
 			<li>Click <a href="http://www.completecsharptutorial.com/basic/do-while-loop">here</a> to see an example of the <strong>do-while loop</strong> in C#.</li><br>
-			<li>Click <a href="http://www.completecsharptutorial.com/basic/for-loop">here</a> to see an example of the <strong>for loop</strong> in C#.</li>			
+			<li>Click <a href="http://www.completecsharptutorial.com/basic/for-loop">here</a> to see an example of the <strong>for loop</strong> in C#.</li>	
+
+			<br><br><a href="#top">Back to top</a>		
 			
-		</div><br><br>	
+		</div><br>	
 		
-	<br><br><a href="#top">Back to top</a>
+	
+	<div id="back-top">
+  		<a href="#"> <img src="../../Images/uparrow.png" alt="uparrow" </a>
+	</div>
+
 		 
 	</div>
-	
+
+	 <script>
+$(document).ready(function(){
+
+  // hide #back-top first
+  $("#back-top").hide();
+
+  // fade in #back-top
+  $(function () {
+    $(window).scroll(function () {
+      if ($(this).scrollTop() > 100) {
+        $('#back-top').fadeIn();
+      } else {
+        $('#back-top').fadeOut();
+      }
+    });
+
+    // scroll body to 0px on click
+    $('#back-top .uparrow').click(function () {
+      $('body,html').animate({
+        scrollTop: 0
+      }, 800);
+      return false;
+    });
+  });
+
+});
+</script>
 	
 	
 </body>
