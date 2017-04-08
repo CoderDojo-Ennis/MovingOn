@@ -8,11 +8,27 @@
 
  <script type="text/javascript">
 
+ 	var commentBox;
+
+
+ 	function saveData(){
+ 		
+		commentBox = document.getElementById('comments').value;
+
+		
+		sessionStorage.setItem('comments',commentBox);
+	
+		window.location.href = "./thankyou.html";
+		
+
+ 	}
+
  </script>
   
 </head>
 <body>
-	<div class="container">
+<form name="TutorialFeedback" action="" method="POST"> 	
+<div class="container">
 		<div class = "nav">
 		<ul>
 			<li><a href="./index/index.html">Home</a></li>
@@ -54,43 +70,21 @@
 		</ul>
 		</div>
 		
-		<h1>Links</h1>
-		<p>Below are useful websites/videos that will help you learn C# and or JavaScript.</p>
-		<p>Visual Studio Code Guide</p>
-		<ul>
-			<li><a href="https://code.visualstudio.com/docs">Visual Studio Code documents</a></li>
-		</ul>
-		
-		<p>Phaser</p>
-		<ul>
-			<li><a href="http://phaser.io/tutorials/getting-started">Getting started with Phaser </a></li>
-			<li><a href="https://phaser.io/learn/official-tutorials">Phaser Tutorials </a></li>
-			
-		</ul>
-		
-		<p>Unity</p>
-		<ul>
-			<li><a href="https://www.youtube.com/watch?v=OPJTUKnHLpk">Getting started with Unity3D</a></li>
+		<h1>Feedback</h1>
+		<p>Give us your feedback on this website in the comment box below</p>
 	
-		</ul>
+<textarea id="comments" cols="30" rows="5" class="html-text-box">
+Comments here...
+</textarea><br><br>
+		<input type="button" onclick="saveData()" value="Submit" class="html-text-box">
+		<input type="reset" value="Clear" class="html-text-box">
+
+
 		
-		<p>C#</p>
-		<ul>
-			<li><a href="http://csharp.net-tutorials.com/">C# .Net Tutorial</a></li>
-			<li><a href="http://www.completecsharptutorial.com/basic/getting-started/">Complete C# Tutorial (C#)</a></li>
-		</ul>
-		
-		
-		<p>JavaScript</p>
-		<ul>
-			<li><a href="https://www.w3schools.com/js/">W3Schools (Javascript)</a></li>
-			<li><a href="http://htmldog.com/guides/javascript/beginner/">JavaScript Beginner Tutorials</a></li>
-			
-		</ul>
-		
-		<br><a href="#top">Back to top</a>
+		<!--<br><a href="#top">Back to top</a>-->
 
 	</div>
+</form>
 </body>
 
 </html>
