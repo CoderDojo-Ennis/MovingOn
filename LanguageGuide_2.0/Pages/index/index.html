@@ -11,8 +11,20 @@
 
 <script type="text/javascript">
 	
-
-
+	//Function to collapse/show contents
+	function toggleText(a){
+		var e=document.getElementById(a);
+		if(!e)return true;
+		if(e.style.display=="none")
+		{
+			e.style.display="block"
+		}
+		else
+		{
+			e.style.display="none"
+		}
+		return true;
+	}
 </script>
   
 </head>
@@ -58,24 +70,49 @@
 				</div>
 			</li>
 			<li><a href="../links.html">Links</a></li>
-			<li><a href="./feedback.html">Feedback</a></li>
+			<li><a href="../feedback.html">Feedback</a></li>
+			
 		</ul>
+		</div><br>
+		
+		<div class="welcome">
+			<h2>Welcome</h2>
+			<p>This website aims to help those with knowledge of Scratch to learn new programming languages.</p> 
+			<p>The languages we are currently doing tutorials on are C# and JavaScript.</p>
+			<p>So let's get started!</p>
+		</div>
+			
+		<input type="button" class="button" onclick="return toggleText('WhatisC#')" value="What is C#?">
+		<div id="WhatisC#" style="display:none">
+		<!--<div class="csharp">-->
+			<br><p><Strong>C#</Strong> is a programming language developed by Microsoft.</p>
+			<p>If you want to develop desktop applications or console games in C#, you should start with <a href="../tools/unity.html">Unity</a>.</p>
+
+		</div><br><br>	
+		
+		<input type="button" class="button" onclick="return toggleText('WhatisJavaScript')" value="What is JavaScript?">
+		<div id="WhatisJavaScript" style="display:none">
+		<!--<div class="javascript">-->
+		
+			<br><p><Strong>JavaScript</Strong> is the programming language of HTML and the web. 
+			   It is used to program the behavior of web pages.</p>
+			<p>If you're into web application development or developing web based games in JavaScript, you should start with <a href="../tools/phaser.html">Phaser</a>.</p>
+		
+		</div><br><br>
+		
+		<input type="button" class="button" onclick="return toggleText('ide')" value="What is an IDE?">
+		<div id="ide" style="display:none">
+		<!--<div class="ide">-->
+			<br><p>An <Strong>IDE</Strong> (<Strong>I</Strong>ntergrated <Strong>D</Strong>evelopment <Strong>E</Strong>nvironment) is a software application that allows developers to write and test their software easily.</p>
+			<p>The IDE we will be using is <a href="../tools/gettingStartedVSCode.html">Visual Studio Code</a>.</p>
 		</div>
 		
-		<h2>Welcome</h2>
-		<p>This website aims to help those with knowledge of Scratch to learn new programming languages.</p>
-		<p>So let's get started!</p>
 		
-		<p>First you need to download <a href="../tools/gettingStartedVSCode.html">Visual Studio Code</a>.</p>
-		
-		<p>Then choose a language you want to learn.</p>
-		<ul>
-			<li><a href="../tools/unity.html">C#</a></li>
-			<li><a href="../tools/phaser.html">HTML and JavaScript</a></li>
-		</ul>
 		
 		<!--<br><br><a href="#top">Back to top</a>-->
-		
+		<div id="back-top">
+			<a href="#"> <img src="../../Images/uparrow.png" alt="uparrow"> </a>
+		</div>
 		
 	<footer>
 	
