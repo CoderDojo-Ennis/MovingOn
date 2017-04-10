@@ -7,8 +7,21 @@
 	<!--<link rel="favicon icon" href="Images/App_Icon.ico" type="image/x-icon" />-->
 	<link rel="stylesheet" href="../../CSS/style.css" type="text/css">
 	
- <script type="text/javascript">
-
+  <script type="text/javascript">
+	//Function to collapse/show contents
+	function toggleText(a){
+		var e=document.getElementById(a);
+		if(!e)return true;
+		if(e.style.display=="none")
+		{
+			e.style.display="block"
+		}
+		else
+		{
+			e.style.display="none"
+		}
+		return true;
+	}
  </script>
 
 </head>
@@ -57,9 +70,9 @@
 		</div>		
 		
 	<h1>Introduction to C#</h1>
-	<h3>1. Data types in C#</h3>
-		
-		<p>Below are some of the basic <strong>data types</strong> used in C#</p>
+	<input type="button" class="button" onclick="return toggleText('C#Fundamentals1')" value="1. Data types in C#">
+	<div id="C#Fundamentals1" style="display:none">
+		<br><p>Below are some of the basic <strong>data types</strong> used in C#</p>
 		<ul>
 
 			
@@ -89,12 +102,11 @@ int age = 22;
 String strMessage = '!!I like coding!!';
 </textarea>
 <p>Always remember when declaring String variables you must use <strong>" "</strong> or <strong>' '</strong></p>
-			
-			
-			
-		</ul>
+</div>				
+</ul>
 		
-		<h3>2. Variables</h3>
+		<br><br><input type="button" class="button" onclick="return toggleText('C#Fundamentals2')" value="2. Variables">
+	<div id="C#Fundamentals2" style="display:none"><br>
 
 <ul>
 			<li><strong>Variables</strong> are containers for storing data values. When declaring a variable we use the keyword <strong>int</strong>. e.g.</li><br>
@@ -102,10 +114,13 @@ String strMessage = '!!I like coding!!';
 int age = 22;
 </textarea>
 
+
 			<p>In this case variable <strong>age</strong> stores the value <strong>22</strong>.</p>
+			</div>
 </ul>
 
-		<h3>3. Operators</h3>
+		<br><br><input type="button" class="button" onclick="return toggleText('C#Fundamentals3')" value="3. Operators">
+		<div id="C#Fundamentals3" style="display:none"><br>
 				
 			<p><strong>Arithmetic Operators</strong></p>
 			<table>
@@ -192,9 +207,11 @@ int age = 22;
 					<td><img src="../../Images/NOT.png" alt="Operators"></td>
 				</tr>
 			</table>
+			</div>
 			
 			
-			<h3>4. Loops</h3>
+			<br><br><input type="button" class="button" onclick="return toggleText('C#Fundamentals4')" value="4. Loops">
+		<div id="C#Fundamentals4" style="display:none"><br>
 			In Scratch, you may have come across the following loop blocks<br><br>
 			<img src="../../Images/Loop_Scratch.png" alt="LoopScratch">
 			
@@ -205,11 +222,8 @@ int age = 22;
 			<li>Click <a href="http://www.completecsharptutorial.com/basic/do-while-loop">here</a> to see an example of the <strong>do-while loop</strong> in C#.</li><br>
 			<li>Click <a href="http://www.completecsharptutorial.com/basic/for-loop">here</a> to see an example of the <strong>for loop</strong> in C#.</li>	
 
-			<br><br><a href="#top">Back to top</a>		
-			
 		</div><br>	
-		
-	
+
 	<div id="back-top">
   		<a href="#"> <img src="../../Images/uparrow.png" alt="uparrow" </a>
 	</div>

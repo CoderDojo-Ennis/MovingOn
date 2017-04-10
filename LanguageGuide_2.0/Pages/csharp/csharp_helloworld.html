@@ -9,8 +9,22 @@
 	
 
  <script type="text/javascript">
+	//Function to collapse/show contents
+	function toggleText(a){
+		var e=document.getElementById(a);
+		if(!e)return true;
+		if(e.style.display=="none")
+		{
+			e.style.display="block"
+		}
+		else
+		{
+			e.style.display="none"
+		}
+		return true;
+	}
 
- </script>
+</script>
   
 </head>
 <body>
@@ -94,11 +108,12 @@
 						<br><img src="../../Images/Debugger 2.1.png" alt="HW_JC#_Step1-8"><br><br>
 
 				<p><strong>You have now created a template hello World Application!</p></strong>
+				
+				<br><div class="buttons">		
+			<a href="https://unity3d.com/learn/tutorials/topics/2d-game-creation/project-goals?playlist=17093" class="button">My first Unity 2D game</a>
+		</div> <br><br>
 
-				<br><h3>Now you are ready to start making your first 2D unity game! 
-				Click <a href="https://unity3d.com/learn/tutorials/topics/2d-game-creation/project-goals?playlist=17093">here</a> to get started.</h3>
-
-				<a href="#top">Back to top</a>	
+				
 
 		</div>
 

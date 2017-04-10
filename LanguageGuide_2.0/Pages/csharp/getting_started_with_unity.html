@@ -10,8 +10,20 @@
 
 
 <script type="text/javascript">
-	
-
+	//Function to collapse/show contents
+	function toggleText(a){
+		var e=document.getElementById(a);
+		if(!e)return true;
+		if(e.style.display=="none")
+		{
+			e.style.display="block"
+		}
+		else
+		{
+			e.style.display="none"
+		}
+		return true;
+	}
 
 </script>
   
@@ -64,14 +76,17 @@
 	
            		
 		<h2>Getting started with Unity3D</h2>
+		<input type="button" class="button" onclick="return toggleText('CsharpTip1')" value="Scratch and Unity Interfaces">
+		<div id="CsharpTip1" style="display:none">
 		<h3>Scratch Interface</h3>
-		<img src="../../Images/ScratchInterface.png" alt="ScratchInterface">
+		<br><img src="../../Images/ScratchInterface.png" alt="ScratchInterface">
 		
 		<h3>Unity Interface</h3>
 		<img src="../../Images/Unity_Interface.png" alt="UnityInterface">
+		</div><br><br><br>
 	
-		<h3>Basic Movement</h3>
-
+		<input type="button" class="button" onclick="return toggleText('CsharpTip2')" value="Basic Movement">
+		<div id="CsharpTip2" style="display:none">
 		<p>In Scratch the basic movement code looks like this</p>
 		<img src="../../Images/Movement_Scratch.png" alt="Scratch_Movement">
 
@@ -113,8 +128,10 @@ public class movement : MonoBehaviour{
                 }
            }
 }</textarea>
+</div><br><br><br>
 	     
-		<h4>Collision Detection and How to Destroy a gameobject</h4>
+		<input type="button" class="button" onclick="return toggleText('CsharpTip3')" value="Collision Detection and How to Destroy a gameobject">
+		<div id="CsharpTip3" style="display:none"><br>
 
 		<img src="../../Images/Col_Destroy_Scratch.png" alt="Col_Destroy_Scratch">
 		
@@ -138,7 +155,7 @@ public class Destroy : MonoBehaviour {
     }
 }
 </textarea>
-		<br><br><a href="#top">Back to top</a>
+</div>
 		<div id="back-top">
   		<a href="#"> <img src="../../Images/uparrow.png" alt="uparrow" </a>
 	</div>

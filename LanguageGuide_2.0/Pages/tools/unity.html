@@ -10,8 +10,20 @@
 
 
 <script type="text/javascript">
-	
-
+	//Function to collapse/show contents
+	function toggleText(a){
+		var e=document.getElementById(a);
+		if(!e)return true;
+		if(e.style.display=="none")
+		{
+			e.style.display="block"
+		}
+		else
+		{
+			e.style.display="none"
+		}
+		return true;
+	}
 
 </script>
   
@@ -68,9 +80,9 @@
 		   to get started.</p>
 		   
 		<p>You will also need to download <a href="https://code.visualstudio.com/#alt-downloads">Visual Studio Code</a>.</p>
-		
-		<h2>1. Basic set up for Unity</h2>	
-		<p>Once you have installed Unity and Visual Studio Code, the first thing you need to do 
+		<input type="button" class="button" onclick="return toggleText('UnityTip1')" value="1. Basic set up for Unity">
+		<div id="UnityTip1" style="display:none">
+		<br><p>Once you have installed Unity and Visual Studio Code, the first thing you need to do 
 		   is to change the default IDE to Visual Studio Code in Unity.</p>
 		
 		<p><Strong>1.</Strong> Open Unity. <Strong>Go to Edit > Preferences</Strong>.</p>
@@ -84,7 +96,7 @@
 		<img src="../../Images/VSC_Unity_Preference.png" alt="VS_Unity">
 		
 		<p><Strong>Make sure you have installed "Unity Debugger for Unity" extension from Visual Studio Code</Strong></p><br><br>
-		
+		</div><br><br><br>
            
 		<div class="buttons">		
 			<a href="../csharp/getting_started_with_unity.html" class="button">Start C# Tutorial</a>
