@@ -130,6 +130,28 @@ p{
     font-size: 13px;
 	font-family: Arial, sans-serif; 
 }
+
+#JSHelloWorld_txtarea{
+    overflow: hidden;
+	width:100%;
+	max-width:600px;
+	min-height:400px;
+    line-height: 13px;
+    font-size: 13px;
+	font-family: Arial, sans-serif; 
+}
+
+#JS_AddText_txtarea{
+    overflow: hidden;
+	width:100%;
+	max-width:600px;
+	min-height:200px;
+    line-height: 13px;
+    font-size: 13px;
+	font-family: Arial, sans-serif; 
+}
+
+}
 #JS_textarea4{
 	width:100%;
 	min-height:400px;
@@ -155,6 +177,16 @@ p{
     line-height: 13px;
     font-size: 13px;
 	font-family: Arial, sans-serif;
+}
+
+#movement_textara1{
+  resize: none;
+  overflow: hidden;
+  width:350px;
+  height: 500px;
+  line-height: 13px;
+  font-size: 13px;
+  font-family: Arial, sans-serif;
 }
 
 #Collision_textarea1{
@@ -202,11 +234,12 @@ input.html-text-box {
   padding: 15px 25px;
   font-size: 16px;
   font-family: Arial, sans-serif;
+  font-weight: bold;
   text-align: center;
   cursor: pointer;
   outline: none;
-  color: #fff;
-  background-color: #4CAF50;
+  color: black;
+  background-color: #FFFF66;
   border: none;
   border-radius: 15px;
   box-shadow: 0 9px #999;
@@ -218,7 +251,7 @@ input.html-text-box {
 }
 
 .button:hover {
-	background-color: #3e8e41}
+	background-color: #FFCC00}
 
 .button:active {
   background-color: #3e8e41;

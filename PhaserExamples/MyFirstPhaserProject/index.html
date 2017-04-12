@@ -25,7 +25,12 @@ function preload() {
 
 function create() {
 
-   game.add.sprite(50, 80,'star');
+	game.add.sprite(50, 80,'star');
+   
+	var text = "Hello World!";
+	var style = { font: "65px Arial", fill: "#4488AA", align: "center" };
+
+	var display = game.add.text(game.world.centerX, game.world.centerY, text, style).anchor.set(0.5);
 
 }
 
