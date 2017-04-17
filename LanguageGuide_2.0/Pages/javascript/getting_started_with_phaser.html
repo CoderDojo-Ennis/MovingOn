@@ -37,43 +37,57 @@
 		<div class = "nav">
 		<ul>
 			<li><a href="../index/index.html">Home</a></li>
-			<li class="dropdown">
-				<a href="javascript:void(0)" class="dropbtn">Tools</a>
-				<div class="dropdown-content">
-					<a href="../tools/gettingStartedVSCode.html">Visual Studio Code</a>
-					<a href="../tools/unity.html">Unity</a>
-					<a href="../tools/phaser.html">Phaser</a>
-					
-				</div>
-			</li>
+		
+			<li><a href="../csharp/getting_started_with_unity.html">C#</a></li>
 			
-			<li class="dropdown">
-				<a href="javascript:void(0)" class="dropbtn">C# tutorial</a>
-				<div class="dropdown-content">
-					<a href="../csharp/getting_started_with_unity.html">1. Getting started with Unity</a>
-					<a href="../csharp/csharp_helloworld.html">2. C# Hello World</a>
-				</div>
-			</li>
-			
-			<li><a href="../javascript/getting_started_with_phaser.html" class="dropbtn">JavaScript tutorial</a></li>
+			<li><a href="../javascript/getting_started_with_phaser.html" class="dropbtn">JavaScript</a></li>
 
-			<li class="dropdown">
-				<a href="javascript:void(0)" class="dropbtn">Advanced</a>
-				<div class="dropdown-content">
-					<a href="../advance/csharp_intro.html">1. C# Fundamentals</a>
-					<a href="../advance/js_intro.html">2. JavaScript Fundamentals</a>
-				</div>
-			</li>
-			<li><a href="../links.html">Links</a></li>
+			<li><a href="../next_step.html">Next Step</a></li>
+			
+			<li><a href="../help_and_tips.html">Help and Tips</a></li>
+			
 			<li><a href="../feedback.html">Feedback</a></li>
 		</ul>
 		</div>
 	
-           		
-		<h2>Getting started with Phaser</h2>
-		<p>Let's start with the basic of Phaser.</p>
+        <h2>Getting started with JavaScript</h2>   
+		<p><strong>JavaScript</Strong> is the programming language of HTML and the web. 
+			       It is used to program the behavior of web pages.</p><br>
+		<p>First download and install <a href="https://code.visualstudio.com/#alt-downloads">Visual Studio Code</a>.</p>
+		<input type="button" class="button" onclick="return toggleText('JS_HW')" 
+		value="1. Hello World in JavaScript">
+		<div id="JS_HW" style="display:none">
+			
+			<p><Strong>1.</Strong> Create a folder called MyFirstPhaserProject on your desktop.</p>
+			<p><Strong>2.</Strong> Open Visual Studio Code and go to File - Open Folder and select the MyFirstPhaserProject folder you set up in step 1.</p>
+			<p><Strong>3.</Strong> Click on the new file icon in the Explorer.</p>
+			<img src="../../Images/HW_CSharp_3.png" alt="HW_C#_Step3"><br>
+			<br><p><Strong>4.</Strong> Name the file helloWorld.html</p>
+			<p><Strong>5.</Strong> Add the below code.</p>
+<textarea id="JS_HW_textarea" readonly>
+<!doctype html> 
+<html lang="en"> 
+<head> 
+	<meta charset="UTF-8" />
+	<title>JavaScript - Hello World</title>
+
+</head>
+<body>
+
+<script type="text/javascript">
+
+	document.write("Hello World!");
+
+</script>
+</body>
+</html>
+</textarea>
+			<br><p><Strong>6.</Strong> Save the file.</p>
+			<p><Strong>7.</Strong> Open the helloWorld.html file in a browser and it should display like below.</p>
+			<img src="../../Images/JS_HW.png" alt="JS_HW"><br>
+		</div><br><br>
 		
-		<input type="button" class="button" onclick="return toggleText('Phaser1')" value="1. Setting up project folder">
+		<input type="button" class="button" onclick="return toggleText('Phaser1')" value="2. Setting up a Phaser project">
 		<div id="Phaser1" style="display:none">
 			<p><Strong>1.</Strong> Create a folder called MyFirstPhaserProject on your desktop.</p>
 			<p><Strong>2.</Strong> Inside the MyFirstPhaserProject folder create another folder called js.</p>
@@ -83,10 +97,10 @@
 			<p><Strong>6.</Strong> Click on the new file icon in the Explorer.</p>
 			<img src="../../Images/HW_CSharp_3.png" alt="HW_C#_Step3"><br>
 			<br><p><Strong>7.</Strong> Name the file index.html</p>
-			
+	
 		</div><br><br>
 		
-		<input type="button" class="button" onclick="return toggleText('Phaser2')" value="2. Creating a Canvas">
+		<input type="button" class="button" onclick="return toggleText('Phaser2')" value="3. Creating a Canvas">
 		<div id="Phaser2" style="display:none">
 		
 			<h3>Game Stage in Scratch </h3>
@@ -97,7 +111,7 @@
 			<h3>Creating a game stage using Phaser</h3>
 			<p><Strong>1.</Strong> Open the index.html you created in the previous part.</p>
 			<p><Strong>2.</Strong> Add the below code.</p>
-<textarea id="phaser_textarea1" readonly>
+<textarea id="phaser_canvas_textarea" readonly>
 <!doctype html> 
 <html lang="en"> 
 <head> 
@@ -113,7 +127,7 @@
 <body>
 
 <script type="text/javascript">
-
+	//code to create a canvas
 	var game = new Phaser.Game(800, 600, Phaser.CANVAS, 'First Project', { create: create });
 
 </script>
@@ -122,74 +136,49 @@
 </textarea>
 			
 				<br><p><Strong>3.</Strong> Save the file</p>
-				<p><Strong>4.</Strong> Open the index.html file in a browser</p>
-				<p>The browser should display like below</p>
+				<p><Strong>4.</Strong> Open the index.html file in a browser and it should display like below.</p>
 				<img src="../../Images/CanvasPhaser.png" alt="CanvasPhaser"><br>
 				
 		</div><br><br>
 		
 		
-		<input type="button" class="button" onclick="return toggleText('Phaser3')" value="3. Adding Image">
+		<input type="button" class="button" onclick="return toggleText('Phaser3')" value="4. Adding Image">
 		<div id="Phaser3" style="display:none">
 			
 			<br><p><Strong>1.</Strong> Using the index.html file you created in the previous part, google search any star png 
 			image of your choice and save it inside your project folder as star.</p> 
-			<p><Strong>2.</Strong> Go back to Visual Studio Code and change the following code.</p>
+			<p><Strong>2.</Strong> Go back to Visual Studio Code and add the following code.</p>
 		
-<textarea id="phaser_textarea2" readonly>
-<!doctype html> 
-<html lang="en"> 
-<head> 
-	<meta charset="UTF-8" />
-	<title>Phaser - First Project </title>
-	<script type="text/javascript" src="./js/phaser.min.js"></script>
-    <style type="text/css">
-        body {
-            margin: 0;
-        }
-    </style>
-</head>
-<body>
-
-<script type="text/javascript">
-	
-	//code to create a canvas
-	var game = new Phaser.Game(800, 600, Phaser.AUTO, 'First Project', { preload: preload, create: create });
+<textarea id="phaser_addimage_textarea" readonly>
 	
 	//code to load image
-	function preload() {
-
+	function preload() 
+	{
 		game.load.image('star', 'star.png');
 	}
 	
 	//code to display image
-	function create() {
-  
+	function create() 
+	{
 		game.add.sprite(50, 80,'star');
 	}
-</script>
-</body>
-</html>
 </textarea>
 
 		<br><p><Strong>3.</Strong> Save the file.</p>
 			<p><Strong>4.</Strong> Open the index.html in a browser and your image should display something similar like below.</p>
 		   
 			<img src="../../Images/AddSpritePhaser.png" alt="AddSpritePhaser"><br>
-		
-			
+	
 		</div><br><br>
 
 		
-		<input type="button" class="button" onclick="return toggleText('Phaser4')" value="4. Adding Text">
+		<input type="button" class="button" onclick="return toggleText('Phaser4')" value="5. Adding Text">
 		<div id="Phaser4" style="display:none">
 			<br><p>Now we are going to add some text!</p>
 			<p><Strong>1.</Strong> Go back to the index.html file.</p>
-			<p><Strong>2.</Strong> Add the following code into the function create().</p>
+			<p><Strong>2.</Strong> Add the following code inside the function create().</p>
 <textarea id="JS_AddText_txtarea" readonly>
 
-function create() {
-	
 	//code to display image
 	game.add.sprite(50, 80,'star');
 	
@@ -199,7 +188,7 @@ function create() {
 	
 	//code to display text
 	var display = game.add.text(game.world.centerX, game.world.centerY, text, style).anchor.set(0.5);
-}
+
 </textarea>
 			
 			<br><br><p><Strong>3.</Strong> Save the file.</p>
@@ -213,7 +202,7 @@ function create() {
 		</div><br><br><br>
 		
 		<div class="buttons">		
-			<a href="https://phaser.io/tutorials/making-your-first-phaser-game/index" class="button">5. Create my first Phaser game</a>
+			<a href="https://phaser.io/tutorials/making-your-first-phaser-game/index" class="button">6. Creating your first Phaser game</a>
 		</div><br><br>
 		
 		

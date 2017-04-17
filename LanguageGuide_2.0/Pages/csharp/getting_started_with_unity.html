@@ -36,48 +36,73 @@
 		<div class = "nav">
 		<ul>
 			<li><a href="../index/index.html">Home</a></li>
-			<li class="dropdown">
-				<a href="javascript:void(0)" class="dropbtn">Tools</a>
-				<div class="dropdown-content">
-					<a href="../tools/gettingStartedVSCode.html">Visual Studio Code</a>
-					<a href="../tools/unity.html">Unity</a>
-					<a href="../tools/phaser.html">Phaser</a>
-					
-				</div>
-			</li>
 			
-			<li class="dropdown">
-				<a href="javascript:void(0)" class="dropbtn">C# tutorial</a>
-				<div class="dropdown-content">
-					<a href="../csharp/getting_started_with_unity.html">1. Getting started with Unity</a>
-					<a href="../csharp/csharp_helloworld.html">2. C# Hello World</a>
-				</div>
-			</li>
+			<li><a href="../csharp/getting_started_with_unity.html">C#</a></li>
 			
-			<li><a href="../javascript/getting_started_with_phaser.html" class="dropbtn">JavaScript tutorial</a></li>
+			<li><a href="../javascript/getting_started_with_phaser.html" class="dropbtn">JavaScript</a></li>
 
-			<li class="dropdown">
-				<a href="javascript:void(0)" class="dropbtn">Advanced</a>
-				<div class="dropdown-content">
-					<a href="../advance/csharp_intro.html">1. C# Fundamentals</a>
-					<a href="../advance/js_intro.html">2. JavaScript Fundamentals</a>
-				</div>
-			</li>
-			<li><a href="../links.html">Links</a></li>
+			<li><a href="../next_step.html">Next Step</a></li>
+			
+			<li><a href="../help_and_tips.html">Help and Tips</a></li>
+			
 			<li><a href="../feedback.html">Feedback</a></li>
+			
 		</ul>
 		</div>
 	
            		
-		<h2>Getting started with Unity3D</h2>
-		<input type="button" class="button" onclick="return toggleText('CsharpTip1')" value="Scratch and Unity Interfaces">
+		<h2>Getting started with C#</h2>
+		<p>First download and install <a href="https://code.visualstudio.com/#alt-downloads">Visual Studio Code</a> 
+		   and <a href="https://www.microsoft.com/net/download/core">.NET Core</a>.</p>
+		   
+		<input type="button" class="button" onclick="return toggleText('VSCode_extension')" value="1. Installing C# extension in Visual Studio Code">
+		<div id="VSCode_extension" style="display:none">
+			<p>You will need to install C# extension inside Visual Studio Code in order to write and test your code in C#.</p>
+			<p>Open Visual Studio Code, <Strong>Go to View > Extensions, then type in C# and Select C# for Visual Studio 
+			   Code(powered by OmniSharp)</Strong> to install.</p>
+			<img src="../../Images/InstallingCSharpEx_1.png" alt="InstallingC#Step1">
+			<img src="../../Images/InstallingCSharpEx_2.png" alt="InstallingC#Step2">
+
+		</div><br><br>
+		   
+		<input type="button" class="button" onclick="return toggleText('CSharp_HW')" value="2. Hello World in C#">
+		<div id="CSharp_HW" style="display:none">
+			
+
+		</div><br><br>
+		   
+		<input type="button" class="button" onclick="return toggleText('CsharpTip1')" value="3. Scratch and Unity Interfaces">
 		<div id="CsharpTip1" style="display:none">
-		<h3>Scratch Interface</h3>
-		<br><img src="../../Images/ScratchInterface.png" alt="ScratchInterface">
+			<div class="imgSizeBySize">
+				<h3>Scratch Interface</h3>
+				<br><img src="../../Images/ScratchInterface.png" alt="ScratchInterface">
+			</div>
+			<div class="imgSizeBySize">
+				<h3>Unity Interface</h3>
+				<img src="../../Images/Unity_Interface.png" alt="UnityInterface">
+			</div>
+
+		</div><br><br>
 		
-		<h3>Unity Interface</h3>
-		<img src="../../Images/Unity_Interface.png" alt="UnityInterface">
-		</div><br><br><br>
+		<p>Now let's try to create a simple C# game. First download and install <a href="https://store.unity.com/download?ref=personal">Unity</a>.</p>
+		
+		<input type="button" class="button" onclick="return toggleText('UnityTip1')" value="1. Basic set up for Unity">
+		<div id="UnityTip1" style="display:none">
+		<br><p>Once you have installed Unity and Visual Studio Code, the first thing you need to do 
+		   is to change the default IDE to Visual Studio Code in Unity.</p>
+		
+		<p><Strong>1.</Strong> Open Unity. <Strong>Go to Edit > Preferences</Strong>.</p>
+		
+		<p><Strong>2.</Strong> Next Unity Preferences Window will appear, <Strong>Go to External Tools > External Script Editor > Select Browse</Strong>.</p>
+		
+		<p><Strong>3.</Strong> You will have to browse where you have installed Visual Studio Code application, Once you have found it double click it.</p>
+		
+		<p><Strong>4.</Strong> You now have Visual Studio Code as your default IDE for Unity 3D.</p>
+		
+		<img src="../../Images/VSC_Unity_Preference.png" alt="VS_Unity">
+		
+		<p><Strong>Make sure you have installed "Unity Debugger for Unity" extension from Visual Studio Code</Strong></p><br><br>
+		</div><br><br>
 	
 		<input type="button" class="button" onclick="return toggleText('CsharpTip2')" value="Basic Movement">
 		<div id="CsharpTip2" style="display:none">
@@ -122,7 +147,7 @@ public class movement : MonoBehaviour{
                 }
            }
 }</textarea>
-</div><br><br><br>
+</div><br><br>
 	     
 		<input type="button" class="button" onclick="return toggleText('CsharpTip3')" value="Collision Detection and How to Destroy a gameobject">
 		<div id="CsharpTip3" style="display:none"><br>

@@ -17,6 +17,7 @@ body,input,button{
 
 /*styling on menu links*/
 
+
 .nav ul {
     list-style-type: none;
     margin: 0;
@@ -73,19 +74,23 @@ body,input,button{
     display: block;
 }
 
+
 a{
 	color:blue;
 }
 
 
-
-/*h1{
-	text-align: center;
-}*/
-
+/*styling on images*/
 img{
-	height:auto;
-	max-width: 100%;
+	max-width:100%;
+	max-height:100%;
+}
+
+.imgSizeBySize {
+  width: 45%;
+  display: inline-block;
+  float: left;
+  padding: 0 10px;
 }
 
 p{
@@ -94,7 +99,7 @@ p{
 	
 }
 
-
+/*text area styling*/
 #JS_textarea1{
 	resize: none;
   overflow: hidden;
@@ -124,8 +129,8 @@ p{
 
     overflow: hidden;
 	width:100%;
-	max-width:600px;
-	min-height:500px;
+	max-width:350px;
+	min-height:250px;
     line-height: 13px;
     font-size: 13px;
 	font-family: Arial, sans-serif; 
@@ -140,18 +145,36 @@ p{
     font-size: 13px;
 	font-family: Arial, sans-serif; 
 }
+#phaser_canvas_textarea{
+	resize: none;
+    overflow: hidden;
+	width:600px;
+    min-height: 300px;
+    line-height: 13px;
+    font-size: 13px;
+	font-family: Arial, sans-serif;
+}
+#phaser_addimage_textarea{
+	resize: none;
+    overflow: hidden;
+	width:300px;
+    min-height: 200px;
+    line-height: 13px;
+    font-size: 13px;
+	font-family: Arial, sans-serif;
+	
+}
 
 #JS_AddText_txtarea{
     overflow: hidden;
 	width:100%;
 	max-width:600px;
-	min-height:200px;
+	min-height:150px;
     line-height: 13px;
     font-size: 13px;
 	font-family: Arial, sans-serif; 
 }
 
-}
 #JS_textarea4{
 	width:100%;
 	min-height:400px;
@@ -197,6 +220,17 @@ p{
   line-height: 13px;
   font-size: 13px;
   font-family: Arial, sans-serif;
+}
+#cs_fixedarray{
+	width:100%;
+	max-width:250px;
+	resize:none;
+}
+#cs_DynamicArray{
+	width:100%;
+	max-width:150px;
+	resize:none;
+	
 }
 
 
