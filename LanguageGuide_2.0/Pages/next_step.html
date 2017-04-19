@@ -23,31 +23,6 @@
 		return true;
 	}
 	
-  $(document).ready(function(){
-
-  // hide #back-top first
-  $("#back-top").hide();
-
-  // fade in #back-top
-  $(function () {
-    $(window).scroll(function () {
-      if ($(this).scrollTop() > 100) {
-        $('#back-top').fadeIn();
-      } else {
-        $('#back-top').fadeOut();
-      }
-    });
-
-    // scroll body to 0px on click
-    $('#back-top .uparrow').click(function () {
-      $('body,html').animate({
-        scrollTop: 0
-      }, 800);
-      return false;
-    });
-  });
-
-});
 
  </script>
 
@@ -61,7 +36,7 @@
 			
 			<li><a href="./csharp/getting_started_with_unity.html">C#</a></li>
 			
-			<li><a href="./javascript/getting_started_with_phaser.html" class="dropbtn">JavaScript</a></li>
+			<li><a href="./javascript/getting_started_with_phaser.html">JavaScript</a></li>
 
 			<li><a href="./next_step.html">Next Step</a></li>
 			
@@ -71,21 +46,21 @@
 		</ul>
 		</div>
 		
-		<h2>Basic C# and JavaScript fundamentals</h2>
+	
 		<p>Before you move on to do tutorials or creating game projects, 
-		   you should read some of the basic C# and JavaScript fundamentals.</p>
-		
-		<h3>C# Fundamentals</h3>
-		<input type="button" class="button" onclick="return toggleText('C#Fundamentals1')" value="1. Data types in C#">
-		<div id="C#Fundamentals1" style="display:none">
-		<br><p>Below are some of the basic <strong>data types</strong> used in C#</p>
-		<ul>
-			<li><strong>bool:</strong> True or False. e.g.</li><br>
+		you should have a look at some of the basic C# and JavaScript fundamentals.</p>
+		<input type="button" class="button" onclick="return toggleText('C#Fundamentals')" value="Basic C# fundamentals" >
+		<div id="C#Fundamentals" style="display:none"><br>
+			<input type="button" class="button" onclick="return toggleText('C#Fundamentals1')" value="1. Data types in C#">
+			<div id="C#Fundamentals1" style="display:none">
+			<br><p>Below are some of the basic <strong>data types</strong> used in C#</p>
+			<ul>
+				<li><strong>bool:</strong> True or False. e.g.</li><br>
 <textarea id="JS_textarea2" readonly>
 bool isAlive =true;
 </textarea><br><br>
 
-			<li><strong>double:</strong>  64-bit double-percision floating point type e.g.</li><br>
+				<li><strong>double:</strong>  64-bit double-percision floating point type e.g.</li><br>
 <textarea id="JS_textarea2" readonly>
 double num = 99999;
 </textarea><br><br>
@@ -118,19 +93,19 @@ and for char variables you must use <strong>' '</strong>)</p>
 		</div>
 		
 		<br><br><input type="button" class="button" onclick="return toggleText('C#Fundamentals2')" value="2. Variables">
-	<div id="C#Fundamentals2" style="display:none"><br>
+				<div id="C#Fundamentals2" style="display:none"><br>
 
-	<ul>
-			<li><strong>Variables</strong> are containers for storing data values. For example</li><br>
+				<ul>
+					<li><strong>Variables</strong> are containers for storing data values. For example</li><br>
 <textarea id="JS_textarea2" readonly>
 int age = 22;
 </textarea>
-
-
-			<p>In this case variable <strong>age</strong> stores the value <strong>22</strong>.</p>
+					<p>In this case variable <strong>age</strong> stores the value <strong>22</strong>.</p>
 			
-</ul>
-		</div>
+				</ul>
+				</div>
+				
+				
 		<br><br><input type="button" class="button" onclick="return toggleText('C#Fundamentals3')" value="3. Operators">
 		<div id="C#Fundamentals3" style="display:none"><br>
 				
@@ -224,23 +199,28 @@ int age = 22;
 			
 			<br><br><input type="button" class="button" onclick="return toggleText('C#Fundamentals4')" value="4. Loops">
 			<div id="C#Fundamentals4" style="display:none"><br>
-				In Scratch, you may have come across the following loop blocks<br><br>
-				<img src="../Images/Loop_Scratch.png" alt="LoopScratch">
+				
+					<p>A <b>loop</b> is used to tell the computer to do something more than once. 
+					In Scratch, you may have come across the following loop blocks.</p>
+					<img src="../Images/Loop_Scratch.png" alt="LoopScratch">	
+				
+				
 			
-				<p>How do we do this in C#?</p>
-
-				<p>In C#, the common types of loops you will use are: <Strong>while</Strong> loop, <Strong>do-while</Strong> loop and <Strong>for</Strong> loop.</p>
-				<li>Click <a href="http://www.completecsharptutorial.com/basic/while-loop">here</a> to see an example of the <strong>while loop</strong> in C#.</li><br>
-				<li>Click <a href="http://www.completecsharptutorial.com/basic/do-while-loop">here</a> to see an example of the <strong>do-while loop</strong> in C#.</li><br>
-				<li>Click <a href="http://www.completecsharptutorial.com/basic/for-loop">here</a> to see an example of the <strong>for loop</strong> in C#.</li>	
-
-			</div><br><br>	
-		
-			<input type="button" class="button" onclick="return toggleText('C#Fundamentals5')" value="5. Arrays">
-			<div id="C#Fundamentals5" style="display:none"><br>
-				<p><strong>Arrays</strong> in C# allows you to stores multiple values in a single variable.</p>
-				<p>There are two kinds of arrays, fixed length and dynamic.</p>
-				<li>To declare a fixed length array</li><br>
+					<p>How do we do this in C#?</p>
+					<p>In C#, the common types of loops you will use are: <Strong>while</Strong> loop, <Strong>do-while</Strong> loop and <Strong>for</Strong> loop.</p>
+					<li>Click <a href="http://www.completecsharptutorial.com/basic/while-loop">here</a> to see an example of the <strong>while loop</strong> in C#.</li><br>
+					<li>Click <a href="http://www.completecsharptutorial.com/basic/do-while-loop">here</a> to see an example of the <strong>do-while loop</strong> in C#.</li><br>
+					<li>Click <a href="http://www.completecsharptutorial.com/basic/for-loop">here</a> to see an example of the <strong>for loop</strong> in C#.</li>	
+				
+				
+			</div><br><br>		
+			
+			
+				<input type="button" class="button" onclick="return toggleText('C#Fundamentals5')" value="5. Arrays" >
+				<div id="C#Fundamentals5" style="display:none;clear: both;"><br>
+					<p><strong>Arrays</strong> in C# allows you to stores multiple values in a single variable.</p>
+					<p>There are two kinds of arrays, fixed length and dynamic.</p>
+					<li>To declare a fixed length array</li><br>
 <textarea id="cs_fixedarray" readonly>
 String[] name = new String[10];
 </textarea><br><br>
@@ -248,16 +228,18 @@ String[] name = new String[10];
 <textarea id="cs_DynamicArray" readonly>
 String[] name;
 </textarea><br><br>
-			</div><br><br><br>
-
+				</div><br><br>
+			</div><br><br>
 			
-			<h3>JavaScript Fundamentals</h3>
-			<input type="button" class="button" onclick="return toggleText('JSFundamentals1')" value="1. Data types in JavaScript">
-			<div id="JSFundamentals1" style="display:none">
-				<br><p>Below are some of the basic <strong>data types</strong> used in JavaScript</p>
-			<ul>
+			<input type="button" class="button" onclick="return toggleText('JavaScriptFundamentals')" value="Basic JavaScript fundamentals" >
+			<div id="JavaScriptFundamentals" style="display:none"><br>
 			
-				<li><strong>Boolean:</strong> True or False. e.g.</li><br>
+				<input type="button" class="button" onclick="return toggleText('JSFundamentals1')" value="1. Data types in JavaScript">
+				<div id="JSFundamentals1" style="display:none">
+					<br><p>Below are some of the basic <strong>data types</strong> used in JavaScript</p>
+				<ul>
+			
+					<li><strong>Boolean:</strong> True or False. e.g.</li><br>
 <textarea id="JS_textarea2" readonly>
 var isLoggedIn = false;
 </textarea>
@@ -415,7 +397,8 @@ function myFunction() {
 		
 		<input type="button" class="button" onclick="return toggleText('JSFundamentals5')" value="5. Loops">
 		<div id="JSFundamentals5" style="display:none">
-			<br><p>In Scratch, you may have come across the following loop blocks</p>
+			<br><p>A <b>loop</b> is used to tell the computer to do something more than once. 
+			In Scratch, you may have come across the following loop blocks</p>
 			<img src="../Images/Loop_Scratch.png" alt="LoopScratch">
 			<p>How do we do this in JavaScript?</p>
 			<p>In JavaScript, the two common types of loops you will use are: <strong>for</strong> and <strong>while</strong>.</p>
@@ -435,6 +418,41 @@ function myFunction() {
 <textarea id="JS_textarea3" readonly>
 var animal = ['Cat','Dog','Rabbit'];
 </textarea>
+		</div>
+		</div><br><br>
+	
+			
+		<input type="button" class="button" onclick="return toggleText('Tutorials')" value="Tutorials/Useful Resources">
+		<div id="Tutorials" style="display:none">
+			<p>Below are useful websites/videos that will help you learn and understand more about C# and JavaScript.</p>
+			
+			<h3>C#</h3>
+			<ul>
+				<li><a href="http://www.completecsharptutorial.com/basic/getting-started/">Complete C# Tutorial</a></li>
+			</ul>
+		
+		
+			<h3>JavaScript</h3>
+			<ul>
+				<li><a href="https://www.w3schools.com/js/">W3Schools (Javascript)</a></li>
+				<li><a href="http://htmldog.com/guides/javascript/beginner/">JavaScript Beginner Tutorials</a></li>
+			</ul>
+			
+			<h3>Phaser</h3>
+			<ul>
+				<li><a href="https://phaser.io/learn/official-tutorials">Phaser Tutorials </a></li>
+			
+			</ul>
+		
+			<h3>Unity</h3>
+			<ul>
+				<li><a href="https://unity3d.com/learn/tutorials">Unity Tutorials</a></li>
+			</ul>
+			
+			<h3>Visual Studio Code Guide</h3>
+			<ul>
+				<li><a href="https://code.visualstudio.com/docs">Visual Studio Code documents</a></li>
+			</ul>
 		</div>
 		
 		<div id="back-top">

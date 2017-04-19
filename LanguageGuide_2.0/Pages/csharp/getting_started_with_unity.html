@@ -39,7 +39,7 @@
 			
 			<li><a href="../csharp/getting_started_with_unity.html">C#</a></li>
 			
-			<li><a href="../javascript/getting_started_with_phaser.html" class="dropbtn">JavaScript</a></li>
+			<li><a href="../javascript/getting_started_with_phaser.html">JavaScript</a></li>
 
 			<li><a href="../next_step.html">Next Step</a></li>
 			
@@ -67,7 +67,7 @@
 		   
 		<input type="button" class="button" onclick="return toggleText('CSharp_HW')" value="2. Hello World in C#">
 		<div id="CSharp_HW" style="display:none">
-		<p><strong>To Create a folder for your C# project.</strong></p>
+				<p><strong>To Create a folder for your C# project.</strong></p>
 
 				<p><strong>1.</strong> Open the Command prompt for Windows/Terminal for Mac.</p>
 
@@ -95,98 +95,119 @@
 						<br><img src="../../Images/Debugger 2.1.png" alt="HW_JC#_Step1-8"><br><br>
 
 				<p><strong>You have now created a template hello World Application!</p></strong>
-			
 
 		</div><br><br>
+		
+		<div style="float: left;clear: both;">
+			<p>Now let's try to create a simple C# project using Unity game engine. First download and install <a href="https://store.unity.com/download?ref=personal">Unity</a>.</p>
 		   
-		<input type="button" class="button" onclick="return toggleText('CsharpTip1')" value="3. Scratch and Unity Interfaces">
+		<input type="button" class="button" onclick="return toggleText('CsharpTip1')" value="1. Differences between Scratch and Unity ">
 		<div id="CsharpTip1" style="display:none">
 			<div class="imgSizeBySize">
-				<h3>Scratch Interface</h3>
+				<h3 align="center">What Scratch look like</h3>
+				<p>In <Strong>Scratch</Strong>, you start your project like this. 
+				You drag and drop the Scratch blocks you need into the Script editing area.</p>
 				<br><img src="../../Images/ScratchInterface.png" alt="ScratchInterface">
 			</div>
 			<div class="imgSizeBySize">
-				<h3>Unity Interface</h3>
-				<img src="../../Images/Unity_Interface.png" alt="UnityInterface">
+				<h3 align="center">What Unity look like</h3>
+				<p>In <Strong>Unity</Strong>, you start your project like this. 
+				Unity is for creating console or mobile games.Unlike Scratch, 
+				Unity has a wide range of assets that you can import or create yourself. 
+				Unity requires the use of code editor such as <b>Visual Studio Code</b>.</p>
+				<img src="../../Images/Unity_Interface.png" alt="UnityInterface"><br><br>
 			</div>
 
 		</div><br><br>
 		
-		<p>Now let's try to create a simple C# game. First download and install <a href="https://store.unity.com/download?ref=personal">Unity</a>.</p>
-		
-		<input type="button" class="button" onclick="return toggleText('UnityTip1')" value="1. Basic set up for Unity">
-		<div id="UnityTip1" style="display:none">
-		<br><p>Once you have installed Unity and Visual Studio Code, the first thing you need to do 
-		   is to change the default IDE to Visual Studio Code in Unity.</p>
-		
-		<p><Strong>1.</Strong> Open Unity. <Strong>Go to Edit > Preferences</Strong>.</p>
-		
-		<p><Strong>2.</Strong> Next Unity Preferences Window will appear, <Strong>Go to External Tools > External Script Editor > Select Browse</Strong>.</p>
-		
-		<p><Strong>3.</Strong> You will have to browse where you have installed Visual Studio Code application, Once you have found it double click it.</p>
-		
-		<p><Strong>4.</Strong> You now have Visual Studio Code as your default IDE for Unity 3D.</p>
-		
-		<img src="../../Images/VSC_Unity_Preference.png" alt="VS_Unity">
-		
-		<p><Strong>Make sure you have installed "Unity Debugger for Unity" extension from Visual Studio Code</Strong></p><br><br>
-		</div><br><br>
-	
-		<input type="button" class="button" onclick="return toggleText('CsharpTip2')" value="Basic Movement">
-		<div id="CsharpTip2" style="display:none">
-		<p>In Scratch the basic movement code looks like this</p>
-		<img src="../../Images/Movement_Scratch.png" alt="Scratch_Movement">
 
-		<p>The below C# code allows you to move gameobject using the arrow keys/WASD keys.</p>
-<textarea id="movement_textara1" readonly>using UnityEngine;
+		<input type="button" class="button" onclick="return toggleText('UnityTip1')" value="2. Basic set up for Unity">
+		<div id="UnityTip1" style="display:none">
+				<br><p>Once you have installed Unity and Visual Studio Code, the first thing you need to do 
+				is to change the default IDE to Visual Studio Code in Unity.</p>
+		
+				<p><Strong>1.</Strong> Open Unity. <Strong>Go to Edit > Preferences</Strong>.</p>
+		
+				<p><Strong>2.</Strong> Next Unity Preferences Window will appear, <Strong>Go to External Tools > External Script Editor > Select Browse</Strong>.</p>
+		
+				<p><Strong>3.</Strong> You will have to browse where you have installed Visual Studio Code application, Once you have found it double click it.</p>
+		
+				<p><Strong>4.</Strong> You now have Visual Studio Code as your default IDE for Unity 3D.</p>
+			
+				<img src="../../Images/VSC_Unity_Preference.png" alt="VS_Unity">
+		
+				<p><Strong>Make sure you have installed "Unity Debugger for Unity" extension from Visual Studio Code</Strong></p><br><br> 
+			</div><br><br>
+			
+			
+			<input type="button" class="button" onclick="return toggleText('UnityTip2')" value="3. Creating a Unity Project">
+			<div id="UnityTip2" style="display:none"><br>
+			
+			
+			
+			</div><br><br>
+			
+			<input type="button" class="button" onclick="return toggleText('UnityTip3')" value="4. Creating a game object">
+			<div id="UnityTip3" style="display:none"><br>
+			
+			
+			
+			</div><br><br>
+			
+			
+			<input type="button" class="button" onclick="return toggleText('CsharpTip2')" value="5. Basic Movement">
+			<div id="CsharpTip2" style="display:none">
+				<p>In Scratch a basic movement code looks like this.</p>
+				<img src="../../Images/Movement_Scratch.png" alt="Scratch_Movement">
+				<p>How do we do this in C#?</p>
+				<p>The below C# code allows you to move game object using the arrow keys/WASD keys in Unity.</p>
+<textarea id="movement_textara1" readonly>
+using UnityEngine;
 using System.Collections;
 
 public class movement : MonoBehaviour{
 		   
-    private float walkingSpeed = 3f;
+	private float walkingSpeed = 3f; //this is a variable called walkingSpeed with a value of 3.
 					   
-	 void Start(){
-	    }
+	void Start(){
+	}
 					
-	 void Update()
-           {
-	     if(Input.GetKey(KeyCode.LeftArrow))
+	void Update()
+	{
+		if(Input.GetKey(KeyCode.UpArrow))
 		{
-	           transform.position += Vector3.left * 
-				speed * Time.deltaTime;
+			transform.position += Vector3.up * speed * Time.deltaTime;
+		}
+				
+		if(Input.GetKey(KeyCode.DownArrow))
+		{
+			transform.position += Vector3.down * speed * Time.deltaTime;
+		}
+				
+		if(Input.GetKey(KeyCode.LeftArrow))
+		{
+			transform.position += Vector3.left * speed * Time.deltaTime;
 		}
 		
-             if(Input.GetKey(KeyCode.RightArrow))
-                {
-                   transform.position += Vector3.right * 
-			         speed * Time.deltaTime;
-                }
-				
-             if(Input.GetKey(KeyCode.UpArrow))
-                {
-                   transform.position += Vector3.up * 
-				 speed * Time.deltaTime;
-                }
-				
-             if(Input.GetKey(KeyCode.DownArrow))
-                {
-                   transform.position += Vector3.down * 
-				  speed * Time.deltaTime;
-                }
-           }
+		if(Input.GetKey(KeyCode.RightArrow))
+		{
+			transform.position += Vector3.right * speed * Time.deltaTime;
+		}	             
+	}
 }</textarea>
 </div><br><br>
 	     
-		<input type="button" class="button" onclick="return toggleText('CsharpTip3')" value="Collision Detection and How to Destroy a gameobject">
-		<div id="CsharpTip3" style="display:none"><br>
-
-		<img src="../../Images/Col_Destroy_Scratch.png" alt="Col_Destroy_Scratch">
-		
-		<p><Strong>1.</Strong> Create a  2D gameobject named "Player".</p>
-		<p><Strong>2.</Strong> Create a another 2D gameobject named "Enemy".</p>
-		<p><Strong>3.</Strong> You will need to add a ridgetbody 2D component to your Player gameobject.</p>
-		<p><Strong>4.</Strong> You will need to enable "Freeze Position X and Y" under rigetbody 2D" settings.</p>
-		<p><Strong>5.</Strong> Add the script below to your player gameobject.</p>
+				<input type="button" class="button" onclick="return toggleText('CsharpTip3')" value="6. Collision Detection and How to Destroy a gameobject">
+				<div id="CsharpTip3" style="display:none"><br>
+					<p>In Scratch, a simple collision detection and destroy looks like this.</p>
+					<img src="../../Images/Col_Destroy_Scratch.png" alt="Col_Destroy_Scratch">
+					
+					<p>How do we do this in C#?</p>
+					<p><Strong>1.</Strong> Create a  2D gameobject named "Player".</p>
+					<p><Strong>2.</Strong> Create a another 2D gameobject named "Enemy".</p>
+					<p><Strong>3.</Strong> You will need to add a ridgetbody 2D component to your Player gameobject.</p>
+					<p><Strong>4.</Strong> You will need to enable "Freeze Position X and Y" under rigetbody 2D" settings.</p>
+					<p><Strong>5.</Strong> Add the script below to your player gameobject.</p>
 		
 <textarea id="Collision_textarea1" readonly>using UnityEngine;		
 using System.Collections;
@@ -202,16 +223,21 @@ public class Destroy : MonoBehaviour {
     }
 }
 </textarea>
-</div>
-		<div id="back-top">
-  		<a href="#"> <img src="../../Images/uparrow.png" alt="uparrow" </a>
-	</div>
+				</div><br><br><br>
+				
+				<div class="buttons">		
+					<a href="https://unity3d.com/learn/tutorials/topics/2d-game-creation/project-goals?playlist=17093" class="button">Creating your first Unity 2D game</a>
+				</div><br><br>
+				
+				<div id="back-top">
+				<a href="#"> <img src="../../Images/uparrow.png" alt="uparrow" </a>
+				</div>
 		
-		
+		</div><br><br><br>
 	<footer>
 	
 	</footer>
-	</div>
+</div>
 
 <script>
 $(document).ready(function(){
