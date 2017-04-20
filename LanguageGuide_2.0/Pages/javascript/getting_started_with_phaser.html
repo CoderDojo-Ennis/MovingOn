@@ -96,8 +96,14 @@
 		<p>Now we are going to create a simple project using <b>Phaser</b>.</p>
 
 		
-		<input type="button" class="button" onclick="return toggleText('PhaserVideo')" value="Full Video with Complete Code">
+		<input type="button" class="button" onclick="return toggleText('PhaserVideo')" value="Full Video with Complete Code for this Tutorial">
 		<div id="PhaserVideo" style="display:none">
+		
+			<br><video width="320" height="240" controls>
+			<source src="../../Videos/js_tut_video.mp4" type="video/mp4">
+			Your browser does not support the video tag.
+			</video>
+			
 			<br><p>This is what your index.html file should look like.</p>
 <textarea id="JS_complete_code_textarea" readonly>
 <!doctype html> 
@@ -209,7 +215,7 @@ function update()
 <script type="text/javascript">
 
 //code to create a canvas
-var game = new Phaser.Game(800, 600, Phaser.CANVAS, 'First Project', 
+var game = new Phaser.Game(800, 600, Phaser.AUTO, 'First Project', 
 			{ preload: preload, create: create,update:update });
 				
 function preload() 
