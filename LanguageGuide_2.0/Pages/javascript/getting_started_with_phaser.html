@@ -55,11 +55,85 @@
 			       It is used to program the behavior of web pages.</p>
 		<p>First download and install <a href="https://code.visualstudio.com/#alt-downloads">Visual Studio Code</a>.</p>
 		
+		<input type="button" class="button" onclick="return toggleText('PhaserVideo')" value="Full Video with Complete Code">
+		<div id="PhaserVideo" style="display:none">
+			<br><p>This is what your index.html file should look like.</p>
+<textarea id="JS_complete_code_textarea" readonly>
+<!doctype html> 
+<html lang="en"> 
+<head> 
+	<meta charset="UTF-8" />
+	<title>Phaser - First Project</title>
+	<script type="text/javascript" src="./js/phaser.js"></script>
+    <style type="text/css">
+        body {
+            margin: 0;
+        }
+    </style>
+</head>
+<body>
+
+<script type="text/javascript">
+
+var game = new Phaser.Game(800, 600, Phaser.AUTO, 'First Project', { preload: preload, create: create,update:update });
+
+var player;
+
+function preload() 
+{
+	game.load.image('star', 'star.png');
+}
+
+function create() 
+{
+	player = game.add.sprite(50,50,'star');
+  
+	var text = "Hello World!";
+	var style = { font: "30px Arial", fill: "#4488AA", align: "center" };
+
+	var display = game.add.text(game.world.centerX, game.world.centerY, text, style).anchor.set(0.5);
+}
+
+function update() 
+{
+	if (game.input.keyboard.isDown(Phaser.Keyboard.LEFT)) 
+	{
+		player.x -= 4; // Move left
+	}
+	
+	if (game.input.keyboard.isDown(Phaser.Keyboard.RIGHT)) 
+	{
+		player.x += 4; // Move right
+	}
+	
+	if (game.input.keyboard.isDown(Phaser.Keyboard.UP)) 
+	{
+		player.y -= 4; // Move up
+	}
+	
+	if (game.input.keyboard.isDown(Phaser.Keyboard.DOWN)) 
+	{
+		player.y += 4; // Move down
+	}
+}
+
+</script>
+</body>
+</html>
+</textarea>
+		
+		</div><br><br>
+		
 		<input type="button" class="button" onclick="return toggleText('JS_HW')" 
 		value="1. Hello World in JavaScript">
 		<div id="JS_HW" style="display:none">
-			
-			<br><p><Strong>1.</Strong> Create a folder called HelloWorld on your desktop.</p>
+			<h3>Hello World in Scratch</h3>
+			<p>In Scratch, you have learned to output dialogs like this:</p>
+			<img src="../../Images/HW_Scratch2.png" alt="HW_Scracth2">
+			<img src="../../Images/HW_Scratch1.png" alt="HW_Scracth1">
+			<p>But how do you do this in C#?</p>
+		
+			<p><Strong>1.</Strong> Create a folder called HelloWorld on your desktop.</p>
 			<p><Strong>2.</Strong> Open Visual Studio Code and go to File - Open Folder and select the HelloWorld folder you set up in step 1.</p>
 			<p><Strong>3.</Strong> Click on the new file icon in the Explorer to add a new file.</p>
 			<img src="../../Images/HW_CSharp_3.png" alt="HW_C#_Step3"><br>
@@ -120,7 +194,7 @@
 <head> 
 	<meta charset="UTF-8" />
 	<title>Phaser - First Project</title>
-	<script type="text/javascript" src="./js/phaser.min.js"></script>
+	<script type="text/javascript" src="./js/phaser.js"></script>
     <style type="text/css">
         body {
             margin: 0;
@@ -130,8 +204,10 @@
 <body>
 
 <script type="text/javascript">
+
 	//code to create a canvas
-	var game = new Phaser.Game(800, 600, Phaser.CANVAS, 'First Project', { create: create });
+	var game = new Phaser.Game(800, 600, Phaser.CANVAS, 'First Project', 
+				{ preload: preload, create: create,update:update });
 
 </script>
 </body>
@@ -154,6 +230,8 @@
 		
 <textarea id="phaser_addimage_textarea" readonly>
 	
+	var player;
+	
 	//code to load image
 	function preload() 
 	{
@@ -163,14 +241,14 @@
 	//code to display image
 	function create() 
 	{
-		game.add.sprite(50, 80,'star');
+		player = game.add.sprite(50, 50,'star');
 	}
 </textarea>
 
 		<br><p><Strong>3.</Strong> Save the file.</p>
 			<p><Strong>4.</Strong> Open the index.html in a browser and your image should display something similar like below.</p>
 		   
-			<img src="../../Images/AddSpritePhaser.png" alt="AddSpritePhaser"><br>
+			<img src="../../Images/Adding_Sprite_Phaser.png" alt="AddSpritePhaser"><br>
 	
 		</div><br><br>
 
@@ -181,13 +259,10 @@
 			<p><Strong>1.</Strong> Go back to the index.html file.</p>
 			<p><Strong>2.</Strong> Add the following code inside the function create().</p>
 <textarea id="JS_AddText_txtarea" readonly>
-
-	//code to display image
-	game.add.sprite(50, 80,'star');
 	
 	//code to add text
 	var text = "Hello World!";
-	var style = { font: "65px Arial", fill: "#4488AA", align: "center" };
+	var style = { font: "30px Arial", fill: "#4488AA", align: "center" };
 	
 	//code to display text
 	var display = game.add.text(game.world.centerX, game.world.centerY, text, style).anchor.set(0.5);
@@ -198,12 +273,50 @@
 				<p><Strong>4.</Strong> Go the project folder and double click on the index.html to open the file in a browser.</p>
 				<p>The browser should display the text "Hello World!" and the star image like below</p>
 		   
-				<img src="../../Images/Phaser_FirstProject.png" alt="Phaser_FirstProject"><br>
+				<img src="../../Images/Adding_Text_Phaser.png" alt="Adding_Text_Phaser"><br>
 				
-				<br><br><b>Well done! You have just created your first Phaser project!! You are now ready to start 
-					   making your first phaser game!</b>
-		</div><br><br><br>
+		</div><br><br>
 		
+		<input type="button" class="button" onclick="return toggleText('Phaser5')" value="6. Moving Image/Sprite">
+		<div id="Phaser5" style="display:none">
+			<br><p>Let make the star move!</p>
+			<p><Strong>1.</Strong> Go back to the index.html file.</p>
+			<p><Strong>2.</Strong> Add the following code after the function create().</p>
+<textarea id="JS_movement_textarea" readonly>
+	
+function update() 
+{
+	
+  if (game.input.keyboard.isDown(Phaser.Keyboard.LEFT)) 
+  {
+    player.x -= 4; // Move left
+  }
+  
+  if (game.input.keyboard.isDown(Phaser.Keyboard.RIGHT)) 
+  {
+    player.x += 4; // Move right
+  }
+  
+  if (game.input.keyboard.isDown(Phaser.Keyboard.UP)) 
+  {
+    player.y -= 4; // Move up
+  }
+  
+  if (game.input.keyboard.isDown(Phaser.Keyboard.DOWN)) 
+  {
+    player.y += 4; // Move down
+  }
+}
+
+</textarea>
+			<br><br><p><Strong>3.</Strong> Save the file.</p>
+					<p><Strong>4.</Strong> Go the project folder and double click on the index.html to open the file in a browser.</p>
+					<p>You should be able to move the star image using the up,down,left,right arrow keys</p>
+			<br><br><b>Well done! You have just created your first Phaser project!! You are now ready to start 
+					   making your first phaser game!</b>
+		
+		</div><br><br><br>
+
 		<div class="buttons">		
 			<a href="https://phaser.io/tutorials/making-your-first-phaser-game/index" class="button">Creating your first Phaser game</a>
 		</div><br><br>

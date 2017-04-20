@@ -3,7 +3,7 @@
 <head> 
 	<meta charset="UTF-8" />
 	<title>Phaser - First Project</title>
-	<script type="text/javascript" src="./js/phaser.min.js"></script>
+	<script type="text/javascript" src="./js/phaser.js"></script>
     <style type="text/css">
         body {
             margin: 0;
@@ -15,23 +15,43 @@
 <script type="text/javascript">
 
 
-var game = new Phaser.Game(800, 600, Phaser.AUTO, 'First Project', { preload: preload, create: create });
+var game = new Phaser.Game(800, 600, Phaser.AUTO, 'First Project', { preload: preload, create: create,update:update });
 
-function preload() {
+var player;
 
-    game.load.image('star', 'star.png');
-
+function preload() 
+{
+	game.load.image('star', 'star.png');
 }
-
-function create() {
-
-	game.add.sprite(50, 80,'star');
-   
+function create() 
+{
+	player = game.add.sprite(50,50,'star');
+  
 	var text = "Hello World!";
-	var style = { font: "65px Arial", fill: "#4488AA", align: "center" };
+	var style = { font: "30px Arial", fill: "#4488AA", align: "center" };
 
 	var display = game.add.text(game.world.centerX, game.world.centerY, text, style).anchor.set(0.5);
+}
 
+function update() {
+
+	
+	if (game.input.keyboard.isDown(Phaser.Keyboard.LEFT)) 
+	{
+		player.x -= 4; // Move left
+	}
+	if (game.input.keyboard.isDown(Phaser.Keyboard.RIGHT)) 
+	{
+		player.x += 4; // Move right
+	}
+	if (game.input.keyboard.isDown(Phaser.Keyboard.UP)) 
+	{
+		player.y -= 4; // Move up
+	}
+	if (game.input.keyboard.isDown(Phaser.Keyboard.DOWN)) 
+	{
+		player.y += 4; // Move down
+	}
 }
 
 </script>

@@ -175,6 +175,26 @@ p{
 	font-family: Arial, sans-serif; 
 }
 
+#JS_movement_textarea{
+	overflow: hidden;
+	width:100%;
+	max-width:400px;
+	min-height:300px;
+    line-height: 13px;
+    font-size: 13px;
+	font-family: Arial, sans-serif;	
+}
+
+#JS_complete_code_textarea{
+	overflow: hidden;
+	width:100%;
+	max-width:600px;
+	min-height:800px;
+    line-height: 13px;
+    font-size: 13px;
+	font-family: Arial, sans-serif;
+}
+
 #JS_textarea4{
 	width:100%;
 	min-height:400px;
