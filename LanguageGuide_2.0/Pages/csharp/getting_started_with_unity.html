@@ -73,7 +73,7 @@
 
 				<p><strong>2.</strong> In the command prompt/terminal enter the following command 
 				      "dotnet new console -o helloWorldApp", without the quotations marks.<br> Please note that "helloWorldApp" is the project folder name, you can name it whatever you like.</p>
-				     <textarea id="JS_textarea2" readonly>-o helloWorldApp</textarea>
+				     <textarea id="JS_textarea2" readonly>dotnet new console -o helloWorldApp</textarea>
 				     
 
 				<p> <strong>3.</strong> Next, enter the command "cd helloWorldApp", without the quotations marks.</p>
@@ -93,6 +93,9 @@
 
 				<p><strong>8.</strong> Click the Debugger button to run the program.</p>
 						<br><img src="../../Images/Debugger 2.1.png" alt="HW_JC#_Step1-8"><br><br>
+
+				<p><strong>9.</strong> On the Debug Console you should see this output.</p>
+						<img src="../../Images/Debug_Result.png" alt="Debug Result"><br><br>
 
 				<p><strong>You have now created a template hello World Application!</p></strong>
 
@@ -147,10 +150,10 @@
 			<div id="UnityTip2" style="display:none"><br>
 			<p>First run Unity, click "New project".</p>
 			<img src="../../Images/Unity_Creating_Proj.png" alt="Creating a Unity project">
-			<p><Strong>1.</Strong>Name your Unity project.</p>
-			<p><Strong>2.</Strong>Select a location  where you want to save yor Unity project.</p>
-			<p><Strong>3.</Strong>Select 3D if you want to create a 3D game or 2D for a 2D game.</p>
-			<p><Strong>4.</Strong>Click "Create project".</p>
+			<p><Strong>1.</Strong> Name your Unity project.</p>
+			<p><Strong>2.</Strong> Select a location  where you want to save yor Unity project.</p>
+			<p><Strong>3.</Strong> Select 3D if you want to create a 3D game or 2D for a 2D game.</p>
+			<p><Strong>4.</Strong> Click "Create project".</p>
 			
 			</div><br><br>
 			
@@ -178,9 +181,12 @@
 			<div id="UnityTip3" style="display:none"><br>
 			<p> To create a 2D or 3D game object is very simple.</p>
 			<img src="../../Images/Unity_Create_Gameobjects_final.png" alt="Create Unity gameobject">
-			<p><Strong>1.</Strong>Go to GameObject</p>
-			<p><Strong>2.</Strong>Select either a 2D or 3D gameobject.</p>
-			<p><Strong>3.</Strong>The gameobject will now appear on the Hierarchy window and also the Scene window.</p>
+			<p><Strong>1.</Strong> Go to GameObject</p>
+			<p><Strong>2.</Strong> Select either a 2D or 3D gameobject.For this purpose of our tutorial we will create two 2D gameobjects.</p>
+			<p><Strong>4.</Strong> The gameobject will now appear on the Hierarchy window and also the Scene window.</p>
+			<p><Strong>5.</Strong> Rename one gameobjects to "Player" and the other one "Enemy".</p>
+			<p><Strong>6.</Strong> Select "Player" In the Hierarchy Window, and go to the Inspector Window, Sprite Renderer -> Sprite -> Knob. you will now be able to see your gameobject. Now do the same as for "Enemy" gameobject.</p>
+
 			
 			
 			
@@ -193,7 +199,9 @@
 				<p>In Scratch a basic movement code looks like this.</p>
 				<img src="../../Images/Movement_Scratch.png" alt="Scratch_Movement">
 				<p>How do we do this in C#?</p>
-				<p>The below C# code allows you to move game object using the arrow keys/WASD keys in Unity.</p>
+				<p><Strong>1.</Strong> First you need to create a script to do this Select "Player" gameobject, go to Inspector Window and <Strong>Add component > New Script > and name the Script "Movement"</Strong>. Make sure that the Language is C sharp. Click "Create and Add".</p>
+				<p><Strong>2.</Strong> The below C# code allows you to move your "Player" gameobject using the arrow keys/WASD keys in Unity. <Strong>Copy and paste this script into the Movement script that you have just created above</Strong>.</p>
+				   
 <textarea id="movement_textara1" readonly>
 using UnityEngine;
 using System.Collections;
@@ -236,11 +244,11 @@ public class Movement : MonoBehaviour{
 					<img src="../../Images/Col_Destroy_Scratch.png" alt="Col_Destroy_Scratch">
 					
 					<p>How do we do this in C#?</p>
-					<p><Strong>1.</Strong> Create a  2D gameobject named "Player".</p>
-					<p><Strong>2.</Strong> Create a another 2D gameobject named "Enemy".</p>
-					<p><Strong>3.</Strong> You will need to add a ridgetbody 2D component to your Player gameobject.</p>
-					<p><Strong>4.</Strong> You will need to enable "Freeze Position X and Y" under rigetbody 2D" settings.</p>
-					<p><Strong>5.</Strong> Add the script below to your player gameobject.</p>
+					<p><Strong>1.</Strong> You will need to add a ridgetbody 2D component and Circle Collider 2D to your "Player" gameobject.</p>
+					<p><Strong>2.</Strong> You will need to enable "Freeze Position X and Y" under rigetbody 2D" settings.</p>
+					<p><Strong>3.</Strong> For the "Enemy" gameobject you will just need to add a Circle Collider 2D.</p>
+					<p><Strong>4.</Strong> Create a new script for the "Player" gameobject and name the script "Destroy".</p>
+					<p><Strong>5.</Strong> Add the script below to your "Player" gameobject.</p>
 		
 <textarea id="Collision_textarea1" readonly>using UnityEngine;		
 using System.Collections;
