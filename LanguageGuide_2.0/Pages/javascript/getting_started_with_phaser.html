@@ -53,8 +53,9 @@
         <h2>Getting started with JavaScript</h2>   
 		<p><strong>JavaScript</Strong> is the programming language of HTML and the web. 
 			       It is used to program the behavior of web pages.</p>
-		<p>First download and install <a href="https://code.visualstudio.com/#alt-downloads">Visual Studio Code</a>.</p>
-
+		<p>First make sure you have downloaded and installed 
+		<a href="https://code.visualstudio.com/#alt-downloads">Visual Studio Code</a>.</p>
+		<p>Now let's write some JavaScript code.</p>
 		<input type="button" class="button" onclick="return toggleText('JS_HW')" 
 		value="Hello World in JavaScript">
 		<div id="JS_HW" style="display:none">
@@ -80,21 +81,233 @@
 </head>
 <body>
 
-<script type="text/javascript">
 
-	document.write("Hello World!");
+	<canvas id="myCanvas" width="500" height="400" style="border:1px solid #000000;"></canvas>
 
-</script>
+	<script type="text/javascript">
+
+		
+		var canvas = document.getElementById("myCanvas");
+		var context = canvas.getContext("2d");
+
+		context.beginPath();
+		context.arc(95,50,40,0,2*Math.PI);
+	
+		context.strokeStyle ='#ff0000';
+		context.stroke();
+
+		canvas.addEventListener("mousedown", canvasClick, false);
+
+		
+
+		function canvasClick() 
+		{
+			canvas_X = event.pageX;
+			canvas_Y = event.pageY;
+			context.font = "30px Arial";
+			context.fillText("Hello World",200,100);
+		}
+
+	</script>
+
 </body>
 </html>
 </textarea>
 			<br><p><Strong>6.</Strong> Save the file.</p>
 			<p><Strong>7.</Strong> Open the helloWorld.html file in a browser and it should display like below.</p>
-			<img src="../../Images/JS_HW.png" alt="JS_HW"><br>
+			<img src="../../Images/JS_HW_Circle.png" alt="JS_HW1"><br>
+			<p><Strong>8.</Strong> Click inside the canvas and the "Hello World!" text should display.</p>
+			<img src="../../Images/JS_HelloWorld.png" alt="JS_HW2"><br>
 		</div><br><br>
 		
+		<h2>Getting started with Phaser</h2>
 		<p>Now we are going to create a simple <b>Phaser</b> project.</p>
+		
+		<input type="button" class="button" onclick="return toggleText('BrowserCheck')" 
+		value="Browser Check">
+		<div id="BrowserCheck" style="display:none">
+			<h3>Before we begin this tutorial, make sure you are using web browsers such as 
+			<b>Firefox</b>, <b>Safari</b> or <b>Edge</b>.</p>
+		</div><br><br>
 
+		<input type="button" class="button" onclick="return toggleText('Phaser1')" value="1. Creating your first Phaser project">
+		<div id="Phaser1" style="display:none">
+		
+			<p><Strong>1.</Strong> Create a folder called MyFirstPhaserProject on your desktop.</p>
+			<p><Strong>2.</Strong> Inside the MyFirstPhaserProject folder create another folder called js.</p>
+			<img src="../../Images/Phaser1.png" alt="Phaser1"><br>
+			<p><Strong>3.</Strong> Download phaser.js file from <a href="https://phaser.io/download/stable">phaser.io</a>.</p>
+			<img src="../../Images/PhaserFile.png" alt="PhaserFile"><br>
+			<p><Strong>4.</Strong> Cut and paste the file into the js folder.</p>
+			<img src="../../Images/Phaser2.png" alt="Phaser2"><br>
+			<p><Strong>5.</Strong> Open Visual Studio Code and go to File - Open Folder and select the MyFirstPhaserProject folder you set up in step 1.</p>
+			<p><Strong>6.</Strong> Click on the new file icon in the Explorer.</p>
+			<img src="../../Images/Phaser_CreateNewFile.png" alt="Phaser_CreateNewFile"><br>
+			<br><p><Strong>7.</Strong> Name the file index.html</p>
+			<p>Your folder should look like this</p>
+			<img src="../../Images/Phaser3.png" alt="Phaser3"><br>
+			<h3>You are now ready to start!</h3>
+		</div><br><br>
+		
+		<input type="button" class="button" onclick="return toggleText('Phaser2')" value="2. Creating a Canvas">
+		<div id="Phaser2" style="display:none">
+		
+			<h3>Game Stage in Scratch </h3>
+			<p>In Scratch, you start with a stage like this</p>
+			<img src="../../Images/StageScratch.png" alt="StageScratch">
+			<p>But how do you do this in JavaScript?</p>
+		
+			<h3>Creating a game stage using Phaser</h3>
+			<p><Strong>1.</Strong> Open the index.html you created in the previous part.</p>
+			<p><Strong>2.</Strong> Add the below code.</p>
+<textarea id="phaser_canvas_textarea" readonly>
+<!doctype html> 
+<html lang="en"> 
+<head> 
+	<meta charset="UTF-8" />
+	<title>Phaser - First Project</title>
+	<script type="text/javascript" src="./js/phaser.js"></script>
+    <style type="text/css">
+        body {
+            margin: 0;
+        }
+    </style>
+</head>
+<body>
+
+<script type="text/javascript">
+
+//code to create a canvas
+var game = new Phaser.Game(800, 600, Phaser.AUTO, 'First Project', 
+			{ preload: preload, create: create,update:update });
+				
+function preload() 
+{
+
+}
+
+function create() 
+{
+
+}
+
+function update() 
+{
+	
+}
+
+</script>
+</body>
+</html>
+</textarea>
+			
+				<br><p><Strong>3.</Strong> Save the file</p>
+				<p><Strong>4.</Strong> Open the <b>index</b> file in a browser and it should display like below.</p>
+				<img src="../../Images/CanvasPhaser.png" alt="CanvasPhaser"><br>
+				
+		</div><br><br>
+		
+		
+		<input type="button" class="button" onclick="return toggleText('Phaser3')" value="3. Adding Image/Sprite">
+		<div id="Phaser3" style="display:none">
+			
+			<br><p><Strong>1.</Strong> Download the <b>star png icon</b> <a href="http://www.freepngimg.com/png/607-gold-star-png-image">here</a>
+			and <b>save</b> it inside your project folder and <b>rename</b> it to <b>star</b>.</p> 
+			<p>You folder should now look like this</p>
+			<img src="../../Images/Phaser4.png" alt="Phaser4"><br>
+			<p><Strong>2.</Strong> Go back to Visual Studio Code and add the following code.</p>
+		
+<textarea id="phaser_addimage_textarea" readonly>
+	
+	var player;
+	
+	//code to load image
+	function preload() 
+	{
+		game.load.image('star', 'star.png');
+	}
+	
+	//code to display image
+	function create() 
+	{
+		player = game.add.sprite(50, 50,'star');
+	}
+</textarea>
+
+		<br><p><Strong>3.</Strong> Save the file.</p>
+			<p><Strong>4.</Strong> Open the <b>index</b> file in a browser and your image should display something similar like below.</p>
+		   
+			<img src="../../Images/Adding_Sprite_Phaser.png" alt="AddSpritePhaser"><br>
+	
+		</div><br><br>
+
+		
+		<input type="button" class="button" onclick="return toggleText('Phaser4')" value="4. Adding Text">
+		<div id="Phaser4" style="display:none">
+			<br><p>Now we are going to add some text!</p>
+			<p><Strong>1.</Strong> Go back to the index.html file.</p>
+			<p><Strong>2.</Strong> Add the following code inside the function create().</p>
+<textarea id="JS_AddText_txtarea" readonly>
+	
+	//code to add text
+	var text = "Hello World!";
+	var style = { font: "30px Arial", fill: "#4488AA", align: "center" };
+	
+	//code to display text
+	var display = game.add.text(game.world.centerX, game.world.centerY, text, style).anchor.set(0.5);
+
+</textarea>
+			
+			<br><br><p><Strong>3.</Strong> Save the file.</p>
+				<p><Strong>4.</Strong> Go the project folder and double click on the index.html to open the file in a browser.</p>
+				<p>The browser should display the text "Hello World!" and the star image like below</p>
+		   
+				<img src="../../Images/Adding_Text_Phaser.png" alt="Adding_Text_Phaser"><br>
+				
+		</div><br><br>
+		
+		<input type="button" class="button" onclick="return toggleText('Phaser5')" value="5. Moving Image/Sprite">
+		<div id="Phaser5" style="display:none">
+			<br><p>Let make the star move!</p>
+			<p>In Scratch a basic movement code looks like this.</p>
+			<img src="../../Images/Movement_Scratch.png" alt="Scratch_Movement">
+			<p>How do we do this in JavaScript?</p>
+			<p><Strong>1.</Strong> Go back to the index.html file.</p>
+			<p><Strong>2.</Strong> Add the following code after the function create().</p>
+<textarea id="JS_movement_textarea" readonly>
+	
+function update() 
+{
+	
+  if (game.input.keyboard.isDown(Phaser.Keyboard.LEFT)) 
+  {
+    player.x -= 10; // Move left
+  }
+  
+  if (game.input.keyboard.isDown(Phaser.Keyboard.RIGHT)) 
+  {
+    player.x += 10; // Move right
+  }
+  
+  if (game.input.keyboard.isDown(Phaser.Keyboard.UP)) 
+  {
+    player.y -= 10; // Move up
+  }
+  
+  if (game.input.keyboard.isDown(Phaser.Keyboard.DOWN)) 
+  {
+    player.y += 10; // Move down
+  }
+}
+
+</textarea>
+			<br><br><p><Strong>3.</Strong> Save the file.</p>
+					<p><Strong>4.</Strong> Go the project folder and double click on the index.html to open the file in a browser.</p>
+					<p>You should be able to move the star image using the arrow keys.</p>
+			<h3>Well done! You have just created your first Phaser project!!</h3>
+		
+		</div><br><br>
+		
 		
 		<input type="button" class="button" onclick="return toggleText('PhaserVideo')" value="Full Video with Complete Code for this Tutorial">
 		<div id="PhaserVideo" style="display:none">
@@ -171,179 +384,26 @@ function update()
 		
 		</div><br><br>
 		
-		<input type="button" class="button" onclick="return toggleText('Phaser1')" value="1. Creating your first Phaser project">
-		<div id="Phaser1" style="display:none">
-		
-			<br>It is recommended to use web browsers such as <b>Firefox</b>, <b>Safari</b> or <b>Edge</b> for all your Phaser projects.</p>
-			<p><Strong>1.</Strong> Create a folder called MyFirstPhaserProject on your desktop.</p>
-			<p><Strong>2.</Strong> Inside the MyFirstPhaserProject folder create another folder called js.</p>
-			<p><Strong>3.</Strong> Download phaser.js file from <a href="https://phaser.io/download/stable">phaser.io</a>.</p>
-			<p><Strong>4.</Strong> Cut and paste the file into the js folder.</p>
-			<p><Strong>5.</Strong> Open Visual Studio Code and go to File - Open Folder and select the MyFirstPhaserProject folder you set up in step 1.</p>
-			<p><Strong>6.</Strong> Click on the new file icon in the Explorer.</p>
-			<img src="../../Images/Phaser_CreateNewFile.png" alt="Phaser_CreateNewFile"><br>
-			<br><p><Strong>7.</Strong> Name the file index.html</p>
-	
-		</div><br><br>
-		
-		<input type="button" class="button" onclick="return toggleText('Phaser2')" value="2. Creating a Canvas">
-		<div id="Phaser2" style="display:none">
-		
-			<h3>Game Stage in Scratch </h3>
-			<p>In Scratch, you start with a stage like this</p>
-			<img src="../../Images/StageScratch.png" alt="StageScratch">
-			<p>But how do you do this in JavaScript?</p>
-		
-			<h3>Creating a game stage using Phaser</h3>
-			<p><Strong>1.</Strong> Open the index.html you created in the previous part.</p>
-			<p><Strong>2.</Strong> Add the below code.</p>
-<textarea id="phaser_canvas_textarea" readonly>
-<!doctype html> 
-<html lang="en"> 
-<head> 
-	<meta charset="UTF-8" />
-	<title>Phaser - First Project</title>
-	<script type="text/javascript" src="./js/phaser.js"></script>
-    <style type="text/css">
-        body {
-            margin: 0;
-        }
-    </style>
-</head>
-<body>
-
-<script type="text/javascript">
-
-//code to create a canvas
-var game = new Phaser.Game(800, 600, Phaser.AUTO, 'First Project', 
-			{ preload: preload, create: create,update:update });
-				
-function preload() 
-{
-
-}
-
-function create() 
-{
-
-}
-
-function update() 
-{
-	
-}
-
-</script>
-</body>
-</html>
-</textarea>
+		<input type="button" class="button" onclick="return toggleText('Challenges')" value="Challenges">
+		<div id="Challenges" style="display:none"><br>
+			<h3>Since you have created a simple Phaser project, do you think you can do the following?</h3>
+			<p><b>1.</b> Add another image to the canvas?</p> 
+			<p><b>2.</b> Change the "Hello World!" text to "Ennis CoderDojo!".</p>
 			
-				<br><p><Strong>3.</Strong> Save the file</p>
-				<p><Strong>4.</Strong> Open the index.html file in a browser and it should display like below.</p>
-				<img src="../../Images/CanvasPhaser.png" alt="CanvasPhaser"><br>
-				
 		</div><br><br>
 		
 		
-		<input type="button" class="button" onclick="return toggleText('Phaser3')" value="3. Adding Image/Sprite">
-		<div id="Phaser3" style="display:none">
-			
-			<br><p><Strong>1.</Strong> Using the index.html file you created in the previous part, google search any star png 
-			image of your choice and save it inside your project folder as star.</p> 
-			<p><Strong>2.</Strong> Go back to Visual Studio Code and add the following code.</p>
-		
-<textarea id="phaser_addimage_textarea" readonly>
-	
-	var player;
-	
-	//code to load image
-	function preload() 
-	{
-		game.load.image('star', 'star.png');
-	}
-	
-	//code to display image
-	function create() 
-	{
-		player = game.add.sprite(50, 50,'star');
-	}
-</textarea>
-
-		<br><p><Strong>3.</Strong> Save the file.</p>
-			<p><Strong>4.</Strong> Open the index.html in a browser and your image should display something similar like below.</p>
-		   
-			<img src="../../Images/Adding_Sprite_Phaser.png" alt="AddSpritePhaser"><br>
-	
-		</div><br><br>
-
-		
-		<input type="button" class="button" onclick="return toggleText('Phaser4')" value="4. Adding Text">
-		<div id="Phaser4" style="display:none">
-			<br><p>Now we are going to add some text!</p>
-			<p><Strong>1.</Strong> Go back to the index.html file.</p>
-			<p><Strong>2.</Strong> Add the following code inside the function create().</p>
-<textarea id="JS_AddText_txtarea" readonly>
-	
-	//code to add text
-	var text = "Hello World!";
-	var style = { font: "30px Arial", fill: "#4488AA", align: "center" };
-	
-	//code to display text
-	var display = game.add.text(game.world.centerX, game.world.centerY, text, style).anchor.set(0.5);
-
-</textarea>
-			
-			<br><br><p><Strong>3.</Strong> Save the file.</p>
-				<p><Strong>4.</Strong> Go the project folder and double click on the index.html to open the file in a browser.</p>
-				<p>The browser should display the text "Hello World!" and the star image like below</p>
-		   
-				<img src="../../Images/Adding_Text_Phaser.png" alt="Adding_Text_Phaser"><br>
-				
-		</div><br><br>
-		
-		<input type="button" class="button" onclick="return toggleText('Phaser5')" value="5. Moving Image/Sprite">
-		<div id="Phaser5" style="display:none">
-			<br><p>Let make the star move!</p>
-			<p><Strong>1.</Strong> Go back to the index.html file.</p>
-			<p><Strong>2.</Strong> Add the following code after the function create().</p>
-<textarea id="JS_movement_textarea" readonly>
-	
-function update() 
-{
-	
-  if (game.input.keyboard.isDown(Phaser.Keyboard.LEFT)) 
-  {
-    player.x -= 4; // Move left
-  }
-  
-  if (game.input.keyboard.isDown(Phaser.Keyboard.RIGHT)) 
-  {
-    player.x += 4; // Move right
-  }
-  
-  if (game.input.keyboard.isDown(Phaser.Keyboard.UP)) 
-  {
-    player.y -= 4; // Move up
-  }
-  
-  if (game.input.keyboard.isDown(Phaser.Keyboard.DOWN)) 
-  {
-    player.y += 4; // Move down
-  }
-}
-
-</textarea>
-			<br><br><p><Strong>3.</Strong> Save the file.</p>
-					<p><Strong>4.</Strong> Go the project folder and double click on the index.html to open the file in a browser.</p>
-					<p>You should be able to move the star image using the arrow keys.</p>
-			<br><br><b>Well done! You have just created your first Phaser project!! You are now ready to start 
-					   making your first phaser game!</b>
-		
+		<input type="button" class="button" onclick="return toggleText('JS_WhatsNext')" value="What's next?">
+		<div id="JS_WhatsNext" style="display:none"><br>
+			<h3>Now that you have created your first JavaScript project, you can choose to</h3>
+			<ul>
+				<li><h3>Read about some of the <a href="../next_step.html">JavaScript fundamentals</a>.</h3></li>
+				<li><h3>Start <a href="https://phaser.io/tutorials/making-your-first-phaser-game/index">
+				Creating your first Phaser game</a>.</h3></li>
+			</ul>
 		</div><br><br><br>
-
-		<div class="buttons">		
-			<a href="https://phaser.io/tutorials/making-your-first-phaser-game/index" class="button">Creating your first Phaser game</a>
-		</div><br><br>
+		
+		
 		
 		
 		<div id="back-top">

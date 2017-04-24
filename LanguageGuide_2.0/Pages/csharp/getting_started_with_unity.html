@@ -52,7 +52,7 @@
 	
            		
 		<h2>Getting started with C#</h2>
-		<p>First download and install <a href="https://code.visualstudio.com/#alt-downloads">Visual Studio Code</a> 
+		<p>First make sure you have downloaded and installed <a href="https://code.visualstudio.com/#alt-downloads">Visual Studio Code</a> 
 		   and <a href="https://www.microsoft.com/net/download/core">.NET Core</a>.</p>
 		
 		<input type="button" class="button" onclick="return toggleText('VSCode_extension')" value="Installing C# extension in Visual Studio Code">
@@ -102,64 +102,18 @@
 		</div><br><br>
 		
 		<div style="float: left;clear: both;">
+			<h2>Getting started with Unity</h2>
 			<p>Now let's try to create a simple <b>C#</b> project using <b>Unity</b> game engine. First download and install <a href="https://store.unity.com/download?ref=personal">Unity</a>.</p>
 		
-
-		<input type="button" class="button" onclick="return toggleText('CSharpVideo')" value="Full Video for this Tutorial">
-		<div id="CSharpVideo" style="display:none">
-			<br><div>
-			<p>Tutorial Part 1</p>
-			<video width="320" height="240" controls>
-			<source src="../../Videos/C_Tutorial_Pt_1.mp4" type="video/mp4">
-			Your browser does not support the video tag.
-			</video>
-			</div><br>
-			
-			<div>
-			
-			<p>Tutorial Part 2</p>
-			<video width="320" height="240" controls>
-			<source src="../../Videos/C_Tutorial_Pt2.mp4" type="video/mp4">
-			Your browser does not support the video tag.
-			</video>
-			</div>
+		<input type="button" class="button" onclick="return toggleText('InstallingUnityDebugger')" 
+		value="Installing Unity Debugger ">
+		<div id="InstallingUnityDebugger" style="display:none;">
+		
 		</div><br><br>
 		
-		<input type="button" class="button" onclick="return toggleText('CsharpTip1')" value="1. Differences between Scratch and Unity ">
-		<div id="CsharpTip1" style="display:none">
-			<div class="imgSizeBySize">
-				<h3 align="center">What Scratch look like</h3>
-				<p>In <Strong>Scratch</Strong>, you start your project like this. 
-				You drag and drop the Scratch blocks you need into the Script editing area.</p>
-				<br><img src="../../Images/ScratchInterface.png" alt="ScratchInterface">
-			</div>
-			<div class="imgSizeBySize">
-				<h3 align="center">What Unity look like</h3>
-				<p>In <Strong>Unity</Strong>, you start your project like this. 
-				Unlike Scratch, Unity offers a wide range of assets that you can import. 
-				You can even create assets yourself. Unity requires the use of code editor such as <b>Visual Studio Code</b>.</p>
-				<img src="../../Images/Unity_Interface.png" alt="UnityInterface"><br><br>
-			</div>
-
-		</div><br><br>
-		
-
-			
-			
-			<input type="button" class="button" onclick="return toggleText('UnityTip2')" value="2. Creating a Unity Project">
-			<div id="UnityTip2" style="display:none"><br>
-			<p>First run Unity, click "New project".</p>
-			<img src="../../Images/Unity_Creating_Proj.png" alt="Creating a Unity project">
-			<p><Strong>1.</Strong> Name your Unity project.</p>
-			<p><Strong>2.</Strong> Select a location  where you want to save yor Unity project.</p>
-			<p><Strong>3.</Strong> Select 3D if you want to create a 3D game or 2D for a 2D game.</p>
-			<p><Strong>4.</Strong> Click "Create project".</p>
-			
-			</div><br><br>
-			
-			
-		<input type="button" class="button" onclick="return toggleText('UnityTip1')" value="3. Basic set up for Unity">
-		<div id="UnityTip1" style="display:none">
+		<input type="button" class="button" onclick="return toggleText('UnityTip0')" 
+		value="Changing Default Script Editor in Unity">
+		<div id="UnityTip0" style="display:none">
 				<br><p>Once you have installed Unity and Visual Studio Code, the first thing you need to do 
 				is to change the default IDE to Visual Studio Code in Unity.</p>
 		
@@ -173,12 +127,46 @@
 			
 				<img src="../../Images/VSC_Unity_Preference.png" alt="VS_Unity">
 		
-				<p><Strong>Make sure you have installed "Unity Debugger for Unity" extension from Visual Studio Code</Strong></p><br><br> 
-			  </div><br><br>
-			  
+				
+		</div><br><br>
+		
+		
+		<input type="button" class="button" onclick="return toggleText('CsharpTip1')" value="Differences between Scratch and Unity ">
+		<div id="CsharpTip1" style="display:none"><br>
+			<div class="imgSizeBySize">
+				<h3 align="center">What Scratch look like</h3>
+				<p>In <Strong>Scratch</Strong>, you start your project like this. 
+				You drag and drop the Scratch blocks you need into the Script editing area.</p>
+				<br><img src="../../Images/ScratchInterface.png" alt="ScratchInterface">
+			</div>
+			<div class="imgSizeBySize">
+				<h3 align="center">What Unity look like</h3>
+				<p>In <Strong>Unity</Strong>, you start your project like this. 
+				Unlike Scratch, Unity offers a wide range of assets that you can import. 
+				You can even create assets yourself. Unity requires the use of code editor such as <b>Visual Studio Code</b>.</p>
+				<img src="../../Images/Unity_Interface.png" alt="UnityInterface"><br><br><br>
+			</div>
+
+		</div><br><br>
+		</div>
+		
+		<div style="float: left;clear: both;">
+		<h2>Creating a simple Unity 2D Project</h2>
+		
+		<input type="button" class="button" onclick="return toggleText('UnityTip1')" value="1. Creating a Unity Project">
+		<div id="UnityTip1" style="display:none"><br>
+			<p>First run Unity, click "New project".</p>
+			<img src="../../Images/Unity_Creating_Proj.png" alt="Creating a Unity project">
+			<p><Strong>1.</Strong> Name your Unity project.</p>
+			<p><Strong>2.</Strong> Select a location  where you want to save yor Unity project.</p>
+			<p><Strong>3.</Strong> Select 3D if you want to create a 3D game or 2D for a 2D game.</p>
+			<p><Strong>4.</Strong> Click "Create project".</p>
 			
-			<input type="button" class="button" onclick="return toggleText('UnityTip3')" value="4. Creating a game object">
-			<div id="UnityTip3" style="display:none"><br>
+		</div><br><br>
+			
+
+		<input type="button" class="button" onclick="return toggleText('UnityTip2')" value="2. Creating a game object">
+		<div id="UnityTip2" style="display:none"><br>
 			<p> To create a 2D or 3D game object is very simple.</p>
 			<img src="../../Images/Unity_Create_Gameobjects_final.png" alt="Create Unity gameobject">
 			<p><Strong>1.</Strong> Go to GameObject</p>
@@ -191,16 +179,23 @@
 			
 			
 			
-			</div><br><br>
+		</div><br><br>
 			
 			
-			<input type="button" class="button" onclick="return toggleText('CsharpTip2')" value="5. Basic Movement">
-			<div id="CsharpTip2" style="display:none">
-				<p>In Scratch a basic movement code looks like this.</p>
+		<input type="button" class="button" onclick="return toggleText('CsharpTip3')" value="3. Basic Movement">
+		<div id="CsharpTip3" style="display:none">
+			<div class="imgSizeBySize">
+				<p><b>In Scratch a basic movement code looks like this.</b></p>
 				<img src="../../Images/Movement_Scratch.png" alt="Scratch_Movement">
-				<p>How do we do this in C#?</p>
-				<p><Strong>1.</Strong> First you need to create a script to do this Select "Player" gameobject, go to Inspector Window and <Strong>Add component > New Script > and name the Script "Movement"</Strong>. Make sure that the Language is C sharp. Click "Create and Add".</p>
-				<p><Strong>2.</Strong> The below C# code allows you to move your "Player" gameobject using the arrow keys/WASD keys in Unity. <Strong>Copy and paste this script into the Movement script that you have just created above</Strong>.</p>
+			</div>
+			<div class="imgSizeBySize">
+				<p><b>How do we do this in C#?</b></p>
+				<p><Strong>1.</Strong> First you need to create a script to do this Select "Player" gameobject, 
+				go to Inspector Window and <Strong>Add component > New Script > and name the Script "Movement"</Strong>. 
+				Make sure that the Language is C sharp. Click "Create and Add".</p>
+				<p><Strong>2.</Strong> The below C# code allows you to move your "Player" gameobject using the 
+				arrow keys/WASD keys in Unity. <Strong>Copy and paste this script into the Movement script that 
+				you have just created above</Strong>.</p>
 				   
 <textarea id="movement_textara1" readonly>
 using UnityEngine;
@@ -208,7 +203,7 @@ using System.Collections;
 
 public class Movement : MonoBehaviour{
 		   
-	private float speed = 3f; //this is a variable called speed with a value of 3.
+	private float speed = 10f; //this is a variable called speed with a value of 10.
 					   
 	void Start(){
 	}
@@ -236,10 +231,11 @@ public class Movement : MonoBehaviour{
 		}	             
 	}
 }</textarea>
-</div><br><br>
+			</div><br><br>
+		</div><br><br>
 	     
-				<input type="button" class="button" onclick="return toggleText('CsharpTip3')" value="6. Collision Detection and How to Destroy a gameobject">
-				<div id="CsharpTip3" style="display:none"><br>
+		<input type="button" class="button" onclick="return toggleText('CsharpTip4')" value="4. Collision Detection and How to Destroy a gameobject">
+		<div id="CsharpTip4" style="display:none"><br>
 					<p>In Scratch, a simple collision detection and destroy looks like this.</p>
 					<img src="../../Images/Col_Destroy_Scratch.png" alt="Col_Destroy_Scratch">
 					
@@ -264,16 +260,41 @@ public class Destroy : MonoBehaviour {
     }
 }
 </textarea>
-				</div><br><br><br>
-				
+		</div><br><br>
 		
-				<div class="buttons">		
-					<a href="https://unity3d.com/learn/tutorials/topics/2d-game-creation/project-goals?playlist=17093" class="button">Creating your first Unity 2D game</a>
-				</div><br><br><br>
+		<input type="button" class="button" onclick="return toggleText('CSharpVideo')" value="Full Video for this Tutorial">
+		<div id="CSharpVideo" style="display:none">
+			<br>
+			<p>Tutorial Part 1</p>
+			<video width="320" height="240" controls>
+			<source src="../../Videos/C_Tutorial_Pt_1.mp4" type="video/mp4">
+			Your browser does not support the video tag.
+			</video>
+
+			<p>Tutorial Part 2</p>
+			<video width="320" height="240" controls>
+			<source src="../../Videos/C_Tutorial_Pt2.mp4" type="video/mp4">
+			Your browser does not support the video tag.
+			</video>
+			
+		</div><br><br>
 				
-				<div id="back-top">
-				<a href="#"> <img src="../../Images/uparrow.png" alt="uparrow" </a>
-				</div>
+				
+				
+		<input type="button" class="button" onclick="return toggleText('CSharp_WhatsNext')" value="What's next?">
+		<div id="CSharp_WhatsNext" style="display:none"><br>
+			<h3>Now that you have created your first C# project, you can choose to</h3>
+			<ul>
+				<li><h3>Read about some of the <a href="../next_step.html">C# fundamentals</a>.</h3></li>
+				<li><h3>Start <a href="https://unity3d.com/learn/tutorials/topics/2d-game-creation/project-goals?playlist=17093">
+				Creating your first Unity 2D game</a>.</h3></li>
+			</ul>
+		</div><br><br><br>
+				
+				
+		<div id="back-top">
+			<a href="#"> <img src="../../Images/uparrow.png" alt="uparrow" </a>
+		</div>
 		
 		</div><br><br><br>
 	<footer>

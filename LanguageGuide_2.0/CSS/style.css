@@ -129,8 +129,8 @@ p{
 
     overflow: hidden;
 	width:100%;
-	max-width:350px;
-	min-height:250px;
+	max-width:650px;
+	min-height:550px;
     line-height: 13px;
     font-size: 13px;
 	font-family: Arial, sans-serif; 
@@ -149,7 +149,7 @@ p{
 	resize: none;
     overflow: hidden;
 	width:600px;
-    min-height: 550px;
+    min-height: 500px;
     line-height: 13px;
     font-size: 13px;
 	font-family: Arial, sans-serif;
@@ -179,7 +179,7 @@ p{
 	overflow: hidden;
 	width:100%;
 	max-width:400px;
-	min-height:300px;
+	min-height:350px;
     line-height: 13px;
     font-size: 13px;
 	font-family: Arial, sans-serif;	

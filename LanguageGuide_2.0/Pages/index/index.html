@@ -58,27 +58,49 @@
 			
 		</div>
 		
-		<h2>Moving on from Scratch</h2>
-		<p>Instead of using Scratch to create game projects, you will now be using <b>Visual Studio Code</b>.</p> 
-		<p><b>Visual Studio Code</b> is a code editor that helps you write and test your code. Let's take a look below.</p> 
+		<input type="button" class="button" onclick="return toggleText('Scratch_VSCode')" 
+		value="Moving on from Scratch">
+		<div id="Scratch_VSCode" style="display:none">
 		
-		<div class="imgSizeBySize">
-			<h3 align="center">What Scratch look like</h3>
-			<p>In <Strong>Scratch</Strong>, you start your project like this. 
-			   You drag and drop the Scratch blocks you need into the Script editing area.</p>
-			<img src="../../Images/ScratchInterface.png" alt="ScratchInterface">
-		</div>
+			<br><p>Instead of using Scratch to create game projects, you will now be using <b>Visual Studio Code</b>.</p>
+			<p><b>Visual Studio Code</b> is a code editor that helps you write and test your code.</p> 
+			<p>You can download and install Visual Studio Code <a href="https://code.visualstudio.com/#alt-downloads">here</a>.</p>
+		</div><br><br>
 		
-		<div class="imgSizeBySize">
-			<h3 align="center">What Visual Studio Code look like</h3>
-			<p>In <Strong>Visual Studio Code</Strong>, you start your project like this. Code are now in text rather than in blocks. 
-			You write your code inside the editor.</p>
-			<img src="../../Images/VSCode_interface.png" alt="VSCode_Interface">
-		</div>
+		<input type="button" class="button" onclick="return toggleText('intro')" value="Differences between Scratch and Visual Studio Code ">
+		<div id="intro" style="display:none"><br>
 		
+			<p>Let's take a look below and see the differences between <b>Scratch</b> and <b>Visual Studio Code</b>.</p> 
 		
-		<div style="float: left;clear: left;">
-			<br><br><br><h3>Let's choose a programming language you want to learn.</h3>	
+			<div class="imgSizeBySize">
+				<h3 align="center">What Scratch look like</h3>
+				<p>In <Strong>Scratch</Strong>, you start your project like this. 
+				You drag and drop the Scratch blocks you need into the Script editing area.</p>
+				<img src="../../Images/ScratchInterface.png" alt="ScratchInterface">
+			</div>
+		
+			<div class="imgSizeBySize">
+				<h3 align="center">What Visual Studio Code look like</h3>
+				<p>In <Strong>Visual Studio Code</Strong>, you start your project like this. Code are now in text rather than in blocks. 
+				You write your code inside the editor.</p>
+				<img src="../../Images/VSCode_interface.png" alt="VSCode_Interface">
+			</div><br><br>
+		</div><br><br>
+		
+		<input type="button" class="button" onclick="return toggleText('VSCode_Customize')" 
+		value="Changing the Color Theme of Visual Studio Code">
+		<div id="VSCode_Customize" style="display:none;">
+			<br><p>By default, the background theme of Visual Studio Code is Dark.</p>
+			<p>To change it,<Strong> Go to File > Preferences > Color Theme</Strong></p>
+			<img src="../../Images/ChangingBackgroundColor.png" alt="ChangeBGColor">
+		</div><br><br>
+		
+	
+		<input type="button" class="button" onclick="return toggleText('PickALanguage')" 
+		value="Choose a Programming Language">
+		<div id="PickALanguage" style="display:none;">
+		
+			<br><h3>Now let's choose a programming language you want to learn.</h3>	
 			<ul>
 			
 				<li><h3>Do you want to create 2D/3D console or mobile app games?</h3></li> 
@@ -87,8 +109,7 @@
 				<li><h3>Do you want to create mobile app or web games?</h3></li> 
 				<p>Try <a href="../javascript/getting_started_with_phaser.html">JavaScript</a>!</p> 
 			</ul>
-		</div>
-		<br><br><br>
+		</div><br><br><br>
 		
 		<div id="back-top">
 			<a href="#"> <img src="../../Images/uparrow.png" alt="uparrow"> </a>

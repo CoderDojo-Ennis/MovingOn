@@ -14,7 +14,6 @@
 
 <script type="text/javascript">
 
-
 var game = new Phaser.Game(800, 600, Phaser.AUTO, 'First Project', { preload: preload, create: create,update:update });
 
 var player;
@@ -34,23 +33,22 @@ function create()
 }
 
 function update() {
-
 	
 	if (game.input.keyboard.isDown(Phaser.Keyboard.LEFT)) 
 	{
-		player.x -= 4; // Move left
+		player.x -= 10; // Move left
 	}
 	if (game.input.keyboard.isDown(Phaser.Keyboard.RIGHT)) 
 	{
-		player.x += 4; // Move right
+		player.x += 10; // Move right
 	}
 	if (game.input.keyboard.isDown(Phaser.Keyboard.UP)) 
 	{
-		player.y -= 4; // Move up
+		player.y -= 10; // Move up
 	}
 	if (game.input.keyboard.isDown(Phaser.Keyboard.DOWN)) 
 	{
-		player.y += 4; // Move down
+		player.y += 10; // Move down
 	}
 }
 
