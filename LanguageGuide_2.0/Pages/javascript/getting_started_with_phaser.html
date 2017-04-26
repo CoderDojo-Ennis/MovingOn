@@ -24,6 +24,19 @@
 		}
 		return true;
 	}
+	
+	function responsiveTopNav() 
+	{
+		var x = document.getElementById("topNav");
+		if (x.className === "nav") 
+		{
+			x.className += " responsive";
+		} 
+		else 
+		{
+			x.className = "nav";
+		}
+	}
 
 
 </script>
@@ -34,20 +47,20 @@
 	<a name="top"></a>
 	
 	<div class="container">
-		<div class = "nav">
-		<ul>
-			<li><a href="../index/index.html">Home</a></li>
-		
-			<li><a href="../csharp/getting_started_with_unity.html">C#</a></li>
+		<div class = "nav" id="topNav">
+			<a href="../index/index.html">Home</a>
 			
-			<li><a href="../javascript/getting_started_with_phaser.html">JavaScript</a></li>
+			<a href="../csharp/getting_started_with_unity.html">C#</a>
+			
+			<a href="../javascript/getting_started_with_phaser.html">JavaScript</a>
 
-			<li><a href="../next_step.html">Next Step</a></li>
+			<a href="../next_step.html">Next Step</a>
 			
-			<li><a href="../help_and_tips.html">Help and Tips</a></li>
+			<a href="../help_and_tips.html">Help and Tips</a>
 			
-			<li><a href="../feedback.html">Feedback</a></li>
-		</ul>
+			<a href="../feedback.html">Feedback</a>
+			
+			<a href="javascript:void(0);" class="icon" onclick="responsiveTopNav()">&#9776;</a>
 		</div>
 	
         <h2>Getting started with JavaScript</h2>   
@@ -126,7 +139,7 @@
 		<input type="button" class="button" onclick="return toggleText('BrowserCheck')" 
 		value="Browser Check">
 		<div id="BrowserCheck" style="display:none">
-			<h3>Before we begin this tutorial, make sure you are using web browsers such as 
+			<h3>Before you begin this tutorial, make sure you are using web browsers such as 
 			<b>Firefox</b>, <b>Safari</b> or <b>Edge</b>.</p>
 		</div><br><br>
 
@@ -238,7 +251,11 @@ function update()
 			<p><Strong>4.</Strong> Open the <b>index</b> file in a browser and your image should display something similar like below.</p>
 		   
 			<img src="../../Images/Adding_Sprite_Phaser.png" alt="AddSpritePhaser"><br>
-	
+			
+			<h3>Challenge</h3>
+			<p><b>How about adding a different image to the canvas?</b></p>
+			<p><b>Can you move the star in a different location?</b></p>
+			
 		</div><br><br>
 
 		
@@ -262,42 +279,47 @@ function update()
 				<p><Strong>4.</Strong> Go the project folder and double click on the index.html to open the file in a browser.</p>
 				<p>The browser should display the text "Hello World!" and the star image like below</p>
 		   
-				<img src="../../Images/Adding_Text_Phaser.png" alt="Adding_Text_Phaser"><br>
+				<img src="../../Images/Adding_Text_Phaser.png" alt="Adding_Text_Phaser"><br><br>
+				
+				
+				<h3>Challenge</h3>
+				<p><b>How about changing the "Hello World!" text to "Ennis CoderDojo!"?</b></p>
+				
 				
 		</div><br><br>
 		
 		<input type="button" class="button" onclick="return toggleText('Phaser5')" value="5. Moving Image/Sprite">
 		<div id="Phaser5" style="display:none">
-			<br><p>Let make the star move!</p>
-			<p>In Scratch a basic movement code looks like this.</p>
+			<br><p><b>Let make the star move!</b></p>
+			<p>In <b>Scratch</b> a basic movement code looks like this.</p>
 			<img src="../../Images/Movement_Scratch.png" alt="Scratch_Movement">
-			<p>How do we do this in JavaScript?</p>
+			
+			<p>How do we do this in <b>JavaScript?</b></p>
 			<p><Strong>1.</Strong> Go back to the index.html file.</p>
 			<p><Strong>2.</Strong> Add the following code after the function create().</p>
 <textarea id="JS_movement_textarea" readonly>
 	
 function update() 
 {
-	
-  if (game.input.keyboard.isDown(Phaser.Keyboard.LEFT)) 
-  {
-    player.x -= 10; // Move left
-  }
+	if (game.input.keyboard.isDown(Phaser.Keyboard.UP)) 
+	{
+		player.y -= 10; // Move up
+	}
   
-  if (game.input.keyboard.isDown(Phaser.Keyboard.RIGHT)) 
-  {
-    player.x += 10; // Move right
-  }
+	if (game.input.keyboard.isDown(Phaser.Keyboard.DOWN)) 
+	{
+		player.y += 10; // Move down
+	}
   
-  if (game.input.keyboard.isDown(Phaser.Keyboard.UP)) 
-  {
-    player.y -= 10; // Move up
-  }
+	if (game.input.keyboard.isDown(Phaser.Keyboard.LEFT)) 
+	{
+		player.x -= 10; // Move left
+	}
   
-  if (game.input.keyboard.isDown(Phaser.Keyboard.DOWN)) 
-  {
-    player.y += 10; // Move down
-  }
+	if (game.input.keyboard.isDown(Phaser.Keyboard.RIGHT)) 
+	{
+		player.x += 10; // Move right
+	}
 }
 
 </textarea>
@@ -358,22 +380,22 @@ function update()
 {
 	if (game.input.keyboard.isDown(Phaser.Keyboard.LEFT)) 
 	{
-		player.x -= 4; // Move left
+		player.x -= 10; // Move left
 	}
 	
 	if (game.input.keyboard.isDown(Phaser.Keyboard.RIGHT)) 
 	{
-		player.x += 4; // Move right
+		player.x += 10; // Move right
 	}
 	
 	if (game.input.keyboard.isDown(Phaser.Keyboard.UP)) 
 	{
-		player.y -= 4; // Move up
+		player.y -= 10; // Move up
 	}
 	
 	if (game.input.keyboard.isDown(Phaser.Keyboard.DOWN)) 
 	{
-		player.y += 4; // Move down
+		player.y += 10; // Move down
 	}
 }
 
@@ -383,16 +405,7 @@ function update()
 </textarea>
 		
 		</div><br><br>
-		
-		<input type="button" class="button" onclick="return toggleText('Challenges')" value="Challenges">
-		<div id="Challenges" style="display:none"><br>
-			<h3>Since you have created a simple Phaser project, do you think you can do the following?</h3>
-			<p><b>1.</b> Add another image to the canvas?</p> 
-			<p><b>2.</b> Change the "Hello World!" text to "Ennis CoderDojo!".</p>
-			
-		</div><br><br>
-		
-		
+
 		<input type="button" class="button" onclick="return toggleText('JS_WhatsNext')" value="What's next?">
 		<div id="JS_WhatsNext" style="display:none"><br>
 			<h3>Now that you have created your first JavaScript project, you can choose to</h3>

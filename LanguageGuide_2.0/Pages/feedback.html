@@ -22,6 +22,19 @@
 		
 
  	}
+	
+	function responsiveTopNav() 
+	{
+		var x = document.getElementById("topNav");
+		if (x.className === "nav") 
+		{
+			x.className += " responsive";
+		} 
+		else 
+		{
+			x.className = "nav";
+		}
+	}
 
  </script>
   
@@ -29,21 +42,18 @@
 <body>
 <form name="TutorialFeedback" action="" method="POST"> 	
 <div class="container">
-		<div class = "nav">
-		<ul>
-			<li><a href="./index/index.html">Home</a></li>
+		<div class = "nav" id="topNav">
+<a href="./csharp/getting_started_with_unity.html">C#</a>
 			
-			<li><a href="./csharp/getting_started_with_unity.html">C#</a></li>
-			
-			<li><a href="./javascript/getting_started_with_phaser.html">JavaScript tutorial</a></li>
+			<a href="./javascript/getting_started_with_phaser.html">JavaScript</a>
 
-			<li><a href="./next_step.html">Next Step</a></li>
+			<a href="./next_step.html">Next Step</a>
 			
-			<li><a href="./help_and_tips.html">Help and Tips</a></li>
+			<a href="./help_and_tips.html">Help and Tips</a>
 			
-			<li><a href="./feedback.html">Feedback</a></li>
+			<a href="./feedback.html">Feedback</a>
 			
-		</ul>
+			<a href="javascript:void(0);" class="icon" onclick="responsiveTopNav()">&#9776;</a>
 		</div>
 		
 		<h1>Feedback</h1>

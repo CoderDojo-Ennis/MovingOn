@@ -23,6 +23,19 @@
 		return true;
 	}
 	
+	function responsiveTopNav() 
+	{
+		var x = document.getElementById("topNav");
+		if (x.className === "nav") 
+		{
+			x.className += " responsive";
+		} 
+		else 
+		{
+			x.className = "nav";
+		}
+	}
+	
 
  </script>
 
@@ -30,25 +43,25 @@
 </head>
 <body>
 <div class="container">
-		<div class = "nav">
-		<ul>
-			<li><a href="./index/index.html">Home</a></li>
+		<div class = "nav" id="topNav">
+			<a href="./index/index.html">Home</a>
 			
-			<li><a href="./csharp/getting_started_with_unity.html">C#</a></li>
+			<a href="./csharp/getting_started_with_unity.html">C#</a>
 			
-			<li><a href="./javascript/getting_started_with_phaser.html">JavaScript</a></li>
+			<a href="./javascript/getting_started_with_phaser.html">JavaScript</a>
 
-			<li><a href="./next_step.html">Next Step</a></li>
+			<a href="./next_step.html">Next Step</a>
 			
-			<li><a href="./help_and_tips.html">Help and Tips</a></li>
-			<li><a href="./feedback.html">Feedback</a></li>
+			<a href="./help_and_tips.html">Help and Tips</a>
 			
-		</ul>
+			<a href="./feedback.html">Feedback</a>
+			
+			<a href="javascript:void(0);" class="icon" onclick="responsiveTopNav()">&#9776;</a>
+			
 		</div>
 		
 	
-		<p>Before you move on to do tutorials or creating game projects, 
-		you should have a look at some of the basic C# and JavaScript fundamentals.</p>
+		<br>
 		<input type="button" class="button" onclick="return toggleText('C#Fundamentals')" value="Basic C# fundamentals" >
 		<div id="C#Fundamentals" style="display:none"><br>
 			<input type="button" class="button" onclick="return toggleText('C#Fundamentals1')" value="1. Data types in C#">
@@ -84,7 +97,7 @@ char gender = 'M';
 
 <li><strong>String:</strong> Sequence of characters such as letters, digits or punctuation marks. e.g.</li><br>
 <textarea id="JS_textarea3" readonly>
-String strMessage = '!!I like coding!!';
+String message = '!!I like coding!!';
 </textarea>
 <p>(Always remember when declaring <strong>String</strong> variables you must use <strong>" "</strong> 
 and for char variables you must use <strong>' '</strong>)</p>
@@ -360,12 +373,16 @@ var name = 'Joe';
 				</table><br>
 		</div><br><br>	
 		
-		<input type="button" class="button" onclick="return toggleText('JSFundamentals4')" value="4. Conditional Statements">
+		<input type="button" class="button" onclick="return toggleText('JSFundamentals4')" value="4. If / Else Statements">
 		<div id="JSFundamentals4" style="display:none">
-			<br><p>Conditional statements are used to perform different actions based on different decisions.</p>
-			<p>In Scratch, a simple conditional statement may look at this</p>
-			<img src="../Images/Simple_IF_Scratch.png" alt="IfScratch">
-			<p>How do we do this in JavaScript?</p>
+			<br><p><b>IF / Else statements</b> are used to perform different actions based on different decisions.</p>
+			<div class="imgSizeBySize">
+				<p>In <b>Scratch</b>, a simple if/else statement may look at this</p>
+				<img src="../Images/Simple_IF_Scratch.png" alt="IfScratch">
+			</div>
+			
+			<div class="imgSizeBySize">
+				<p>How do we do this in <b>JavaScript</b>?</p>
 	
 <textarea id="JS_textarea4" readonly>
 <!DOCTYPE html>
@@ -394,19 +411,21 @@ function myFunction() {
 </html>
 </textarea>
 		</div><br><br>
+		</div><br><br>
 		
 		<input type="button" class="button" onclick="return toggleText('JSFundamentals5')" value="5. Loops">
 		<div id="JSFundamentals5" style="display:none">
-			<br><p>A <b>loop</b> is used to tell the computer to do something more than once. 
-			In Scratch, you may have come across the following loop blocks</p>
+			<br><p>A <b>loop</b> is used to tell the computer to do something more than once.</p> 
+			<p>In <b>Scratch</b>, you may have come across the following loop blocks</p>
 			<img src="../Images/Loop_Scratch.png" alt="LoopScratch">
-			<p>How do we do this in JavaScript?</p>
-			<p>In JavaScript, the two common types of loops you will use are: <strong>for</strong> and <strong>while</strong>.</p>
+			
+			<p>How do we do this in <b>JavaScript</b>?</p>
+			<p>In <b>JavaScript</b>, the two common types of loops you will use are: <strong>for</strong> and <strong>while</strong>.</p>
 			<p>A <strong>for</strong> loop is used when you know in advance how many times the script should perform.</p>
 			<li>Click <a href="https://www.w3schools.com/js/tryit.asp?filename=tryjs_loop_for">here</a> to see an example of the <strong>for loop</strong> in JavaScript.</li>
 			<p>A <strong>while</strong> loop is used when you want the loop to continue until a certain condition becomes true.</p>
 			<li>Click <a href="https://www.w3schools.com/js/tryit.asp?filename=tryjs_while">here</a> to see an example of the <strong>while loop</strong> in JavaScript.</li>
-			
+
 		</div><br><br>
 		
 		

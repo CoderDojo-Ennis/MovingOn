@@ -23,6 +23,19 @@
 		}
 		return true;
 	}
+	
+	function responsiveTopNav() 
+	{
+		var x = document.getElementById("topNav");
+		if (x.className === "nav") 
+		{
+			x.className += " responsive";
+		} 
+		else 
+		{
+			x.className = "nav";
+		}
+	}
 
 </script>
   
@@ -32,21 +45,20 @@
 	<a name="top"></a>
 	
 	<div class="container">
-		<div class = "nav">
-		<ul>
-			<li><a href="../index/index.html">Home</a></li>
+		<div class = "nav" id="topNav">
+			<a href="../index/index.html">Home</a>
 			
-			<li><a href="../csharp/getting_started_with_unity.html">C#</a></li>
+			<a href="../csharp/getting_started_with_unity.html">C#</a>
 			
-			<li><a href="../javascript/getting_started_with_phaser.html">JavaScript</a></li>
+			<a href="../javascript/getting_started_with_phaser.html">JavaScript</a>
 
-			<li><a href="../next_step.html">Next Step</a></li>
+			<a href="../next_step.html">Next Step</a>
 			
-			<li><a href="../help_and_tips.html">Help and Tips</a></li>
+			<a href="../help_and_tips.html">Help and Tips</a>
 			
-			<li><a href="../feedback.html">Feedback</a></li>
+			<a href="../feedback.html">Feedback</a>
 			
-		</ul>
+			<a href="javascript:void(0);" class="icon" onclick="responsiveTopNav()">&#9776;</a>
 		</div>
 	
            		
@@ -82,10 +94,12 @@
 				     This command will restore the packages in the project file</p>
 				     <textarea id="JS_textarea2" readonly>dotnet restore</textarea>
 
-				<p><strong>5.</strong> The final command, enter "dotnet run", without the quotations marks. This will run helloWorldApp</p>
+				<p><strong>5.</strong> The final command, enter "dotnet run", without the quotations marks. 
+				This will run helloWorldApp</p>
 						<textarea id="JS_textarea2" readonly>dotnet run</textarea>
 
-				<P><strong>6.</strong> Open VSC(Visual Studio Code), In VCS you can open the project by going to "File -- Open " then search for your project to open .
+				<P><strong>6.</strong> Open VSC(Visual Studio Code), 
+				In VCS you can open the project by going to "File -- Open " then search for your project to open .
 
 				<p><strong>7.</strong> You can find the Debugger tool here.</p>
 						<br><img src="../../Images/Debugger 1.1.png" alt="HW_JC#_Step1-8"><br><br>
@@ -175,9 +189,9 @@
 			<img src="../../Images/Unity_Create_Gameobjects_final.png" alt="Create Unity gameobject">
 			<p><Strong>1.</Strong> Go to GameObject</p>
 			<p><Strong>2.</Strong> Select either a 2D or 3D gameobject.For this purpose of our tutorial we will create two 2D gameobjects.</p>
-			<p><Strong>4.</Strong> The gameobject will now appear on the Hierarchy window and also the Scene window.</p>
-			<p><Strong>5.</Strong> Rename one gameobjects to "Player" and the other one "Enemy".</p>
-			<p><Strong>6.</Strong> Select "Player" In the Hierarchy Window, and go to the Inspector Window, Sprite Renderer -> Sprite -> Knob. you will now be able to see your gameobject. Now do the same as for "Enemy" gameobject.</p>
+			<p><Strong>3.</Strong> The gameobject will now appear on the Hierarchy window and also the Scene window.</p>
+			<p><Strong>4.</Strong> Rename one gameobjects to "Player" and the other one "Enemy".</p>
+			<p><Strong>5.</Strong> Select "Player" In the Hierarchy Window, and go to the Inspector Window, Sprite Renderer -> Sprite -> Knob. you will now be able to see your gameobject. Now do the same as for "Enemy" gameobject.</p>
 
 			
 			
@@ -186,20 +200,21 @@
 		</div><br><br>
 			
 			
-		<input type="button" class="button" onclick="return toggleText('CsharpTip3')" value="3. Basic Movement">
+		<input type="button" class="button" onclick="return toggleText('CsharpTip3')" value="3. Moving game object">
 		<div id="CsharpTip3" style="display:none">
-			<div class="imgSizeBySize">
-				<p><b>In Scratch a basic movement code looks like this.</b></p>
-				<img src="../../Images/Movement_Scratch.png" alt="Scratch_Movement">
-			</div>
-			<div class="imgSizeBySize">
-				<p><b>How do we do this in C#?</b></p>
-				<p><Strong>1.</Strong> First you need to create a script to do this Select "Player" gameobject, 
-				go to Inspector Window and <Strong>Add component > New Script > and name the Script "Movement"</Strong>. 
-				Make sure that the Language is C sharp. Click "Create and Add".</p>
-				<p><Strong>2.</Strong> The below C# code allows you to move your "Player" gameobject using the 
-				arrow keys/WASD keys in Unity. <Strong>Copy and paste this script into the Movement script that 
-				you have just created above</Strong>.</p>
+			
+			<p><b>In Scratch a basic movement code looks like this.</b></p>
+			<img src="../../Images/Movement_Scratch.png" alt="Scratch_Movement">
+			
+
+			<p><b>Let's make the player move.</b></p>
+			<p><b>Unity</b> uses <b>Vector</b> to move objects. <b>Vector</b> means <b>direction</b> and <b>magnitude</b>.</p>
+			<p><Strong>1.</Strong> First you need to create a script to do this Select "Player" gameobject, 
+			go to Inspector Window and <Strong>Add component > New Script > and name the Script "Movement"</Strong>. 
+			Make sure that the Language is C sharp. Click "Create and Add".</p>
+			<p><Strong>2.</Strong> The below C# code allows you to move your "Player" gameobject using the 
+			arrow keys/WASD keys in Unity. <Strong>Copy and paste this script into the Movement script that 
+			you have just created above</Strong>.</p>
 				   
 <textarea id="movement_textara1" readonly>
 using UnityEngine;
@@ -235,20 +250,22 @@ public class Movement : MonoBehaviour{
 		}	             
 	}
 }</textarea>
-			</div><br><br>
+			
 		</div><br><br>
 	     
 		<input type="button" class="button" onclick="return toggleText('CsharpTip4')" value="4. Collision Detection and How to Destroy a gameobject">
 		<div id="CsharpTip4" style="display:none"><br>
-					<p>In Scratch, a simple collision detection and destroy looks like this.</p>
-					<img src="../../Images/Col_Destroy_Scratch.png" alt="Col_Destroy_Scratch">
+				<P><b>Collision Detection</b> means determining whether two objects have collided.</P>
+				<p>In Scratch, a simple collision detection and destroy looks like this.</p>
+				<img src="../../Images/Col_Destroy_Scratch.png" alt="Col_Destroy_Scratch">
 					
-					<p>How do we do this in C#?</p>
-					<p><Strong>1.</Strong> You will need to add a ridgetbody 2D component and Circle Collider 2D to your "Player" gameobject.</p>
-					<p><Strong>2.</Strong> You will need to enable "Freeze Position X and Y" under rigetbody 2D" settings.</p>
-					<p><Strong>3.</Strong> For the "Enemy" gameobject you will just need to add a Circle Collider 2D.</p>
-					<p><Strong>4.</Strong> Create a new script for the "Player" gameobject and name the script "Destroy".</p>
-					<p><Strong>5.</Strong> Add the script below to your "Player" gameobject.</p>
+		
+				<p><b>Now we are going to add collision detection logic to make the enemy disappear.</b></p>
+				<p><Strong>1.</Strong> You will need to add a ridgetbody 2D component and Circle Collider 2D to your "Player" gameobject.</p>
+				<p><Strong>2.</Strong> You will need to enable "Freeze Position X and Y" under rigetbody 2D" settings.</p>
+				<p><Strong>3.</Strong> For the "Enemy" gameobject you will just need to add a Circle Collider 2D.</p>
+				<p><Strong>4.</Strong> Create a new script for the "Player" gameobject and name the script "Destroy".</p>
+				<p><Strong>5.</Strong> Add the script below to your "Player" gameobject.</p>
 		
 <textarea id="Collision_textarea1" readonly>using UnityEngine;		
 using System.Collections;
@@ -263,7 +280,8 @@ public class Destroy : MonoBehaviour {
         }
     }
 }
-</textarea>
+</textarea><br>
+		
 		</div><br><br>
 		
 		<input type="button" class="button" onclick="return toggleText('CSharpVideo')" value="Full Video for this Tutorial">
