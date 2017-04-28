@@ -46,7 +46,7 @@
 	
 	<div class="container">
 		<div class = "nav" id="topNav">
-			<a href="../index/index.html">Home</a>
+			<a href="../index.html">Home</a>
 			
 			<a href="../csharp/getting_started_with_unity.html">C#</a>
 			
@@ -63,8 +63,8 @@
 	
            		
 		<h2>Getting started with C#</h2>
-		<p>First make sure you have downloaded and installed <a href="https://code.visualstudio.com/#alt-downloads">Visual Studio Code</a> 
-		   and <a href="https://www.microsoft.com/net/download/core">.NET Core</a>.</p>
+		<h3>First make sure you have downloaded and installed <a href="https://code.visualstudio.com/#alt-downloads">Visual Studio Code</a> 
+		   and <a href="https://www.microsoft.com/net/download/core">.NET Core</a>.</h3>
 		
 		<input type="button" class="button" onclick="return toggleText('VSCode_extension')" value="Installing C# extension in Visual Studio Code">
 		<div id="VSCode_extension" style="display:none">
@@ -78,13 +78,13 @@
 		   
 		<input type="button" class="button" onclick="return toggleText('CSharp_HW')" value="Hello World in C#">
 		<div id="CSharp_HW" style="display:none">
-				<p><strong>To Create a folder for your C# project.</strong></p>
+				<p><strong>To make sure .Net Core is running on your machine.</strong></p>
 
 				<p><strong>1.</strong> Open the Command prompt for Windows/Terminal for Mac.</p>
 
 				<p><strong>2.</strong> In the command prompt/terminal enter the following command 
 				      "dotnet new console -o helloWorldApp", without the quotations marks.<br> Please note that "helloWorldApp" is the project folder name, you can name it whatever you like.</p>
-				     <textarea id="JS_textarea2" readonly>dotnet new console -o helloWorldApp</textarea>
+				     <textarea id="dotnet1_textarea" readonly>dotnet new console -o helloWorldApp</textarea>
 				     
 
 				<p> <strong>3.</strong> Next, enter the command "cd helloWorldApp", without the quotations marks.</p>
@@ -116,13 +116,19 @@
 		
 		<div style="float: left;clear: both;">
 			<h2>Getting started with Unity</h2>
-			<p>Now let's try to create a simple <b>C#</b> project using <b>Unity</b> game engine. First download and install <a href="https://store.unity.com/download?ref=personal">Unity</a>.</p>
+			<p><b>Unity</b> is a cross-platform game engine and it is used to develop video games for PC, consoles, mobile devices and websites.</p> 
+			
+		<input type="button" class="button" onclick="return toggleText('InstallUnity')" 
+		value="Installing Unity">
+		<div id="InstallUnity" style="display:none;">
+			<br><h3>First download and install <a href="https://store.unity.com/download?ref=personal">Unity</a>.</h3>
 		
+		</div><br><br>
 		<input type="button" class="button" onclick="return toggleText('InstallingUnityDebugger')" 
 		value="Installing Unity Debugger ">
 		<div id="InstallingUnityDebugger" style="display:none;">
-		<br><p>Use Visual Studio Code to debug your Unity C# projects.</p>
-		<p>Open Visual Studio Code, <Strong>Go to View > Extensions, then type in Unity and Select Debugger for Unity</Strong> to install.</p>
+		<br><p>To be able to debug your Unity C# projects, we need to install the <b>Debugger for Unity extension</b>.</p>
+		<p>First open Visual Studio Code, <Strong>Go to View > Extensions, then type in Unity and Select Debugger for Unity</Strong> to install.</p>
 		
 		<img src="../../Images/Unity_Debugger_1.png" alt="Installing_Unity_Debugger_Step1"><br><br>
 		<img src="../../Images/Unity_Debugger_2.png" alt="Installing_Unity_Debugger_Step2">
@@ -132,8 +138,8 @@
 		<input type="button" class="button" onclick="return toggleText('UnityTip0')" 
 		value="Changing Default Script Editor in Unity">
 		<div id="UnityTip0" style="display:none">
-				<br><p>Once you have installed Unity and Visual Studio Code, the first thing you need to do 
-				is to change the default IDE to Visual Studio Code in Unity.</p>
+				<br><p>Once you have installed <b>Unity</b> and <b>Visual Studio Code</b>, the first thing you need to do 
+				is to change the default IDE to Visual Studio Code in <b>Unity</b>.</p>
 		
 				<p><Strong>1.</Strong> Open Unity. <Strong>Go to Edit > Preferences</Strong>.</p>
 		
@@ -141,7 +147,7 @@
 		
 				<p><Strong>3.</Strong> You will have to browse where you have installed Visual Studio Code application, Once you have found it double click it.</p>
 		
-				<p><Strong>4.</Strong> You now have Visual Studio Code as your default IDE for Unity 3D.</p>
+				<p><Strong>4.</Strong> You now have Visual Studio Code as your default IDE for Unity.</p>
 			
 				<img src="../../Images/VSC_Unity_Preference.png" alt="VS_Unity">
 		
@@ -149,7 +155,8 @@
 		</div><br><br>
 		
 		
-		<input type="button" class="button" onclick="return toggleText('CsharpTip1')" value="Differences between Scratch and Unity ">
+		<input type="button" class="button" onclick="return toggleText('CsharpTip1')" 
+		value="Differences between Scratch and Unity ">
 		<div id="CsharpTip1" style="display:none"><br>
 			<div class="imgSizeBySize">
 				<h3 align="center">What Scratch look like</h3>
@@ -170,10 +177,11 @@
 		
 		<div style="float: left;clear: both;">
 		<h2>Creating a simple Unity 2D Project</h2>
+		<p>Let's create a simple <b>C#</b> project using <b>Unity</b> game engine and <b>Visual Studio Code</b>.</p>
 		
 		<input type="button" class="button" onclick="return toggleText('UnityTip1')" value="1. Creating a Unity Project">
 		<div id="UnityTip1" style="display:none"><br>
-			<p>First run Unity, click "New project".</p>
+			<p>First run <b>Unity</b>, click "New project".</p>
 			<img src="../../Images/Unity_Creating_Proj.png" alt="Creating a Unity project">
 			<p><Strong>1.</Strong> Name your Unity project.</p>
 			<p><Strong>2.</Strong> Select a location  where you want to save yor Unity project.</p>
@@ -185,18 +193,24 @@
 
 		<input type="button" class="button" onclick="return toggleText('UnityTip2')" value="2. Creating a game object">
 		<div id="UnityTip2" style="display:none"><br>
-			<p> To create a 2D or 3D game object is very simple.</p>
-			<img src="../../Images/Unity_Create_Gameobjects_final.png" alt="Create Unity gameobject">
-			<p><Strong>1.</Strong> Go to GameObject</p>
-			<p><Strong>2.</Strong> Select either a 2D or 3D gameobject.For this purpose of our tutorial we will create two 2D gameobjects.</p>
-			<p><Strong>3.</Strong> The gameobject will now appear on the Hierarchy window and also the Scene window.</p>
-			<p><Strong>4.</Strong> Rename one gameobjects to "Player" and the other one "Enemy".</p>
-			<p><Strong>5.</Strong> Select "Player" In the Hierarchy Window, and go to the Inspector Window, Sprite Renderer -> Sprite -> Knob. you will now be able to see your gameobject. Now do the same as for "Enemy" gameobject.</p>
+			<p>Let's create a simple 2D game object.</p>
+			
+			<p><Strong>1.</Strong> Go to GameObject and Select 2D gameobject and then Sprite.</p>
+			<img src="../../Images/Unity_Create_Gameobjects_final.png" alt="Create Unity gameobject"><br>
+			<p><Strong>2.</Strong> The gameobject will now appear on the Hierarchy window and also the Scene window.</p>
+			<img src="../../Images/Unity_GO1.png" alt="Create Unity gameobject1">
+			<p><Strong>3.</Strong> On the Hierarchy Window, Right click on the new sprite game object and rename it to Player.</p>
+			<img src="../../Images/Unity_GO2.png" alt="Create Unity gameobject2">
+			<p><Strong>4.</Strong> Select "Player" In the Hierarchy Window, and go to the Inspector Window, <b>Sprite Renderer -> Sprite -> Knob.</b> </p>
+			<img src="../../Images/Unity_GO3.png" alt="Create Unity gameobject3">
+			<p>You should now be able to see your gameobject.</p> 
+			
+			<p><Strong>5.</Strong> Now let's create an enemy. Repeat step 1-4. But this time name the game object as <b>Enemy</b>.</p>
+			<p>You should end up with something like this.</p>
+			<img src="../../Images/Unity_GO4.png" alt="Create Unity gameobject4">
+			
+			
 
-			
-			
-			
-			
 		</div><br><br>
 			
 			
@@ -212,9 +226,12 @@
 			<p><Strong>1.</Strong> First you need to create a script to do this Select "Player" gameobject, 
 			go to Inspector Window and <Strong>Add component > New Script > and name the Script "Movement"</Strong>. 
 			Make sure that the Language is C sharp. Click "Create and Add".</p>
+			<img src="../../Images/Unity_Move.png" alt="UnityCreateScript">
+			
 			<p><Strong>2.</Strong> The below C# code allows you to move your "Player" gameobject using the 
-			arrow keys/WASD keys in Unity. <Strong>Copy and paste this script into the Movement script that 
-			you have just created above</Strong>.</p>
+			arrow keys/WASD keys in Unity.</p> 
+			<p><Strong>Copy and paste the below into the Movement script that 
+			you have just created above in Visual Studio Code.</Strong>.</p>
 				   
 <textarea id="movement_textara1" readonly>
 using UnityEngine;
@@ -298,6 +315,9 @@ public class Destroy : MonoBehaviour {
 			<source src="../../Videos/C_Tutorial_Pt2.mp4" type="video/mp4">
 			Your browser does not support the video tag.
 			</video>
+			
+			<br><h3>A copy of this project can be downloaded 
+			<a href="../../Examples/UnitySample/Sample2D_Proj.zip" download>here</a>.</h3>
 			
 		</div><br><br>
 				

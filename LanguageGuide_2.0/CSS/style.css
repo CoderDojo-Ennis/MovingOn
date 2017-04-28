@@ -89,6 +89,12 @@ img{
 	float: left;
 	padding: 0 10px;
 }
+.imgContainer{
+	width: 30%;
+	display: inline-block;
+	float: left;
+	padding: 0 10px;
+}
 
 p{
 	font-size:16px;
@@ -97,6 +103,13 @@ p{
 }
 
 /*text area styling*/
+
+#dotnet1_textarea{
+	width:100%;
+	max-width:300px;
+	resize:none;
+	
+}
 #JS_textarea1{
 	resize: none;
 	overflow: hidden;
