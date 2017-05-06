@@ -1,0 +1,71 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+	<title>Survey Application</title>
+	<meta charset='utf-8'>
+	<meta name="viewport" content="width=device-width,height=device-height,initial-scale=1,user-scalable=yes">
+	<link rel="stylesheet" href="../CSS/style.css" type="text/css"> 
+	<link rel="favicon icon" href="../Images/App_Icon.ico" type="image/x-icon" />
+</head>
+
+<script type="text/javascript">
+
+	function saveData(){
+	
+		var Q2;
+
+		 
+		var A = document.getElementById('q2A').checked;
+		var B = document.getElementById('q2B').checked;
+		
+		if(A){
+			sessionStorage.setItem("Q2","A");
+
+		}
+		else if(B){
+			sessionStorage.setItem("Q2","B");
+		}
+		 
+
+		 window.location.href = "question3.html";	 
+	}
+	
+	function goBack(){
+	
+		window.history.back();
+		
+		window.location.href = "question1.html";
+	}
+	
+</script>
+
+<body>
+	<form name="surveyApp" method="POST"> 
+		<h1>Q2 Which of the following code strutucre is clearer for you to understand?</h1><br>
+		<!--comparing languages-->
+		
+		
+		<div class="choiceA">
+			<label class="imageAsChoice">
+				<input type="radio" id="q2A" name="q2" value="A"> A<br><br>
+				<img src="../Images/HelloWorld_JS.png" alt="Javscript">
+			</label>
+		</div>
+		<div class="choiceB">
+			<label class="imageAsChoice">
+				<input type="radio" id="q2B" name="q2" value="B" > B<br><br>
+				<img src="../Images/C++_HelloWorld.png" alt="Jquery" >
+			</label>
+		</div>
+
+		<div class="buttons">
+			<input type=button id="back" onClick="goBack()" 
+			value='Back' style="float: left;">
+					
+			<input type=button id="next" onClick="saveData()" 
+			value='Next' style="float: right;">
+		</div>
+	</form>
+</body>
+
+</html>

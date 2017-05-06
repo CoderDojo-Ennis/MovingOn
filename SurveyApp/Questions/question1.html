@@ -1,0 +1,78 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+	<title>Survey Application</title>
+	<meta charset='utf-8'>
+	<meta name="viewport" content="width=device-width,height=device-height,initial-scale=1,user-scalable=yes">
+	  
+	<link rel="favicon icon" href="../Images/App_Icon.ico" type="image/x-icon" />
+	<link rel="stylesheet" href="../CSS/style.css" type="text/css">
+</head>
+
+<script type="text/javascript">
+
+	
+	function saveData(){
+		//declaring variable for q1 
+		var Q1;
+		
+
+		//variables for choice a and b 
+		var A = document.getElementById('q1A').checked;
+		var B = document.getElementById('q1B').checked;
+		
+		//if a is checked
+		if(A){
+			sessionStorage.setItem("Q1","A");
+		}
+		else if(B){//if b is checked
+			sessionStorage.setItem("Q1","B");
+		}
+		
+		
+		
+		//next page
+		window.location.href = "question2.html";	 
+	}
+	
+	//function to go back to previous page
+	function goBack(){
+	
+		window.history.back();
+		
+		window.location.href = "../SurveyAppIndex.html";
+	}
+</script>
+
+<body>
+	<form name="surveyApp" method="POST"> 
+
+		<h1>Q1 Which of the following code structure is clearer for you to understand?</h1><br>
+		<!--comparing languages-->
+		
+		<div class="choiceA">
+			<label class="imageAsChoice">
+				<input type="radio" id="q1A" name="q1" value="A"> A<br><br>
+     	  
+				<img src="../Images/HelloWorld_Eclipse.png" alt="Java">
+			</label>
+		</div>
+		
+		<div class = "choiceB">
+			<label class="imageAsChoice">
+				<input type="radio" id="q1B" name="q1" value="B"> B<br><br>
+				<img src="../Images/CSharp_VS.png" alt="C#">
+			</label>
+		</div>	
+		
+				
+		<div class="buttons">		
+			<input type=button id="back" onClick="goBack()" 
+			value='Back' style="float:left" >
+					
+			<input type=button id="next" onClick="saveData()" value='Next'style="float:right">
+		</div>
+	</form>
+</body>
+
+</html>

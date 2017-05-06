@@ -1,0 +1,103 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+	<title>Survey Application</title>
+	<meta charset='utf-8'>
+	<meta name="viewport" content="width=device-width,height=device-height,initial-scale=1,user-scalable=yes">
+	<link rel="favicon icon" href="../Images/App_Icon.ico" type="image/x-icon" />
+	<script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
+ <style type="text/css" >
+ 
+ h1{
+ text-align:center;
+
+ }
+
+ 
+
+ </style>
+	
+</head>
+
+<script type="text/javascript">
+
+/***************************************************************************************
+*    Title: <submit web page form data to a google spreadsheet>
+*    Author: <Mike Heavers>
+*    Date: <18/12/2013>
+*    Availability: <http://mikeheavers.com/tutorials/submitting_custom_form_data_to_a_google_spreadsheet_with_javascript/>
+*
+***************************************************************************************/
+	
+		//getting data from session storage
+		var fname = sessionStorage.getItem("firstname");
+		var age = sessionStorage.getItem("age");
+		var Q1 = sessionStorage.getItem("Q1");
+		var Q2 = sessionStorage.getItem("Q2");
+		var Q3 = sessionStorage.getItem("Q3");
+		var Q4 = sessionStorage.getItem("Q4");
+		var Q5 = sessionStorage.getItem("Q5");
+		var Q6 = sessionStorage.getItem("Q6");
+		var Q7 = sessionStorage.getItem("Q7");
+		var Q8 = sessionStorage.getItem("Q8");
+		var Q9 = sessionStorage.getItem("Q9");
+		var Q10 = sessionStorage.getItem("Q10");
+		
+		//correspond google sheet entry to each questions
+		var fnID = "entry.1984219641"; 
+		var ageID = "entry.649173294";
+		var q1ID = "entry.746652570";
+		var q2ID = "entry.1357402052";
+		var q3ID = "entry.1621665023";
+		var q4ID = "entry.570804246";
+		var q5ID = "entry.291546801";
+		var q6ID = "entry.428150911";
+		var q7ID = "entry.1381925005";
+		var q8ID = "entry.1232104783";
+		var q9ID = "entry.1286020416";
+		var q10ID = "entry.1007119505";
+		
+		//sending data to google sheet, corresponding each field to the sheet
+		var url = 'https://docs.google.com/forms/d/e/1FAIpQLSciwPlkPf2lato8Q8uiAenwlao2HCdH1HPGbABJrE_aAXpmlg/formResponse';
+		var submitRef = '&submit=-8388452744988563745';
+		var submitURL = (fnID + "=" + fname + "&" + ageID + "=" + age + "&" + q1ID + "=" + Q1 + "&" + 
+						q2ID + "=" + Q2 + "&" + q3ID + "=" + Q3 + "&" + q4ID + "=" + Q4 + "&" + q5ID + "=" + 
+						Q5 + "&" + q6ID + "=" + Q6 + "&" + q7ID + "=" + Q7 + "&" + q8ID + "=" + Q8 + "&" + 
+						q9ID + "=" + Q9 + "&" + q10ID + "=" + Q10 + submitRef);
+		
+		 console.log(submitURL);
+		 //jQuery(this)[0].action = submitURL;
+		
+		
+		var xhr = new XMLHttpRequest();
+		xhr.open("POST",url,true);
+		
+		$.ajax({
+					url: url,
+                    data: submitURL,
+                    type: "POST",
+                    dataType: "xml",
+                    statusCode: {
+                        0: function() {
+                            //Success message
+                        },
+                        200: function() {
+                            //Success Message
+                        }
+                    }
+                });
+	
+
+		//link to view sheet
+		//https://docs.google.com/spreadsheets/d/1IxxIWpQYDEZ6OT_6srBzDdvXwjguNyXKZTDzUifoOoc/edit?usp=sharing
+		
+</script>
+ 
+<body>
+	<form name="surveyApp" action="" method="POST">
+		<h1>Thank you!</h1>
+
+	</form>	
+</body>
+
+</html>

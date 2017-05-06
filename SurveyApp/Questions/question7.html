@@ -1,0 +1,83 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+	<title>Survey Application</title>
+	<meta charset='utf-8'>  
+	<meta name="viewport" content="width=device-width,height=device-height,initial-scale=1,user-scalable=yes">
+	<link rel="stylesheet" href="../CSS/style.css" type="text/css">
+	<link rel="favicon icon" href="../Images/App_Icon.ico" type="image/x-icon" />
+</head>
+
+<script type="text/javascript">
+	    
+	function saveData(){
+		var Q7;
+
+		 
+		var A = document.getElementById('q7A').checked;
+		var B = document.getElementById('q7B').checked;
+		var C = document.getElementById('q7C').checked;
+		
+		if(A){
+			sessionStorage.setItem("Q7","A");
+
+		}
+		else if(B){
+			sessionStorage.setItem("Q7","B");
+		}
+		else if(C){
+			sessionStorage.setItem("Q7","C");
+		}
+
+		 window.location.href = "question8.html";	 
+	}
+	
+	
+	function goBack(){
+	
+		window.history.back();
+		
+		window.location.href = "question6.html";
+	}
+
+</script>
+ 
+<body>
+	<form name="surveyApp" action="" method="POST"> 
+		<h1>Q7 Which of the following background colour makes the code clearer to read?</h1><br><br>
+		<!--comparing backgraound colours-->
+		
+		
+		<div class="choiceA">
+			<label class="imageAsChoice">
+				<input type="radio" id="q7A" name="q7" value="A"> A<br><br>
+				<img src="../Images/LightBG_Java.png" alt="Light BG">
+			</label>
+		</div>
+		
+		<div class="choiceB">
+			<label class="imageAsChoice">
+				<input type="radio" id="q7B" name="q7" value="B"> B<br><br>
+				<img src="../Images/DarkBG_CSharp.png" alt="Dark BG" >
+			</label>
+		</div>
+		
+		<div class="choiceC">
+			<label class="imageAsChoice"><br>
+				<input type="radio" id="q7C" name="q7" value="C"> C<br><br>
+				<img src="../Images/Solarized Light Q7.png" alt="Solarized BG">
+			</label>
+		</div>
+		
+		<div class="buttons">
+			<input type=button id="back" onClick="goBack()" 
+			value='Back' style="float: left;">
+					
+			<input type=button id="next" onClick="saveData()" 
+			value='Next' style="float: right;">
+		
+		</div>
+	</form>
+</body>
+
+</html>

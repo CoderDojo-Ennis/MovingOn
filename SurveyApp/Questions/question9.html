@@ -1,0 +1,71 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+	<title>Survey Application</title>
+	<meta charset='utf-8'>  
+	<meta name="viewport" content="width=device-width,height=device-height,initial-scale=1,user-scalable=yes">
+	<link rel="stylesheet" href="../CSS/style.css" type="text/css">
+	<link rel="favicon icon" href="../Images/App_Icon.ico" type="image/x-icon" />
+</head>
+
+<script type="text/javascript">
+	function saveData(){
+		var Q9;
+
+		 
+		var A = document.getElementById('q9A').checked;
+		var B = document.getElementById('q9B').checked;
+		
+		if(A){
+			sessionStorage.setItem("Q9","A");
+
+		}
+		else if(B){
+			sessionStorage.setItem("Q9","B");
+		}
+		 
+
+		 window.location.href = "question10.html";	 
+	}
+	
+	
+	function goBack(){
+	
+		window.history.back();
+		
+		window.location.href = "question8.html";
+	}
+
+</script>
+ 
+<body>
+	<form name="surveyApp" action="" method="POST"> 
+		<h1>Q9 Which of the following code reads better?</h1><br><br>
+		<!--comparing IDE-->
+		
+		
+		<div class="choiceA">
+			<label class="imageAsChoice">
+				<input type="radio" id="q9A" name="q9" value="A"> A<br><br>
+				<img src="../Images/HelloWorldJCreator.png" alt="jcreator"  >
+			</label>
+		</div>	
+		
+		<div class="choiceB">		
+			<label class="imageAsChoice">
+				<input type="radio" id="q9B" name="q9" value="B"> B<br><br>
+				<img src="../Images/HelloWorldIntelliJ.png" alt="intellij">
+			</label>
+		</div>
+		
+		<div class="buttons">
+			<input type=button id="back" onClick="goBack()" 
+			value='Back' style="float: left;">
+					
+			<input type=button id="next" onClick="saveData()" 
+			value='Next' style="float: right;">
+		</div>
+	</form>
+</body>
+
+</html>
